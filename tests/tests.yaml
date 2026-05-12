@@ -26,7 +26,7 @@ tests:
       MIN-FRAGMENTS: 6
       create-issue: true
       MAX-AGE-YOUNGEST-MEMBER: 730
-  marineinfo-resource-availability:
+  marineinfo-person-resource-availability:
     image: ghcr.io/vliz-be-opsci/grmp-test-implementations-resource-availability:main
     config:
       create-issue: true
@@ -34,47 +34,115 @@ tests:
         - https://marineinfo.org/en/doc/person/46372
         - https://marineinfo.org/id/person/46372
         - https://marineinfo.org/doc/person/46372
-        - https://marineinfo.org/en/doc/publication/97613
-        - https://marineinfo.org/doc/publication/97613
-        - https://marineinfo.org/id/publication/97613
-        - https://marineinfo.org/doc/institute/36
-        - https://marineinfo.org/en/doc/institute/36
-        - https://marineinfo.org/id/institute/36
-        - https://marineinfo.org/en/doc/project/5528
-        - https://marineinfo.org/doc/project/5528
-        - https://marineinfo.org/id/project/5528
-        - https://marineinfo.org/en/doc/event/3127
-        - https://marineinfo.org/doc/event/3127
-        - https://marineinfo.org/id/event/3127
-        - https://marineinfo.org/en/doc/dataset/3221
-        - https://marineinfo.org/doc/dataset/3221
-        - https://marineinfo.org/id/dataset/3221
       max-redirects: 3
       timeout: 10
       verify-ssl: true
       check-http-availability: true
       check-https-availability: true
-  marineinfo-cors-compliance-basic:
+  marineinfo-publication-resource-availability:
+    image: ghcr.io/vliz-be-opsci/grmp-test-implementations-resource-availability:main
+    config:
+      create-issue: true
+      urls: 
+        - https://marineinfo.org/en/doc/publication/97613
+        - https://marineinfo.org/doc/publication/97613
+        - https://marineinfo.org/id/publication/97613
+      max-redirects: 3
+      timeout: 10
+      verify-ssl: true
+      check-http-availability: true
+      check-https-availability: true
+  marineinfo-institute-resource-availability:
+    image: ghcr.io/vliz-be-opsci/grmp-test-implementations-resource-availability:main
+    config:
+      create-issue: true
+      urls: 
+        - https://marineinfo.org/doc/institute/36
+        - https://marineinfo.org/en/doc/institute/36
+        - https://marineinfo.org/id/institute/36
+      max-redirects: 3
+      timeout: 10
+      verify-ssl: true
+      check-http-availability: true
+      check-https-availability: true
+  marineinfo-project-resource-availability:
+    image: ghcr.io/vliz-be-opsci/grmp-test-implementations-resource-availability:main
+    config:
+      create-issue: true
+      urls: 
+        - https://marineinfo.org/en/doc/project/5528
+        - https://marineinfo.org/id/project/5528
+        - https://marineinfo.org/doc/project/5528
+      max-redirects: 3
+      timeout: 10
+      verify-ssl: true
+      check-http-availability: true
+      check-https-availability: true
+  marineinfo-event-resource-availability:
+    image: ghcr.io/vliz-be-opsci/grmp-test-implementations-resource-availability:main
+    config:
+      create-issue: true
+      urls: 
+        - https://marineinfo.org/en/doc/event/3127
+        - https://marineinfo.org/id/event/3127
+        - https://marineinfo.org/doc/event/3127
+      max-redirects: 3
+      timeout: 10
+      verify-ssl: true
+      check-http-availability: true
+      check-https-availability: true
+  marineinfo-dataset-resource-availability:
+    image: ghcr.io/vliz-be-opsci/grmp-test-implementations-resource-availability:main
+    config:
+      create-issue: true
+      urls: 
+        - https://marineinfo.org/en/doc/dataset/3221
+        - https://marineinfo.org/id/dataset/3221
+        - https://marineinfo.org/doc/dataset/3221
+      max-redirects: 3
+      timeout: 10
+      verify-ssl: true
+      check-http-availability: true
+      check-https-availability: true
+  marineinfo-cors-compliance-basic-person:
     image: ghcr.io/vliz-be-opsci/grmp-test-implementations-cors-compliance:main
     config:
       urls: 
          - https://marineinfo.org/en/doc/person/46372
          - https://marineinfo.org/id/person/46372
          - https://marineinfo.org/doc/person/46372
+  marineinfo-cors-compliance-basic-publication:
+    image: ghcr.io/vliz-be-opsci/grmp-test-implementations-cors-compliance:main
+    config:
+      urls: 
          - https://marineinfo.org/en/doc/publication/97613
          - https://marineinfo.org/doc/publication/97613
          - https://marineinfo.org/id/publication/97613
+  marineinfo-cors-compliance-basic-institute:
+    image: ghcr.io/vliz-be-opsci/grmp-test-implementations-cors-compliance:main
+    config:
+      urls: 
          - https://marineinfo.org/doc/institute/36
          - https://marineinfo.org/en/doc/institute/36
          - https://marineinfo.org/id/institute/36
+  marineinfo-cors-compliance-basic-project:
+    image: ghcr.io/vliz-be-opsci/grmp-test-implementations-cors-compliance:main
+    config:
+      urls: 
          - https://marineinfo.org/en/doc/project/5528
-         - https://marineinfo.org/doc/project/5528
          - https://marineinfo.org/id/project/5528
+         - https://marineinfo.org/doc/project/5528
+  marineinfo-cors-compliance-basic-event:
+    image: ghcr.io/vliz-be-opsci/grmp-test-implementations-cors-compliance:main
+    config:
+      urls: 
          - https://marineinfo.org/en/doc/event/3127
          - https://marineinfo.org/doc/event/3127
          - https://marineinfo.org/id/event/3127
+  marineinfo-cors-compliance-basic-dataset:
+    image: ghcr.io/vliz-be-opsci/grmp-test-implementations-cors-compliance:main
+    config:
+      urls: 
          - https://marineinfo.org/en/doc/dataset/3221
          - https://marineinfo.org/doc/dataset/3221
          - https://marineinfo.org/id/dataset/3221
-
-
