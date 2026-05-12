@@ -1,6 +1,27 @@
 {
-  "generated_at": "2026-05-12T11:02:45.078402Z",
+  "generated_at": "2026-05-12T11:06:38.871124Z",
   "runs": [
+    {
+      "commit_sha": "68ae9c79f171cb799b818eb1fcc4bbe31c0b07ef",
+      "short_sha": "68ae9c7",
+      "date": "2026-05-12T11:06:37.284806Z",
+      "run_number": 3,
+      "run_attempt": 1,
+      "source_branch": "main",
+      "config_file": "tests",
+      "triggered_by": "cedricdcc",
+      "workflow_name": "Run Configured Tests",
+      "run_id": "25730264298",
+      "summary": {
+        "total_tests": 120,
+        "passed": 84,
+        "failed": 36,
+        "errors": 0,
+        "skipped": 0,
+        "pass_rate": 70.0,
+        "duration": 31.5596
+      }
+    },
     {
       "commit_sha": "cbf2b29204b253c9129d97a11bdb749d2453a4f5",
       "short_sha": "cbf2b29",
