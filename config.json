@@ -1,0 +1,5 @@
+{
+  "reportUrl": "https://raw.githubusercontent.com/vlizBE/GRMPy_VLIZ/grmp-reports/report.xml",
+  "runsUrl": "https://raw.githubusercontent.com/vlizBE/GRMPy_VLIZ/grmp-reports/runs.json",
+  "label": "vlizBE/GRMPy_VLIZ"
+}
