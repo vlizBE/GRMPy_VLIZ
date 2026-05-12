@@ -1,0 +1,579 @@
+name: Run Configured Tests
+
+on: 
+  workflow_dispatch:
+    inputs:
+      report_branch:
+        description: 'Branch to push test reports to'
+        required: true
+        default: 'grmp-reports'
+        type: string
+      config_directory:
+        description: 'Test configuration directory'
+        required: true
+        default: 'input-echo-demo'
+        type: string
+      dashboard_label:
+        description: 'Label shown in dashboard header'
+        required: false
+        default: ''
+        type: string
+      enable_prometheus:
+        description: 'Generate and push a metrics.prom file for Prometheus textfile collector'
+        required: false
+        default: 'false'
+        type: string
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      packages: read
+      issues: write
+      pages: read
+    
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Login to GHCR
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.repository_owner }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Run tests
+        env:
+          config_directory: ${{ github.event.inputs.config_directory }}
+        run: |
+          mkdir -p reports
+          docker run --rm \
+            -v /var/run/docker.sock:/var/run/docker.sock \
+            -v "${{ github.workspace }}/${config_directory}":/config:ro \
+            -v "${{ github.workspace }}/reports":/reports:rw \
+            -e REPORTS_HOST_PATH="${{ github.workspace }}/reports" \
+            -e GITHUB_SERVER_URL="${{ github.server_url }}" \
+            -e GITHUB_REPOSITORY="${{ github.repository }}" \
+            -e GITHUB_SHA="${{ github.sha }}" \
+            -e CONFIG_DIRECTORY="${config_directory}" \
+            ghcr.io/vliz-be-opsci/grmp-framework:main
+
+      - name: Set up Python
+        if: always()
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Push report to branch
+        id: push_report
+        env:
+          INPUT_REPORT_BRANCH: ${{ github.event.inputs.report_branch }}
+          config_directory: ${{ github.event.inputs.config_directory }}
+          ACTOR: ${{ github.actor }}
+          WORKFLOW: ${{ github.workflow }}
+          RUN_ID: ${{ github.run_id }}
+          RUN_NUMBER: ${{ github.run_number }}
+          RUN_ATTEMPT: ${{ github.run_attempt }}
+          REF_NAME: ${{ github.ref_name }}
+        if: always()
+        run: |
+          REPORT_BRANCH="$INPUT_REPORT_BRANCH"
+          
+          if [ ! -f "reports/combined_report.xml" ]; then
+            echo "Error: No report file found at reports/combined_report.xml"
+            exit 1
+          fi
+          
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          
+          git fetch origin "$REPORT_BRANCH" 2>/dev/null || true
+          
+          if git ls-remote --heads origin "$REPORT_BRANCH" | grep -qF "$REPORT_BRANCH"; then
+            git checkout "$REPORT_BRANCH"
+          else
+            git checkout --orphan "$REPORT_BRANCH"
+            git rm -rf . 2>/dev/null || true
+          fi
+
+          git checkout ${{ github.sha }} -- dashboard/ 2>/dev/null || true
+          
+          if [ -d dashboard ]; then
+            cp -a dashboard/. .
+            git rm -rf --cached dashboard/ 2>/dev/null || true
+            rm -rf dashboard/
+          fi
+                   
+          cp reports/combined_report.xml report.xml
+          
+          git add report.xml
+          git add index.html 2>/dev/null || true
+          
+          SHORT_SHA="${GITHUB_SHA:0:7}"
+          COMMIT_MSG="Test run #${RUN_NUMBER} attempt ${RUN_ATTEMPT} (${REF_NAME} @ ${SHORT_SHA})"
+          COMMIT_BODY="Config: ${config_directory}
+          Triggered by: ${ACTOR}
+          Workflow: ${WORKFLOW}
+          Run ID: ${RUN_ID}"
+          
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "$COMMIT_MSG" -m "$COMMIT_BODY"
+            git push origin "$REPORT_BRANCH"
+            echo "Report pushed to $REPORT_BRANCH branch"
+          fi
+
+          REPORT_COMMIT_SHA=$(git rev-parse HEAD)
+          echo "REPORT_COMMIT_SHA=${REPORT_COMMIT_SHA}" >> $GITHUB_ENV
+          echo "   Report commit SHA: ${REPORT_COMMIT_SHA}"
+
+      - name: Parse report and generate run metadata
+        if: steps.push_report.outcome == 'success'
+        env:
+          CONFIG_FILE: ${{ github.event.inputs.config_directory }}
+          RUN_NUMBER: ${{ github.run_number }}
+          RUN_ATTEMPT: ${{ github.run_attempt }}
+          REF_NAME: ${{ github.ref_name }}
+          ACTOR: ${{ github.actor }}
+          WORKFLOW_NAME: ${{ github.workflow }}
+          RUN_ID: ${{ github.run_id }}
+        run: |
+          python3 << 'EOF'
+          import xml.etree.ElementTree as ET
+          import json
+          import os
+          from datetime import datetime
+          from pathlib import Path
+
+          config_file   = os.environ['CONFIG_FILE']
+          run_number    = int(os.environ['RUN_NUMBER'])
+          run_attempt   = int(os.environ['RUN_ATTEMPT'])
+          ref_name      = os.environ['REF_NAME']
+          commit_sha    = os.environ['REPORT_COMMIT_SHA']
+          actor         = os.environ['ACTOR']
+          workflow_name = os.environ['WORKFLOW_NAME']
+          run_id        = os.environ['RUN_ID']
+
+          report_path = Path('reports/combined_report.xml')
+          if not report_path.exists():
+              print(f"Report not found at {report_path}")
+              exit(1)
+
+          tree = ET.parse(report_path)
+          root = tree.getroot()
+
+          total_tests = 0
+          failures    = 0
+          errors      = 0
+          skipped     = 0
+          total_time  = 0.0
+
+          suites = root.findall('.//testsuite')
+          if root.tag == 'testsuite' and not suites:
+              suites = [root]
+
+          for suite in suites:
+              total_tests += int(suite.get('tests') or 0)
+              failures    += int(suite.get('failures') or 0)
+              errors      += int(suite.get('errors') or 0)
+              skipped     += int(suite.get('skipped') or 0)
+              total_time  += float(suite.get('time') or 0)
+
+          passed    = max(0, total_tests - failures - errors - skipped)
+          pass_rate = round((passed / total_tests * 100), 2) if total_tests > 0 else 0
+
+          new_run = {
+              "commit_sha":    commit_sha,
+              "short_sha":     commit_sha[:7],
+              "date":          datetime.utcnow().isoformat() + "Z",
+              "run_number":    run_number,
+              "run_attempt":   run_attempt,
+              "source_branch": ref_name,
+              "config_file":   config_file,
+              "triggered_by":  actor,
+              "workflow_name": workflow_name,
+              "run_id":        run_id,
+              "summary": {
+                  "total_tests": total_tests,
+                  "passed":      passed,
+                  "failed":      failures,
+                  "errors":      errors,
+                  "skipped":     skipped,
+                  "pass_rate":   pass_rate,
+                  "duration":    round(total_time, 4)
+              }
+          }
+
+          print(f"Parsed test report:")
+          print(f"   Total: {total_tests}, Passed: {passed}, Failed: {failures}")
+          print(f"   Pass rate: {pass_rate}%, Duration: {total_time:.2f}s")
+          print(f"   Report commit SHA: {commit_sha}")
+
+          with open('new_run.json', 'w') as f:
+              json.dump(new_run, f, indent=2)
+
+          print("Saved new_run.json")
+          EOF
+
+      - name: Create or update issues for failing test suites
+        if: steps.push_report.outcome == 'success'
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          RUN_NUMBER: ${{ github.run_number }}
+          RUN_ATTEMPT: ${{ github.run_attempt }}
+          RUN_ID: ${{ github.run_id }}
+          REF_NAME: ${{ github.ref_name }}
+          SERVER_URL: ${{ github.server_url }}
+          REPOSITORY: ${{ github.repository }}
+          REPORT_BRANCH: ${{ github.event.inputs.report_branch }}
+          REPORT_COMMIT_SHA: ${{ env.REPORT_COMMIT_SHA }}
+        run: |
+          python3 << 'EOF'
+          import hashlib
+          import json
+          import os
+          import subprocess
+          import sys
+          import xml.etree.ElementTree as ET
+          from pathlib import Path
+
+          EXCLUDE_FROM_HASH = {'provenance', 'create-issue'}
+          ISSUE_LABEL = 'grmp-test-failure'
+
+          run_number    = os.environ['RUN_NUMBER']
+          run_attempt   = os.environ['RUN_ATTEMPT']
+          run_id        = os.environ['RUN_ID']
+          ref_name      = os.environ['REF_NAME']
+          server_url    = os.environ['SERVER_URL']
+          repository    = os.environ['REPOSITORY']
+          report_branch      = os.environ['REPORT_BRANCH']
+          report_commit_sha  = os.environ['REPORT_COMMIT_SHA']
+          run_url            = f"{server_url}/{repository}/actions/runs/{run_id}"
+
+          # Fetch the Pages URL from the GitHub API — returns None if Pages is not configured
+          def get_pages_url(repository, token):
+              result = subprocess.run(
+                  ['gh', 'api', f'repos/{repository}/pages', '--jq', '.html_url'],
+                  capture_output=True, text=True
+              )
+              if result.returncode == 0 and result.stdout.strip():
+                  return result.stdout.strip().rstrip('/')
+              return None
+
+          pages_base = get_pages_url(repository, os.environ['GH_TOKEN'])
+
+          report_path = Path('reports/combined_report.xml')
+          if not report_path.exists():
+              print("Report not found, skipping issue management")
+              sys.exit(0)
+
+          tree = ET.parse(report_path)
+          root = tree.getroot()
+          suites = root.findall('.//testsuite')
+          if root.tag == 'testsuite' and not suites:
+              suites = [root]
+
+          def get_props(suite):
+              props = {}
+              props_elem = suite.find('properties')
+              if props_elem is not None:
+                  for prop in props_elem.findall('property'):
+                      k = prop.get('name', '')
+                      v = prop.get('value', '')
+                      if k and k not in EXCLUDE_FROM_HASH:
+                          props[k] = v
+              return props
+
+          def config_hash(props):
+              return hashlib.sha256(
+                  json.dumps(props, sort_keys=True).encode()
+              ).hexdigest()[:8]
+
+          def escape_md_table(text):
+              """Escape pipe and newline characters for markdown table cells."""
+              return str(text).replace('|', '\\|').replace('\n', ' ')
+
+          def make_cases_table(suite):
+              rows = []
+              for tc in suite.findall('testcase'):
+                  name = tc.get('name', 'unknown')
+                  if tc.find('failure') is not None:
+                      status, msg = 'failure', tc.find('failure').get('message', '')
+                  elif tc.find('error') is not None:
+                      status, msg = 'error', tc.find('error').get('message', '')
+                  elif tc.find('skipped') is not None:
+                      status, msg = 'skipped', tc.find('skipped').get('message', '')
+                  else:
+                      status, msg = 'passed', ''
+                  rows.append(f'| `{escape_md_table(name)}` | {status} | {escape_md_table(msg)} |')
+              return (
+                  '| Test case | Status | Message |\n'
+                  '| --- | --- | --- |\n'
+                  + '\n'.join(rows)
+              )
+
+          def make_props_table(props):
+              rows = [f'| `{escape_md_table(k)}` | {escape_md_table(v)} |' for k, v in sorted(props.items())]
+              return (
+                  '| Property | Value |\n'
+                  '| --- | --- |\n'
+                  + '\n'.join(rows)
+              )
+
+          def find_open_issue(title):
+              result = subprocess.run(
+                  ['gh', 'issue', 'list', '--state', 'open',
+                   '--search', title, '--json', 'number,title'],
+                  capture_output=True, text=True, check=True
+              )
+              matches = [
+                  i for i in json.loads(result.stdout or '[]')
+                  if i['title'] == title
+              ]
+              return matches[0]['number'] if matches else None
+
+          for suite in suites:
+              suite_name = suite.get('name', 'unknown')
+              failures   = int(suite.get('failures') or 0)
+              errors     = int(suite.get('errors') or 0)
+              total      = int(suite.get('tests') or 0)
+              skipped    = int(suite.get('skipped') or 0)
+              passed     = max(0, total - failures - errors - skipped)
+
+              # Read create-issue directly from raw properties before hash filtering
+              props_elem_raw = suite.find('properties')
+              create_issue = False
+              if props_elem_raw is not None:
+                  for prop in props_elem_raw.findall('property'):
+                      if prop.get('name') == 'create-issue':
+                          create_issue = prop.get('value', 'false').lower() == 'true'
+
+              if not create_issue:
+                  print(f'Skipping issue management for {suite_name}: create-issue is not set')
+                  continue
+
+              props        = get_props(suite)
+              issue_title  = f'[GRMP] {suite_name} #{config_hash(props)}'
+              issue_number = find_open_issue(issue_title)
+              summary      = (
+                  f'{passed}/{total} passed, '
+                  f'{failures} failed, '
+                  f'{errors} errored'
+              )
+
+              if failures > 0 or errors > 0:
+                  if issue_number:
+                      body = (
+                          f'Still failing in run #{run_number} attempt {run_attempt} ({ref_name})'
+                          f' — {summary}.\n\n'
+                          + f'[View run]({run_url})'
+                          + (f' · [View in dashboard]({pages_base}#{"run=" + report_commit_sha})' if pages_base else '')
+                          + '\n\n'
+                          + f'### Test cases\n\n{make_cases_table(suite)}\n'
+                      )
+                      subprocess.run(
+                          ['gh', 'issue', 'comment', str(issue_number), '--body', body],
+                          check=True
+                      )
+                      print(f'Commented on existing issue #{issue_number}: {issue_title}')
+                  else:
+                      body = (
+                          f'## Test suite: `{suite_name}`\n\n'
+                          f'**Run #{run_number} attempt {run_attempt}** ({ref_name}) — {summary}.\n\n'
+                          f'[View run]({run_url})'
+                          + (f' · [View in dashboard]({pages_base}#{"run=" + report_commit_sha})' if pages_base else '')
+                          + '\n\n'
+                          + f'### Configuration\n\n{make_props_table(props)}\n\n'
+                          + f'### Test cases\n\n{make_cases_table(suite)}\n'
+                      )
+                      subprocess.run(
+                          ['gh', 'issue', 'create',
+                           '--title', issue_title,
+                           '--body', body,
+                           '--label', ISSUE_LABEL],
+                          check=True
+                      )
+                      print(f'Created new issue: {issue_title}')
+              else:
+                  if issue_number:
+                      body = (
+                          f'All tests passing as of run #{run_number} attempt {run_attempt} ({ref_name})'
+                          f' — {passed}/{total} passed.\n\n'
+                          + f'[View run]({run_url})'
+                          + (f' · [View in dashboard]({pages_base}#{"run=" + report_commit_sha})' if pages_base else '')
+                          + '\n\n'
+                          + 'This issue can be closed if the fix is confirmed.'
+                      )
+                      subprocess.run(
+                          ['gh', 'issue', 'comment', str(issue_number), '--body', body],
+                          check=True
+                      )
+                      print(f'Commented on issue #{issue_number}: suite now passing')
+          EOF
+
+      - name: Update runs.json
+        if: steps.push_report.outcome == 'success'
+        run: |
+          python3 << 'EOF'
+          import json
+          from datetime import datetime
+          from pathlib import Path
+
+          runs_file    = Path('runs.json')
+          new_run_file = Path('new_run.json')
+
+          if not new_run_file.exists():
+              print("new_run.json not found, skipping runs.json update")
+              exit(1)
+
+          with open(new_run_file) as f:
+              new_run = json.load(f)
+
+          if runs_file.exists():
+              with open(runs_file) as f:
+                  data = json.load(f)
+          else:
+              data = {
+                  "generated_at": "",
+                  "runs": []
+              }
+
+          data["generated_at"] = datetime.utcnow().isoformat() + "Z"
+
+          data["runs"].insert(0, new_run)
+          data["runs"] = data["runs"][:50]
+
+          with open(runs_file, 'w') as f:
+              json.dump(data, f, indent=2)
+
+          print(f"Updated runs.json ({len(data['runs'])} runs)")
+          EOF
+
+      - name: Commit runs.json to report branch
+        if: steps.push_report.outcome == 'success'
+        env:
+          REPORT_BRANCH: ${{ github.event.inputs.report_branch }}
+          RUN_NUMBER: ${{ github.run_number }}
+        run: |
+          if [ ! -f "runs.json" ]; then
+            echo "runs.json not found, skipping"
+            exit 0
+          fi
+
+          git add runs.json
+
+          if git diff --staged --quiet; then
+            echo "No changes to runs.json"
+          else
+            git commit -m "Update runs.json for run #${RUN_NUMBER}"
+            git push origin "${REPORT_BRANCH}"
+            echo "runs.json committed to ${REPORT_BRANCH}"
+          fi
+
+      - name: Generate and commit config.json for dashboard
+        if: steps.push_report.outcome == 'success'
+        env:
+          REPORT_BRANCH: ${{ github.event.inputs.report_branch }}
+          REPOSITORY: ${{ github.repository }}
+          DASHBOARD_LABEL: ${{ github.event.inputs.dashboard_label || github.repository }}
+          RUN_NUMBER: ${{ github.run_number }}
+        run: |
+          python3 - << 'PYEOF'
+          import json, os
+          base_url = f"https://raw.githubusercontent.com/{os.environ['REPOSITORY']}/{os.environ['REPORT_BRANCH']}"
+          cfg = {
+              "reportUrl": f"{base_url}/report.xml",
+              "runsUrl":   f"{base_url}/runs.json",
+              "label":     os.environ["DASHBOARD_LABEL"],
+          }
+          with open("config.json", "w") as f:
+              json.dump(cfg, f, indent=2)
+          PYEOF
+
+          git add config.json
+          if ! git diff --staged --quiet; then
+            git commit -m "Update config.json for run #${RUN_NUMBER}"
+            git push origin "${REPORT_BRANCH}"
+            echo "config.json committed"
+          fi
+
+      - name: Generate and commit metrics.prom for Prometheus
+        if: steps.push_report.outcome == 'success' && github.event.inputs.enable_prometheus == 'true'
+        env:
+          REPORT_BRANCH: ${{ github.event.inputs.report_branch }}
+          RUN_NUMBER: ${{ github.run_number }}
+          RUN_ATTEMPT: ${{ github.run_attempt }}
+          REF_NAME: ${{ github.ref_name }}
+        run: |
+          python3 << 'EOF'
+          import xml.etree.ElementTree as ET
+          import os
+          from datetime import datetime, timezone
+          from pathlib import Path
+
+          def escape_label_value(s):
+              """Escape backslash, newline, and double-quote for Prometheus labels."""
+              return s.replace('\\', '\\\\').replace('\n', '\\n').replace('"', '\\"')
+
+          run_number = os.environ['RUN_NUMBER']
+          run_attempt = os.environ['RUN_ATTEMPT']
+          branch = escape_label_value(os.environ['REF_NAME'])
+
+          report_path = Path('reports/combined_report.xml')
+          if not report_path.exists():
+              print("Report not found, skipping metrics.prom generation")
+              exit(0)
+
+          tree = ET.parse(report_path)
+          root = tree.getroot()
+          suites = root.findall('.//testsuite')
+          if root.tag == 'testsuite' and not suites:
+              suites = [root]
+
+          labels_base = f'run="{run_number}",attempt="{run_attempt}",branch="{branch}"'
+          timestamp = int(datetime.now(timezone.utc).timestamp())
+          lines = []
+
+          def metric(name, help_text, mtype, samples):
+              lines.append(f'# HELP {name} {help_text}')
+              lines.append(f'# TYPE {name} {mtype}')
+              for labelset, value in samples:
+                  lines.append(f'{name}{{{labelset}}} {value}')
+
+          suite_samples = []
+          for suite in suites:
+              suite_name  = escape_label_value(suite.get('name', 'unknown'))
+              total       = int(suite.get('tests') or 0)
+              failures    = int(suite.get('failures') or 0)
+              errors      = int(suite.get('errors') or 0)
+              skipped     = int(suite.get('skipped') or 0)
+              passed      = max(0, total - failures - errors - skipped)
+              duration    = float(suite.get('time') or 0)
+              pass_rate   = round(passed / total, 4) if total > 0 else 0
+              ls = f'testsuite="{suite_name}",{labels_base}'
+              suite_samples.append((suite_name, ls, total, passed, failures, errors, skipped, pass_rate, duration))
+
+          metric('grmp_testsuite_tests_total',    'Total number of test cases in the suite',  'gauge', [(ls, t) for _, ls, t, *_ in suite_samples])
+          metric('grmp_testsuite_passed_total',   'Number of passing test cases',             'gauge', [(ls, p) for _, ls, _, p, *_ in suite_samples])
+          metric('grmp_testsuite_failed_total',   'Number of failing test cases',             'gauge', [(ls, f) for _, ls, _, _, f, *_ in suite_samples])
+          metric('grmp_testsuite_errors_total',   'Number of errored test cases',             'gauge', [(ls, e) for _, ls, _, _, _, e, *_ in suite_samples])
+          metric('grmp_testsuite_skipped_total',  'Number of skipped test cases',             'gauge', [(ls, sk) for _, ls, _, _, _, _, sk, *_ in suite_samples])
+          metric('grmp_testsuite_pass_rate',      'Pass rate as a value between 0 and 1',    'gauge', [(ls, pr) for _, ls, _, _, _, _, _, pr, _ in suite_samples])
+          metric('grmp_testsuite_duration_seconds', 'Suite execution time in seconds',       'gauge', [(ls, d) for _, ls, _, _, _, _, _, _, d in suite_samples])
+          metric('grmp_run_timestamp_seconds',    'Unix timestamp of the workflow run',       'gauge', [(labels_base, timestamp)])
+
+          with open('metrics.prom', 'w') as f:
+              f.write('\n'.join(lines) + '\n')
+
+          print(f"Generated metrics.prom with {len(suites)} suite(s)")
+          EOF
+
+          git add metrics.prom
+          if ! git diff --staged --quiet; then
+            git commit -m "Update metrics.prom for run #${RUN_NUMBER}"
+            git push origin "${REPORT_BRANCH}"
+            echo "metrics.prom committed to ${REPORT_BRANCH}"
+          fi

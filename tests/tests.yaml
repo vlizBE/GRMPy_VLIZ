@@ -1,0 +1,80 @@
+tests:
+  LDES-feeds-marineinfo:
+    image: ghcr.io/vliz-be-opsci/grmp-test-implementations-ldes-validation:main
+    config:
+      TIMEOUT: 600  # Optional: timeout in seconds
+      URLS: ['https://marineinfo.org/feed/institute', 'https://marineinfo.org/feed/dataset','https://marineinfo.org/feed/publication','https://marineinfo.org/feed/person','https://marineinfo.org/feed/project', 'https://marineinfo.org/feed/event']
+      MIN-MEMBERS: 20
+      MIN-FRAGMENTS: 10
+      create-issue: true
+      MAX-AGE-YOUNGEST-MEMBER: 730
+  LDES-feed-aphia:
+    image: ghcr.io/vliz-be-opsci/grmp-test-implementations-ldes-validation:main
+    config:
+      TIMEOUT: 600  # Optional: timeout in seconds
+      URLS: ['http://aphia.org/feed']
+      MIN-MEMBERS: 20
+      MIN-FRAGMENTS: 6
+      create-issue: true
+      MAX-AGE-YOUNGEST-MEMBER: 730
+  LDES-feed-marine-regions: 
+    image: ghcr.io/vliz-be-opsci/grmp-test-implementations-ldes-validation:main
+    config:
+      TIMEOUT: 600  # Optional: timeout in seconds
+      URLS: ['https://marineregions.org/feed.ttl']
+      MIN-MEMBERS: 20
+      MIN-FRAGMENTS: 6
+      create-issue: true
+      MAX-AGE-YOUNGEST-MEMBER: 730
+  marineinfo-resource-availability:
+    image: ghcr.io/vliz-be-opsci/grmp-test-implementations-resource-availability:main
+    config:
+      create-issue: true
+      urls: 
+        - https://marineinfo.org/en/doc/person/46372
+        - https://marineinfo.org/id/person/46372
+        - https://marineinfo.org/doc/person/46372
+        - https://marineinfo.org/en/doc/publication/97613
+        - https://marineinfo.org/doc/publication/97613
+        - https://marineinfo.org/id/publication/97613
+        - https://marineinfo.org/doc/institute/36
+        - https://marineinfo.org/en/doc/institute/36
+        - https://marineinfo.org/id/institute/36
+        - https://marineinfo.org/en/doc/project/5528
+        - https://marineinfo.org/doc/project/5528
+        - https://marineinfo.org/id/project/5528
+        - https://marineinfo.org/en/doc/event/3127
+        - https://marineinfo.org/doc/event/3127
+        - https://marineinfo.org/id/event/3127
+        - https://marineinfo.org/en/doc/dataset/3221
+        - https://marineinfo.org/doc/dataset/3221
+        - https://marineinfo.org/id/dataset/3221
+      max-redirects: 3
+      timeout: 10
+      verify-ssl: true
+      check-http-availability: true
+      check-https-availability: true
+  marineinfo-cors-compliance-basic:
+    image: ghcr.io/vliz-be-opsci/grmp-test-implementations-cors-compliance:main
+    config:
+      urls: 
+         - https://marineinfo.org/en/doc/person/46372
+         - https://marineinfo.org/id/person/46372
+         - https://marineinfo.org/doc/person/46372
+         - https://marineinfo.org/en/doc/publication/97613
+         - https://marineinfo.org/doc/publication/97613
+         - https://marineinfo.org/id/publication/97613
+         - https://marineinfo.org/doc/institute/36
+         - https://marineinfo.org/en/doc/institute/36
+         - https://marineinfo.org/id/institute/36
+         - https://marineinfo.org/en/doc/project/5528
+         - https://marineinfo.org/doc/project/5528
+         - https://marineinfo.org/id/project/5528
+         - https://marineinfo.org/en/doc/event/3127
+         - https://marineinfo.org/doc/event/3127
+         - https://marineinfo.org/id/event/3127
+         - https://marineinfo.org/en/doc/dataset/3221
+         - https://marineinfo.org/doc/dataset/3221
+         - https://marineinfo.org/id/dataset/3221
+
+
