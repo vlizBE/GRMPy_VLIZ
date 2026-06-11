@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <testsuites>
-	<testsuite name="LDES-feeds-marineinfo" timestamp="2026-06-11T12:30:47.339701+00:00" tests="36" errors="0" failures="5" skipped="0" time="13.119035243988037">
-		<testcase name="ldes_harvest [https://marineinfo.org/feed/institute]" classname="LDES-feeds-marineinfo" time="2.8649885654449463">
+	<testsuite name="LDES-feeds-marineinfo" timestamp="2026-06-11T12:46:34.338571+00:00" tests="36" errors="0" failures="5" skipped="0" time="8.733891487121582">
+		<testcase name="ldes_harvest [https://marineinfo.org/feed/institute]" classname="LDES-feeds-marineinfo" time="1.8397212028503418">
 			<system-out>Fetching RDF graph from: https://marineinfo.org/feed/institute
 HTTP 200, Content-Type: 'text/turtle; charset=utf-8;', format: turtle
 Successfully parsed 202 triple(s)
 </system-out>
 		</testcase>
-		<testcase name="ldes_event_stream [https://marineinfo.org/feed/institute]" classname="LDES-feeds-marineinfo" time="8.940696716308594e-05">
+		<testcase name="ldes_event_stream [https://marineinfo.org/feed/institute]" classname="LDES-feeds-marineinfo" time="7.987022399902344e-05">
 			<system-out>Found 1 ldes:EventStream declaration(s)
   EventStream: https://marineinfo.org/feed/institute
 </system-out>
 		</testcase>
-		<testcase name="ldes_tree_view [https://marineinfo.org/feed/institute]" classname="LDES-feeds-marineinfo" time="2.0503997802734375e-05">
+		<testcase name="ldes_tree_view [https://marineinfo.org/feed/institute]" classname="LDES-feeds-marineinfo" time="2.3365020751953125e-05">
 			<system-out>Found 1 tree:view relation(s)
   tree:view: https://marineinfo.org/feed/institute?fragment=2026-06-10T10%3A00%3A00Z%2F2026-06-10T11%3A00%3A00Z
 </system-out>
 		</testcase>
-		<testcase name="ldes_min_members [https://marineinfo.org/feed/institute]" classname="LDES-feeds-marineinfo" time="0.000583648681640625">
+		<testcase name="ldes_min_members [https://marineinfo.org/feed/institute]" classname="LDES-feeds-marineinfo" time="0.0005795955657958984">
 			<system-out>Traversing LDES feed from: https://marineinfo.org/feed/institute
 Fetching LDES fragment: https://marineinfo.org/feed/institute?fragment=2026-06-10T10%3A00%3A00Z%2F2026-06-10T11%3A00%3A00Z
 HTTP 200, Content-Type: 'text/turtle; charset=utf-8;', format: turtle
@@ -41,7 +41,7 @@ Traversal complete: 10 fragment(s) fetched, 5153 total triple(s)
 Found 501 tree:member(s) across 10 traversed fragment(s); required minimum: 20
 </system-out>
 		</testcase>
-		<testcase name="ldes_min_fragments [https://marineinfo.org/feed/institute]" classname="LDES-feeds-marineinfo" time="4.2438507080078125e-05">
+		<testcase name="ldes_min_fragments [https://marineinfo.org/feed/institute]" classname="LDES-feeds-marineinfo" time="2.6464462280273438e-05">
 			<system-out>Traversing LDES feed from: https://marineinfo.org/feed/institute
 Fetching LDES fragment: https://marineinfo.org/feed/institute?fragment=2026-06-10T10%3A00%3A00Z%2F2026-06-10T11%3A00%3A00Z
 HTTP 200, Content-Type: 'text/turtle; charset=utf-8;', format: turtle
@@ -75,7 +75,7 @@ Traversed 10 LDES fragment(s) (following tree:Relation → tree:node links); req
   fragment: https://marineinfo.org/feed/institute?fragment=2026-06-10T10%3A00%3A00Z%2F2026-06-10T11%3A00%3A00Z
 </system-out>
 		</testcase>
-		<testcase name="ldes_max_age_youngest_member [https://marineinfo.org/feed/institute]" classname="LDES-feeds-marineinfo" time="0.0037441253662109375">
+		<testcase name="ldes_max_age_youngest_member [https://marineinfo.org/feed/institute]" classname="LDES-feeds-marineinfo" time="0.0037326812744140625">
 			<system-out>Traversing LDES feed from: https://marineinfo.org/feed/institute
 Fetching LDES fragment: https://marineinfo.org/feed/institute?fragment=2026-06-10T10%3A00%3A00Z%2F2026-06-10T11%3A00%3A00Z
 HTTP 200, Content-Type: 'text/turtle; charset=utf-8;', format: turtle
@@ -98,26 +98,26 @@ HTTP 200, Content-Type: 'text/turtle; charset=utf-8;', format: turtle
 Traversal complete: 10 fragment(s) fetched, 5153 total triple(s)
 Checking age of youngest tree:member across 10 traversed fragment(s) of: https://marineinfo.org/feed/institute
 Using ldes:timestampPath predicate(s): http://purl.org/dc/elements/1.1/modified
-Youngest member timestamp: 2026-06-10T12:25:25+02:00; age: 26.04 hour(s); maximum allowed: 730 hour(s)
+Youngest member timestamp: 2026-06-10T12:25:25+02:00; age: 26.31 hour(s); maximum allowed: 730 hour(s)
 </system-out>
 		</testcase>
-		<testcase name="ldes_harvest [https://marineinfo.org/feed/dataset]" classname="LDES-feeds-marineinfo" time="1.2081987857818604">
+		<testcase name="ldes_harvest [https://marineinfo.org/feed/dataset]" classname="LDES-feeds-marineinfo" time="1.417696475982666">
 			<system-out>Fetching RDF graph from: https://marineinfo.org/feed/dataset
 HTTP 200, Content-Type: 'text/turtle; charset=utf-8;', format: turtle
 Successfully parsed 208 triple(s)
 </system-out>
 		</testcase>
-		<testcase name="ldes_event_stream [https://marineinfo.org/feed/dataset]" classname="LDES-feeds-marineinfo" time="6.198883056640625e-05">
+		<testcase name="ldes_event_stream [https://marineinfo.org/feed/dataset]" classname="LDES-feeds-marineinfo" time="4.2438507080078125e-05">
 			<system-out>Found 1 ldes:EventStream declaration(s)
   EventStream: https://marineinfo.org/feed/dataset
 </system-out>
 		</testcase>
-		<testcase name="ldes_tree_view [https://marineinfo.org/feed/dataset]" classname="LDES-feeds-marineinfo" time="2.193450927734375e-05">
+		<testcase name="ldes_tree_view [https://marineinfo.org/feed/dataset]" classname="LDES-feeds-marineinfo" time="2.1219253540039062e-05">
 			<system-out>Found 1 tree:view relation(s)
   tree:view: https://marineinfo.org/feed/dataset?fragment=2026-06-11T14%3A00%3A00Z%2F2026-06-11T15%3A00%3A00Z
 </system-out>
 		</testcase>
-		<testcase name="ldes_min_members [https://marineinfo.org/feed/dataset]" classname="LDES-feeds-marineinfo" time="7.390975952148438e-05">
+		<testcase name="ldes_min_members [https://marineinfo.org/feed/dataset]" classname="LDES-feeds-marineinfo" time="7.295608520507812e-05">
 			<failure message="Insufficient members: found 3, expected at least 20">The event stream at https://marineinfo.org/feed/dataset exposes only 3 tree:member triple(s) across 4 traversed fragment(s), but at least 20 are required</failure>
 			<system-out>Traversing LDES feed from: https://marineinfo.org/feed/dataset
 Fetching LDES fragment: https://marineinfo.org/feed/dataset?fragment=2026-06-11T14%3A00%3A00Z%2F2026-06-11T15%3A00%3A00Z
@@ -135,7 +135,7 @@ Warning: could not fetch fragment https://marineinfo.org/feed/dataset?fragment=2
 Insufficient members: 3 &lt; 20
 </system-err>
 		</testcase>
-		<testcase name="ldes_min_fragments [https://marineinfo.org/feed/dataset]" classname="LDES-feeds-marineinfo" time="2.0265579223632812e-05">
+		<testcase name="ldes_min_fragments [https://marineinfo.org/feed/dataset]" classname="LDES-feeds-marineinfo" time="1.3113021850585938e-05">
 			<failure message="Insufficient fragments: traversed 4, expected at least 10">The LDES feed at https://marineinfo.org/feed/dataset yielded only 4 traversed fragment(s) (following tree:Relation → tree:node links), but at least 10 are required</failure>
 			<system-out>Traversing LDES feed from: https://marineinfo.org/feed/dataset
 Fetching LDES fragment: https://marineinfo.org/feed/dataset?fragment=2026-06-11T14%3A00%3A00Z%2F2026-06-11T15%3A00%3A00Z
@@ -157,7 +157,7 @@ Warning: could not fetch fragment https://marineinfo.org/feed/dataset?fragment=2
 Insufficient fragments: 4 &lt; 10
 </system-err>
 		</testcase>
-		<testcase name="ldes_max_age_youngest_member [https://marineinfo.org/feed/dataset]" classname="LDES-feeds-marineinfo" time="0.00013017654418945312">
+		<testcase name="ldes_max_age_youngest_member [https://marineinfo.org/feed/dataset]" classname="LDES-feeds-marineinfo" time="0.00012826919555664062">
 			<system-out>Traversing LDES feed from: https://marineinfo.org/feed/dataset
 Fetching LDES fragment: https://marineinfo.org/feed/dataset?fragment=2026-06-11T14%3A00%3A00Z%2F2026-06-11T15%3A00%3A00Z
 HTTP 200, Content-Type: 'text/turtle; charset=utf-8;', format: turtle
@@ -169,29 +169,29 @@ Fetching LDES fragment: https://marineinfo.org/feed/dataset?fragment=2026-06-10T
 Traversal complete: 4 fragment(s) fetched, 814 total triple(s)
 Checking age of youngest tree:member across 4 traversed fragment(s) of: https://marineinfo.org/feed/dataset
 Using ldes:timestampPath predicate(s): http://purl.org/dc/elements/1.1/modified
-Youngest member timestamp: 2026-06-11T14:26:50+00:00; age: -1.97 hour(s); maximum allowed: 730 hour(s)
+Youngest member timestamp: 2026-06-11T14:26:50+00:00; age: -1.70 hour(s); maximum allowed: 730 hour(s)
 </system-out>
 			<system-err>Could not fetch fragment https://marineinfo.org/feed/dataset?fragment=2026-06-10T23%3A00%3A00Z%2F2026-06-11T00%3A00%3A00Z: 500 Server Error: Internal Server Error for url: https://marineinfo.org/imis?module=dataset&amp;show=feed&amp;format=ttl&amp;fragment=2026-06-10T23%253A00%253A00Z%252F2026-06-11T00%253A00%253A00Z
 Warning: could not fetch fragment https://marineinfo.org/feed/dataset?fragment=2026-06-10T23%3A00%3A00Z%2F2026-06-11T00%3A00%3A00Z: 500 Server Error: Internal Server Error for url: https://marineinfo.org/imis?module=dataset&amp;show=feed&amp;format=ttl&amp;fragment=2026-06-10T23%253A00%253A00Z%252F2026-06-11T00%253A00%253A00Z
 </system-err>
 		</testcase>
-		<testcase name="ldes_harvest [https://marineinfo.org/feed/publication]" classname="LDES-feeds-marineinfo" time="1.331430196762085">
+		<testcase name="ldes_harvest [https://marineinfo.org/feed/publication]" classname="LDES-feeds-marineinfo" time="0.9410514831542969">
 			<system-out>Fetching RDF graph from: https://marineinfo.org/feed/publication
 HTTP 200, Content-Type: 'text/turtle; charset=utf-8;', format: turtle
-Successfully parsed 263 triple(s)
+Successfully parsed 267 triple(s)
 </system-out>
 		</testcase>
-		<testcase name="ldes_event_stream [https://marineinfo.org/feed/publication]" classname="LDES-feeds-marineinfo" time="4.7206878662109375e-05">
+		<testcase name="ldes_event_stream [https://marineinfo.org/feed/publication]" classname="LDES-feeds-marineinfo" time="5.3882598876953125e-05">
 			<system-out>Found 1 ldes:EventStream declaration(s)
   EventStream: https://marineinfo.org/feed/publication
 </system-out>
 		</testcase>
-		<testcase name="ldes_tree_view [https://marineinfo.org/feed/publication]" classname="LDES-feeds-marineinfo" time="1.9311904907226562e-05">
+		<testcase name="ldes_tree_view [https://marineinfo.org/feed/publication]" classname="LDES-feeds-marineinfo" time="5.793571472167969e-05">
 			<system-out>Found 1 tree:view relation(s)
   tree:view: https://marineinfo.org/feed/publication?fragment=2026-06-11T12%3A00%3A00Z%2F2026-06-11T13%3A00%3A00Z
 </system-out>
 		</testcase>
-		<testcase name="ldes_min_members [https://marineinfo.org/feed/publication]" classname="LDES-feeds-marineinfo" time="0.00010156631469726562">
+		<testcase name="ldes_min_members [https://marineinfo.org/feed/publication]" classname="LDES-feeds-marineinfo" time="0.00010085105895996094">
 			<system-out>Traversing LDES feed from: https://marineinfo.org/feed/publication
 Fetching LDES fragment: https://marineinfo.org/feed/publication?fragment=2026-06-11T12%3A00%3A00Z%2F2026-06-11T13%3A00%3A00Z
 HTTP 200, Content-Type: 'text/turtle; charset=utf-8;', format: turtle
@@ -206,14 +206,14 @@ HTTP 200, Content-Type: 'text/turtle; charset=utf-8;', format: turtle
 Fetching LDES fragment: https://marineinfo.org/feed/publication?fragment=2026-06-11T06%3A00%3A00Z%2F2026-06-11T07%3A00%3A00Z
 HTTP 200, Content-Type: 'text/turtle; charset=utf-8;', format: turtle
 Fetching LDES fragment: https://marineinfo.org/feed/publication?fragment=2026-06-10T23%3A00%3A00Z%2F2026-06-11T00%3A00%3A00Z
-Traversal complete: 7 fragment(s) fetched, 1855 total triple(s)
-Found 31 tree:member(s) across 7 traversed fragment(s); required minimum: 20
+Traversal complete: 7 fragment(s) fetched, 1859 total triple(s)
+Found 32 tree:member(s) across 7 traversed fragment(s); required minimum: 20
 </system-out>
 			<system-err>Could not fetch fragment https://marineinfo.org/feed/publication?fragment=2026-06-10T23%3A00%3A00Z%2F2026-06-11T00%3A00%3A00Z: 500 Server Error: Internal Server Error for url: https://marineinfo.org/imis?module=ref&amp;show=feed&amp;format=ttl&amp;fragment=2026-06-10T23%253A00%253A00Z%252F2026-06-11T00%253A00%253A00Z
 Warning: could not fetch fragment https://marineinfo.org/feed/publication?fragment=2026-06-10T23%3A00%3A00Z%2F2026-06-11T00%3A00%3A00Z: 500 Server Error: Internal Server Error for url: https://marineinfo.org/imis?module=ref&amp;show=feed&amp;format=ttl&amp;fragment=2026-06-10T23%253A00%253A00Z%252F2026-06-11T00%253A00%253A00Z
 </system-err>
 		</testcase>
-		<testcase name="ldes_min_fragments [https://marineinfo.org/feed/publication]" classname="LDES-feeds-marineinfo" time="1.5020370483398438e-05">
+		<testcase name="ldes_min_fragments [https://marineinfo.org/feed/publication]" classname="LDES-feeds-marineinfo" time="1.4781951904296875e-05">
 			<failure message="Insufficient fragments: traversed 7, expected at least 10">The LDES feed at https://marineinfo.org/feed/publication yielded only 7 traversed fragment(s) (following tree:Relation → tree:node links), but at least 10 are required</failure>
 			<system-out>Traversing LDES feed from: https://marineinfo.org/feed/publication
 Fetching LDES fragment: https://marineinfo.org/feed/publication?fragment=2026-06-11T12%3A00%3A00Z%2F2026-06-11T13%3A00%3A00Z
@@ -229,7 +229,7 @@ HTTP 200, Content-Type: 'text/turtle; charset=utf-8;', format: turtle
 Fetching LDES fragment: https://marineinfo.org/feed/publication?fragment=2026-06-11T06%3A00%3A00Z%2F2026-06-11T07%3A00%3A00Z
 HTTP 200, Content-Type: 'text/turtle; charset=utf-8;', format: turtle
 Fetching LDES fragment: https://marineinfo.org/feed/publication?fragment=2026-06-10T23%3A00%3A00Z%2F2026-06-11T00%3A00%3A00Z
-Traversal complete: 7 fragment(s) fetched, 1855 total triple(s)
+Traversal complete: 7 fragment(s) fetched, 1859 total triple(s)
 Traversed 7 LDES fragment(s) (following tree:Relation → tree:node links); required minimum: 10
   fragment: https://marineinfo.org/feed/publication
   fragment: https://marineinfo.org/feed/publication?fragment=2026-06-11T06%3A00%3A00Z%2F2026-06-11T07%3A00%3A00Z
@@ -244,7 +244,7 @@ Warning: could not fetch fragment https://marineinfo.org/feed/publication?fragme
 Insufficient fragments: 7 &lt; 10
 </system-err>
 		</testcase>
-		<testcase name="ldes_max_age_youngest_member [https://marineinfo.org/feed/publication]" classname="LDES-feeds-marineinfo" time="0.0003209114074707031">
+		<testcase name="ldes_max_age_youngest_member [https://marineinfo.org/feed/publication]" classname="LDES-feeds-marineinfo" time="0.00031447410583496094">
 			<system-out>Traversing LDES feed from: https://marineinfo.org/feed/publication
 Fetching LDES fragment: https://marineinfo.org/feed/publication?fragment=2026-06-11T12%3A00%3A00Z%2F2026-06-11T13%3A00%3A00Z
 HTTP 200, Content-Type: 'text/turtle; charset=utf-8;', format: turtle
@@ -259,32 +259,32 @@ HTTP 200, Content-Type: 'text/turtle; charset=utf-8;', format: turtle
 Fetching LDES fragment: https://marineinfo.org/feed/publication?fragment=2026-06-11T06%3A00%3A00Z%2F2026-06-11T07%3A00%3A00Z
 HTTP 200, Content-Type: 'text/turtle; charset=utf-8;', format: turtle
 Fetching LDES fragment: https://marineinfo.org/feed/publication?fragment=2026-06-10T23%3A00%3A00Z%2F2026-06-11T00%3A00%3A00Z
-Traversal complete: 7 fragment(s) fetched, 1855 total triple(s)
+Traversal complete: 7 fragment(s) fetched, 1859 total triple(s)
 Checking age of youngest tree:member across 7 traversed fragment(s) of: https://marineinfo.org/feed/publication
 Using ldes:timestampPath predicate(s): http://purl.org/dc/elements/1.1/modified
-Youngest member timestamp: 2026-06-11T14:18:37+02:00; age: 0.19 hour(s); maximum allowed: 730 hour(s)
+Youngest member timestamp: 2026-06-11T14:40:06+02:00; age: 0.10 hour(s); maximum allowed: 730 hour(s)
 </system-out>
 			<system-err>Could not fetch fragment https://marineinfo.org/feed/publication?fragment=2026-06-10T23%3A00%3A00Z%2F2026-06-11T00%3A00%3A00Z: 500 Server Error: Internal Server Error for url: https://marineinfo.org/imis?module=ref&amp;show=feed&amp;format=ttl&amp;fragment=2026-06-10T23%253A00%253A00Z%252F2026-06-11T00%253A00%253A00Z
 Warning: could not fetch fragment https://marineinfo.org/feed/publication?fragment=2026-06-10T23%3A00%3A00Z%2F2026-06-11T00%3A00%3A00Z: 500 Server Error: Internal Server Error for url: https://marineinfo.org/imis?module=ref&amp;show=feed&amp;format=ttl&amp;fragment=2026-06-10T23%253A00%253A00Z%252F2026-06-11T00%253A00%253A00Z
 </system-err>
 		</testcase>
-		<testcase name="ldes_harvest [https://marineinfo.org/feed/person]" classname="LDES-feeds-marineinfo" time="1.5742440223693848">
+		<testcase name="ldes_harvest [https://marineinfo.org/feed/person]" classname="LDES-feeds-marineinfo" time="2.3067233562469482">
 			<system-out>Fetching RDF graph from: https://marineinfo.org/feed/person
 HTTP 200, Content-Type: 'text/turtle; charset=utf-8;', format: turtle
 Successfully parsed 158 triple(s)
 </system-out>
 		</testcase>
-		<testcase name="ldes_event_stream [https://marineinfo.org/feed/person]" classname="LDES-feeds-marineinfo" time="5.1975250244140625e-05">
+		<testcase name="ldes_event_stream [https://marineinfo.org/feed/person]" classname="LDES-feeds-marineinfo" time="4.410743713378906e-05">
 			<system-out>Found 1 ldes:EventStream declaration(s)
   EventStream: https://marineinfo.org/feed/person
 </system-out>
 		</testcase>
-		<testcase name="ldes_tree_view [https://marineinfo.org/feed/person]" classname="LDES-feeds-marineinfo" time="1.9550323486328125e-05">
+		<testcase name="ldes_tree_view [https://marineinfo.org/feed/person]" classname="LDES-feeds-marineinfo" time="2.002716064453125e-05">
 			<system-out>Found 1 tree:view relation(s)
   tree:view: https://marineinfo.org/feed/person?fragment=2026-06-11T07%3A00%3A00Z%2F2026-06-11T08%3A00%3A00Z
 </system-out>
 		</testcase>
-		<testcase name="ldes_min_members [https://marineinfo.org/feed/person]" classname="LDES-feeds-marineinfo" time="0.00016045570373535156">
+		<testcase name="ldes_min_members [https://marineinfo.org/feed/person]" classname="LDES-feeds-marineinfo" time="0.00015091896057128906">
 			<system-out>Traversing LDES feed from: https://marineinfo.org/feed/person
 Fetching LDES fragment: https://marineinfo.org/feed/person?fragment=2026-06-11T07%3A00%3A00Z%2F2026-06-11T08%3A00%3A00Z
 HTTP 200, Content-Type: 'text/turtle; charset=utf-8;', format: turtle
@@ -308,7 +308,7 @@ Traversal complete: 10 fragment(s) fetched, 2278 total triple(s)
 Found 102 tree:member(s) across 10 traversed fragment(s); required minimum: 20
 </system-out>
 		</testcase>
-		<testcase name="ldes_min_fragments [https://marineinfo.org/feed/person]" classname="LDES-feeds-marineinfo" time="1.430511474609375e-05">
+		<testcase name="ldes_min_fragments [https://marineinfo.org/feed/person]" classname="LDES-feeds-marineinfo" time="1.3589859008789062e-05">
 			<system-out>Traversing LDES feed from: https://marineinfo.org/feed/person
 Fetching LDES fragment: https://marineinfo.org/feed/person?fragment=2026-06-11T07%3A00%3A00Z%2F2026-06-11T08%3A00%3A00Z
 HTTP 200, Content-Type: 'text/turtle; charset=utf-8;', format: turtle
@@ -342,7 +342,7 @@ Traversed 10 LDES fragment(s) (following tree:Relation → tree:node links); req
   fragment: https://marineinfo.org/feed/person?fragment=2026-06-11T07%3A00%3A00Z%2F2026-06-11T08%3A00%3A00Z
 </system-out>
 		</testcase>
-		<testcase name="ldes_max_age_youngest_member [https://marineinfo.org/feed/person]" classname="LDES-feeds-marineinfo" time="0.0007717609405517578">
+		<testcase name="ldes_max_age_youngest_member [https://marineinfo.org/feed/person]" classname="LDES-feeds-marineinfo" time="0.0008144378662109375">
 			<system-out>Traversing LDES feed from: https://marineinfo.org/feed/person
 Fetching LDES fragment: https://marineinfo.org/feed/person?fragment=2026-06-11T07%3A00%3A00Z%2F2026-06-11T08%3A00%3A00Z
 HTTP 200, Content-Type: 'text/turtle; charset=utf-8;', format: turtle
@@ -365,26 +365,26 @@ HTTP 200, Content-Type: 'text/turtle; charset=utf-8;', format: turtle
 Traversal complete: 10 fragment(s) fetched, 2278 total triple(s)
 Checking age of youngest tree:member across 10 traversed fragment(s) of: https://marineinfo.org/feed/person
 Using ldes:timestampPath predicate(s): http://purl.org/dc/elements/1.1/modified
-Youngest member timestamp: 2026-06-11T09:59:54+02:00; age: 4.51 hour(s); maximum allowed: 730 hour(s)
+Youngest member timestamp: 2026-06-11T09:59:54+02:00; age: 4.77 hour(s); maximum allowed: 730 hour(s)
 </system-out>
 		</testcase>
-		<testcase name="ldes_harvest [https://marineinfo.org/feed/project]" classname="LDES-feeds-marineinfo" time="2.945356607437134">
+		<testcase name="ldes_harvest [https://marineinfo.org/feed/project]" classname="LDES-feeds-marineinfo" time="1.2861475944519043">
 			<system-out>Fetching RDF graph from: https://marineinfo.org/feed/project
 HTTP 200, Content-Type: 'text/turtle; charset=utf-8;', format: turtle
 Successfully parsed 218 triple(s)
 </system-out>
 		</testcase>
-		<testcase name="ldes_event_stream [https://marineinfo.org/feed/project]" classname="LDES-feeds-marineinfo" time="4.982948303222656e-05">
+		<testcase name="ldes_event_stream [https://marineinfo.org/feed/project]" classname="LDES-feeds-marineinfo" time="4.267692565917969e-05">
 			<system-out>Found 1 ldes:EventStream declaration(s)
   EventStream: https://marineinfo.org/feed/project
 </system-out>
 		</testcase>
-		<testcase name="ldes_tree_view [https://marineinfo.org/feed/project]" classname="LDES-feeds-marineinfo" time="2.1457672119140625e-05">
+		<testcase name="ldes_tree_view [https://marineinfo.org/feed/project]" classname="LDES-feeds-marineinfo" time="2.0742416381835938e-05">
 			<system-out>Found 1 tree:view relation(s)
   tree:view: https://marineinfo.org/feed/project?fragment=2026-06-09T13%3A00%3A00Z%2F2026-06-09T14%3A00%3A00Z
 </system-out>
 		</testcase>
-		<testcase name="ldes_min_members [https://marineinfo.org/feed/project]" classname="LDES-feeds-marineinfo" time="6.461143493652344e-05">
+		<testcase name="ldes_min_members [https://marineinfo.org/feed/project]" classname="LDES-feeds-marineinfo" time="6.341934204101562e-05">
 			<failure message="Insufficient members: found 17, expected at least 20">The event stream at https://marineinfo.org/feed/project exposes only 17 tree:member triple(s) across 10 traversed fragment(s), but at least 20 are required</failure>
 			<system-out>Traversing LDES feed from: https://marineinfo.org/feed/project
 Fetching LDES fragment: https://marineinfo.org/feed/project?fragment=2026-06-09T13%3A00%3A00Z%2F2026-06-09T14%3A00%3A00Z
@@ -411,7 +411,7 @@ Found 17 tree:member(s) across 10 traversed fragment(s); required minimum: 20
 			<system-err>Insufficient members: 17 &lt; 20
 </system-err>
 		</testcase>
-		<testcase name="ldes_min_fragments [https://marineinfo.org/feed/project]" classname="LDES-feeds-marineinfo" time="1.4543533325195312e-05">
+		<testcase name="ldes_min_fragments [https://marineinfo.org/feed/project]" classname="LDES-feeds-marineinfo" time="1.3589859008789062e-05">
 			<system-out>Traversing LDES feed from: https://marineinfo.org/feed/project
 Fetching LDES fragment: https://marineinfo.org/feed/project?fragment=2026-06-09T13%3A00%3A00Z%2F2026-06-09T14%3A00%3A00Z
 HTTP 200, Content-Type: 'text/turtle; charset=utf-8;', format: turtle
@@ -445,7 +445,7 @@ Traversed 10 LDES fragment(s) (following tree:Relation → tree:node links); req
   fragment: https://marineinfo.org/feed/project?fragment=2026-06-09T13%3A00%3A00Z%2F2026-06-09T14%3A00%3A00Z
 </system-out>
 		</testcase>
-		<testcase name="ldes_max_age_youngest_member [https://marineinfo.org/feed/project]" classname="LDES-feeds-marineinfo" time="0.00020551681518554688">
+		<testcase name="ldes_max_age_youngest_member [https://marineinfo.org/feed/project]" classname="LDES-feeds-marineinfo" time="0.00020813941955566406">
 			<system-out>Traversing LDES feed from: https://marineinfo.org/feed/project
 Fetching LDES fragment: https://marineinfo.org/feed/project?fragment=2026-06-09T13%3A00%3A00Z%2F2026-06-09T14%3A00%3A00Z
 HTTP 200, Content-Type: 'text/turtle; charset=utf-8;', format: turtle
@@ -468,16 +468,16 @@ HTTP 200, Content-Type: 'text/turtle; charset=utf-8;', format: turtle
 Traversal complete: 10 fragment(s) fetched, 2180 total triple(s)
 Checking age of youngest tree:member across 10 traversed fragment(s) of: https://marineinfo.org/feed/project
 Using ldes:timestampPath predicate(s): http://purl.org/dc/elements/1.1/modified
-Youngest member timestamp: 2026-06-09T15:47:30+02:00; age: 46.72 hour(s); maximum allowed: 730 hour(s)
+Youngest member timestamp: 2026-06-09T15:47:30+02:00; age: 46.98 hour(s); maximum allowed: 730 hour(s)
 </system-out>
 		</testcase>
-		<testcase name="ldes_harvest [https://marineinfo.org/feed/event]" classname="LDES-feeds-marineinfo" time="3.18782377243042">
+		<testcase name="ldes_harvest [https://marineinfo.org/feed/event]" classname="LDES-feeds-marineinfo" time="0.9355754852294922">
 			<system-out>Fetching RDF graph from: https://marineinfo.org/feed/event
 HTTP 200, Content-Type: 'text/turtle; charset=utf-8;', format: turtle
 Successfully parsed 255 triple(s)
 </system-out>
 		</testcase>
-		<testcase name="ldes_event_stream [https://marineinfo.org/feed/event]" classname="LDES-feeds-marineinfo" time="4.76837158203125e-05">
+		<testcase name="ldes_event_stream [https://marineinfo.org/feed/event]" classname="LDES-feeds-marineinfo" time="4.2438507080078125e-05">
 			<system-out>Found 1 ldes:EventStream declaration(s)
   EventStream: https://marineinfo.org/feed/event
 </system-out>
@@ -487,7 +487,7 @@ Successfully parsed 255 triple(s)
   tree:view: https://marineinfo.org/feed/event?fragment=2026-05-21T13%3A00%3A00Z%2F2026-05-21T14%3A00%3A00Z
 </system-out>
 		</testcase>
-		<testcase name="ldes_min_members [https://marineinfo.org/feed/event]" classname="LDES-feeds-marineinfo" time="5.936622619628906e-05">
+		<testcase name="ldes_min_members [https://marineinfo.org/feed/event]" classname="LDES-feeds-marineinfo" time="6.079673767089844e-05">
 			<failure message="Insufficient members: found 15, expected at least 20">The event stream at https://marineinfo.org/feed/event exposes only 15 tree:member triple(s) across 10 traversed fragment(s), but at least 20 are required</failure>
 			<system-out>Traversing LDES feed from: https://marineinfo.org/feed/event
 Fetching LDES fragment: https://marineinfo.org/feed/event?fragment=2026-05-21T13%3A00%3A00Z%2F2026-05-21T14%3A00%3A00Z
@@ -548,7 +548,7 @@ Traversed 10 LDES fragment(s) (following tree:Relation → tree:node links); req
   fragment: https://marineinfo.org/feed/event?fragment=2026-05-21T13%3A00%3A00Z%2F2026-05-21T14%3A00%3A00Z
 </system-out>
 		</testcase>
-		<testcase name="ldes_max_age_youngest_member [https://marineinfo.org/feed/event]" classname="LDES-feeds-marineinfo" time="0.00018715858459472656">
+		<testcase name="ldes_max_age_youngest_member [https://marineinfo.org/feed/event]" classname="LDES-feeds-marineinfo" time="0.00018644332885742188">
 			<system-out>Traversing LDES feed from: https://marineinfo.org/feed/event
 Fetching LDES fragment: https://marineinfo.org/feed/event?fragment=2026-05-21T13%3A00%3A00Z%2F2026-05-21T14%3A00%3A00Z
 HTTP 200, Content-Type: 'text/turtle; charset=utf-8;', format: turtle
@@ -571,36 +571,36 @@ HTTP 200, Content-Type: 'text/turtle; charset=utf-8;', format: turtle
 Traversal complete: 10 fragment(s) fetched, 2550 total triple(s)
 Checking age of youngest tree:member across 10 traversed fragment(s) of: https://marineinfo.org/feed/event
 Using ldes:timestampPath predicate(s): http://purl.org/dc/elements/1.1/modified
-Youngest member timestamp: 2026-05-21T15:58:54+02:00; age: 502.53 hour(s); maximum allowed: 730 hour(s)
+Youngest member timestamp: 2026-05-21T15:58:54+02:00; age: 502.79 hour(s); maximum allowed: 730 hour(s)
 </system-out>
 		</testcase>
 		<properties>
 			<property name="urls" value="https://marineinfo.org/feed/institute, https://marineinfo.org/feed/dataset, https://marineinfo.org/feed/publication, https://marineinfo.org/feed/person, https://marineinfo.org/feed/project, https://marineinfo.org/feed/event"/>
-			<property name="provenance" value="https://github.com/vlizBE/GRMPy_VLIZ/blob/ab8b7444ba68e6f17302641bbc70b722b764c1a5/tests/tests.yaml"/>
+			<property name="provenance" value="https://github.com/vlizBE/GRMPy_VLIZ/blob/5217b90ba9b7ae5b4cb982b1aeff6ed0bb0edf65/tests/tests.yaml"/>
 			<property name="min_members" value="20"/>
 			<property name="min_fragments" value="10"/>
 			<property name="max_age_youngest_member" value="730"/>
 			<property name="create-issue" value="true"/>
 		</properties>
 	</testsuite>
-	<testsuite name="LDES-feed-aphia" timestamp="2026-06-11T12:30:53.820049+00:00" tests="6" errors="0" failures="0" skipped="0" time="1.0248830318450928">
-		<testcase name="ldes_harvest [http://aphia.org/feed]" classname="LDES-feed-aphia" time="1.0235943794250488">
+	<testsuite name="LDES-feed-aphia" timestamp="2026-06-11T12:46:39.550464+00:00" tests="6" errors="0" failures="0" skipped="0" time="1.0360794067382812">
+		<testcase name="ldes_harvest [http://aphia.org/feed]" classname="LDES-feed-aphia" time="1.0347132682800293">
 			<system-out>Fetching RDF graph from: http://aphia.org/feed
 HTTP 200, Content-Type: 'text/turtle;charset=UTF-8', format: turtle
 Successfully parsed 662 triple(s)
 </system-out>
 		</testcase>
-		<testcase name="ldes_event_stream [http://aphia.org/feed]" classname="LDES-feed-aphia" time="7.915496826171875e-05">
+		<testcase name="ldes_event_stream [http://aphia.org/feed]" classname="LDES-feed-aphia" time="8.916854858398438e-05">
 			<system-out>Found 1 ldes:EventStream declaration(s)
   EventStream: https://aphia.org/feed
 </system-out>
 		</testcase>
-		<testcase name="ldes_tree_view [http://aphia.org/feed]" classname="LDES-feed-aphia" time="2.1219253540039062e-05">
+		<testcase name="ldes_tree_view [http://aphia.org/feed]" classname="LDES-feed-aphia" time="2.193450927734375e-05">
 			<system-out>Found 1 tree:view relation(s)
   tree:view: https://aphia.org/feed?page=2026-06-10T20%3A00%3A00Z%2F2026-06-10T21%3A00%3A00Z
 </system-out>
 		</testcase>
-		<testcase name="ldes_min_members [http://aphia.org/feed]" classname="LDES-feed-aphia" time="0.0002040863037109375">
+		<testcase name="ldes_min_members [http://aphia.org/feed]" classname="LDES-feed-aphia" time="0.0002281665802001953">
 			<system-out>Traversing LDES feed from: http://aphia.org/feed
 Fetching LDES fragment: https://aphia.org/feed?page=2026-06-10T20%3A00%3A00Z%2F2026-06-10T21%3A00%3A00Z
 HTTP 200, Content-Type: 'text/turtle;charset=UTF-8', format: turtle
@@ -616,7 +616,7 @@ Traversal complete: 6 fragment(s) fetched, 4171 total triple(s)
 Found 138 tree:member(s) across 6 traversed fragment(s); required minimum: 20
 </system-out>
 		</testcase>
-		<testcase name="ldes_min_fragments [http://aphia.org/feed]" classname="LDES-feed-aphia" time="2.8371810913085938e-05">
+		<testcase name="ldes_min_fragments [http://aphia.org/feed]" classname="LDES-feed-aphia" time="2.5987625122070312e-05">
 			<system-out>Traversing LDES feed from: http://aphia.org/feed
 Fetching LDES fragment: https://aphia.org/feed?page=2026-06-10T20%3A00%3A00Z%2F2026-06-10T21%3A00%3A00Z
 HTTP 200, Content-Type: 'text/turtle;charset=UTF-8', format: turtle
@@ -638,7 +638,7 @@ Traversed 6 LDES fragment(s) (following tree:Relation → tree:node links); requ
   fragment: https://aphia.org/feed?page=2026-06-10T20%3A00%3A00Z%2F2026-06-10T21%3A00%3A00Z
 </system-out>
 		</testcase>
-		<testcase name="ldes_max_age_youngest_member [http://aphia.org/feed]" classname="LDES-feed-aphia" time="0.0009558200836181641">
+		<testcase name="ldes_max_age_youngest_member [http://aphia.org/feed]" classname="LDES-feed-aphia" time="0.0010008811950683594">
 			<system-out>Traversing LDES feed from: http://aphia.org/feed
 Fetching LDES fragment: https://aphia.org/feed?page=2026-06-10T20%3A00%3A00Z%2F2026-06-10T21%3A00%3A00Z
 HTTP 200, Content-Type: 'text/turtle;charset=UTF-8', format: turtle
@@ -653,26 +653,26 @@ HTTP 200, Content-Type: 'text/turtle;charset=UTF-8', format: turtle
 Traversal complete: 6 fragment(s) fetched, 4171 total triple(s)
 Checking age of youngest tree:member across 6 traversed fragment(s) of: http://aphia.org/feed
 Using ldes:timestampPath predicate(s): http://purl.org/dc/terms/modified
-Youngest member timestamp: 2026-06-10T20:57:41+00:00; age: 15.55 hour(s); maximum allowed: 730 hour(s)
+Youngest member timestamp: 2026-06-10T20:57:41+00:00; age: 15.82 hour(s); maximum allowed: 730 hour(s)
 </system-out>
 		</testcase>
 		<properties>
 			<property name="urls" value="http://aphia.org/feed"/>
-			<property name="provenance" value="https://github.com/vlizBE/GRMPy_VLIZ/blob/ab8b7444ba68e6f17302641bbc70b722b764c1a5/tests/tests.yaml"/>
+			<property name="provenance" value="https://github.com/vlizBE/GRMPy_VLIZ/blob/5217b90ba9b7ae5b4cb982b1aeff6ed0bb0edf65/tests/tests.yaml"/>
 			<property name="min_members" value="20"/>
 			<property name="min_fragments" value="6"/>
 			<property name="max_age_youngest_member" value="730"/>
 			<property name="create-issue" value="true"/>
 		</properties>
 	</testsuite>
-	<testsuite name="LDES-feed-marine-regions" timestamp="2026-06-11T12:31:29.227378+00:00" tests="6" errors="0" failures="0" skipped="0" time="0.8383114337921143">
-		<testcase name="ldes_harvest [https://marineregions.org/feed.ttl]" classname="LDES-feed-marine-regions" time="0.8253209590911865">
+	<testsuite name="LDES-feed-marine-regions" timestamp="2026-06-11T12:46:53.543655+00:00" tests="6" errors="0" failures="0" skipped="0" time="0.8060111999511719">
+		<testcase name="ldes_harvest [https://marineregions.org/feed.ttl]" classname="LDES-feed-marine-regions" time="0.7928950786590576">
 			<system-out>Fetching RDF graph from: https://marineregions.org/feed.ttl
 HTTP 200, Content-Type: 'text/turtle; charset=UTF-8;', format: turtle
 Successfully parsed 155 triple(s)
 </system-out>
 		</testcase>
-		<testcase name="ldes_event_stream [https://marineregions.org/feed.ttl]" classname="LDES-feed-marine-regions" time="0.00011992454528808594">
+		<testcase name="ldes_event_stream [https://marineregions.org/feed.ttl]" classname="LDES-feed-marine-regions" time="7.939338684082031e-05">
 			<system-out>Found 1 ldes:EventStream declaration(s)
   EventStream: https://www.marineregions.org/feed
 </system-out>
@@ -682,7 +682,7 @@ Successfully parsed 155 triple(s)
   tree:view: https://www.marineregions.org/feed.ttl?page=2026-06-11T06%3A00%3A00Z%2F2026-06-11T07%3A00%3A00Z
 </system-out>
 		</testcase>
-		<testcase name="ldes_min_members [https://marineregions.org/feed.ttl]" classname="LDES-feed-marine-regions" time="0.0018045902252197266">
+		<testcase name="ldes_min_members [https://marineregions.org/feed.ttl]" classname="LDES-feed-marine-regions" time="0.0018641948699951172">
 			<system-out>Traversing LDES feed from: https://marineregions.org/feed.ttl
 Fetching LDES fragment: https://www.marineregions.org/feed.ttl?page=2026-06-11T06%3A00%3A00Z%2F2026-06-11T07%3A00%3A00Z
 HTTP 200, Content-Type: 'text/turtle; charset=UTF-8;', format: turtle
@@ -698,7 +698,7 @@ Traversal complete: 6 fragment(s) fetched, 28504 total triple(s)
 Found 1615 tree:member(s) across 6 traversed fragment(s); required minimum: 20
 </system-out>
 		</testcase>
-		<testcase name="ldes_min_fragments [https://marineregions.org/feed.ttl]" classname="LDES-feed-marine-regions" time="2.86102294921875e-05">
+		<testcase name="ldes_min_fragments [https://marineregions.org/feed.ttl]" classname="LDES-feed-marine-regions" time="3.62396240234375e-05">
 			<system-out>Traversing LDES feed from: https://marineregions.org/feed.ttl
 Fetching LDES fragment: https://www.marineregions.org/feed.ttl?page=2026-06-11T06%3A00%3A00Z%2F2026-06-11T07%3A00%3A00Z
 HTTP 200, Content-Type: 'text/turtle; charset=UTF-8;', format: turtle
@@ -720,7 +720,7 @@ Traversed 6 LDES fragment(s) (following tree:Relation → tree:node links); requ
   fragment: https://www.marineregions.org/feed.ttl?page=2026-06-11T06%3A00%3A00Z%2F2026-06-11T07%3A00%3A00Z
 </system-out>
 		</testcase>
-		<testcase name="ldes_max_age_youngest_member [https://marineregions.org/feed.ttl]" classname="LDES-feed-marine-regions" time="0.011013984680175781">
+		<testcase name="ldes_max_age_youngest_member [https://marineregions.org/feed.ttl]" classname="LDES-feed-marine-regions" time="0.01111292839050293">
 			<system-out>Traversing LDES feed from: https://marineregions.org/feed.ttl
 Fetching LDES fragment: https://www.marineregions.org/feed.ttl?page=2026-06-11T06%3A00%3A00Z%2F2026-06-11T07%3A00%3A00Z
 HTTP 200, Content-Type: 'text/turtle; charset=UTF-8;', format: turtle
@@ -735,20 +735,20 @@ HTTP 200, Content-Type: 'text/turtle; charset=UTF-8;', format: turtle
 Traversal complete: 6 fragment(s) fetched, 28504 total triple(s)
 Checking age of youngest tree:member across 6 traversed fragment(s) of: https://marineregions.org/feed.ttl
 Using ldes:timestampPath predicate(s): http://purl.org/dc/terms/modified
-Youngest member timestamp: 2026-06-11T06:35:33+00:00; age: 5.93 hour(s); maximum allowed: 730 hour(s)
+Youngest member timestamp: 2026-06-11T06:35:33+00:00; age: 6.19 hour(s); maximum allowed: 730 hour(s)
 </system-out>
 		</testcase>
 		<properties>
 			<property name="urls" value="https://marineregions.org/feed.ttl"/>
-			<property name="provenance" value="https://github.com/vlizBE/GRMPy_VLIZ/blob/ab8b7444ba68e6f17302641bbc70b722b764c1a5/tests/tests.yaml"/>
+			<property name="provenance" value="https://github.com/vlizBE/GRMPy_VLIZ/blob/5217b90ba9b7ae5b4cb982b1aeff6ed0bb0edf65/tests/tests.yaml"/>
 			<property name="min_members" value="20"/>
 			<property name="min_fragments" value="6"/>
 			<property name="max_age_youngest_member" value="730"/>
 			<property name="create-issue" value="true"/>
 		</properties>
 	</testsuite>
-	<testsuite name="marineinfo-person-resource-availability" timestamp="2026-06-11T12:31:40.062209+00:00" tests="9" errors="0" failures="0" skipped="0" time="2.598914384841919">
-		<testcase name="dns_resolution [https://marineinfo.org/en/doc/person/46372]" classname="marineinfo-person-resource-availability" time="0.005491971969604492">
+	<testsuite name="marineinfo-person-resource-availability" timestamp="2026-06-11T12:46:57.422973+00:00" tests="9" errors="0" failures="0" skipped="0" time="2.30232572555542">
+		<testcase name="dns_resolution [https://marineinfo.org/en/doc/person/46372]" classname="marineinfo-person-resource-availability" time="0.0019097328186035156">
 			<system-out>Resolving hostname: marineinfo.org
 resolved_ip: 193.191.134.34
 </system-out>
@@ -762,62 +762,62 @@ resolved_ip: 193.191.134.34
 			<property name="check-http-availability" value="true"/>
 			<property name="check-https-availability" value="true"/>
 			<property name="verify-ssl" value="true"/>
-			<property name="provenance" value="https://github.com/vlizBE/GRMPy_VLIZ/blob/ab8b7444ba68e6f17302641bbc70b722b764c1a5/tests/tests.yaml"/>
+			<property name="provenance" value="https://github.com/vlizBE/GRMPy_VLIZ/blob/5217b90ba9b7ae5b4cb982b1aeff6ed0bb0edf65/tests/tests.yaml"/>
 			<property name="create-issue" value="true"/>
 		</properties>
-		<testcase name="http_availability [https://marineinfo.org/en/doc/person/46372]" classname="marineinfo-person-resource-availability" time="0.22469854354858398">
-			<system-out>response_time_s: 0.225
+		<testcase name="http_availability [https://marineinfo.org/en/doc/person/46372]" classname="marineinfo-person-resource-availability" time="0.1871020793914795">
+			<system-out>response_time_s: 0.187
 status_code: 301
 redirects_to: https://marineinfo.org/en/doc/person/46372
 OK: HTTP endpoint reachable (redirects to HTTPS)
 </system-out>
 		</testcase>
-		<testcase name="https_availability [https://marineinfo.org/en/doc/person/46372]" classname="marineinfo-person-resource-availability" time="0.6479842662811279">
-			<system-out>response_time_s: 0.648
+		<testcase name="https_availability [https://marineinfo.org/en/doc/person/46372]" classname="marineinfo-person-resource-availability" time="0.6848921775817871">
+			<system-out>response_time_s: 0.685
 status_code: 200
-OK: HTTPS available, status 200 in 0.648s
+OK: HTTPS available, status 200 in 0.685s
 </system-out>
 		</testcase>
-		<testcase name="dns_resolution [https://marineinfo.org/id/person/46372]" classname="marineinfo-person-resource-availability" time="0.002462148666381836">
+		<testcase name="dns_resolution [https://marineinfo.org/id/person/46372]" classname="marineinfo-person-resource-availability" time="0.00252532958984375">
 			<system-out>Resolving hostname: marineinfo.org
 resolved_ip: 193.191.134.34
 </system-out>
 		</testcase>
-		<testcase name="http_availability [https://marineinfo.org/id/person/46372]" classname="marineinfo-person-resource-availability" time="0.21520709991455078">
-			<system-out>response_time_s: 0.215
+		<testcase name="http_availability [https://marineinfo.org/id/person/46372]" classname="marineinfo-person-resource-availability" time="0.18097805976867676">
+			<system-out>response_time_s: 0.181
 status_code: 301
 redirects_to: https://marineinfo.org/id/person/46372
 OK: HTTP endpoint reachable (redirects to HTTPS)
 </system-out>
 		</testcase>
-		<testcase name="https_availability [https://marineinfo.org/id/person/46372]" classname="marineinfo-person-resource-availability" time="0.4296576976776123">
-			<system-out>response_time_s: 0.430
+		<testcase name="https_availability [https://marineinfo.org/id/person/46372]" classname="marineinfo-person-resource-availability" time="0.3697810173034668">
+			<system-out>response_time_s: 0.370
 status_code: 200
-OK: HTTPS available, status 200 in 0.430s
+OK: HTTPS available, status 200 in 0.370s
 </system-out>
 		</testcase>
-		<testcase name="dns_resolution [https://marineinfo.org/doc/person/46372]" classname="marineinfo-person-resource-availability" time="0.002618551254272461">
+		<testcase name="dns_resolution [https://marineinfo.org/doc/person/46372]" classname="marineinfo-person-resource-availability" time="0.0016570091247558594">
 			<system-out>Resolving hostname: marineinfo.org
 resolved_ip: 193.191.134.34
 </system-out>
 		</testcase>
-		<testcase name="http_availability [https://marineinfo.org/doc/person/46372]" classname="marineinfo-person-resource-availability" time="0.2155914306640625">
-			<system-out>response_time_s: 0.216
+		<testcase name="http_availability [https://marineinfo.org/doc/person/46372]" classname="marineinfo-person-resource-availability" time="0.188307523727417">
+			<system-out>response_time_s: 0.188
 status_code: 301
 redirects_to: https://marineinfo.org/doc/person/46372
 OK: HTTP endpoint reachable (redirects to HTTPS)
 </system-out>
 		</testcase>
-		<testcase name="https_availability [https://marineinfo.org/doc/person/46372]" classname="marineinfo-person-resource-availability" time="0.8552026748657227">
-			<system-out>response_time_s: 0.855
+		<testcase name="https_availability [https://marineinfo.org/doc/person/46372]" classname="marineinfo-person-resource-availability" time="0.6851727962493896">
+			<system-out>response_time_s: 0.685
 status_code: 200
 final_url: https://marineinfo.org/en/doc/person/46372
-OK: HTTPS available, status 200 in 0.855s
+OK: HTTPS available, status 200 in 0.685s
 </system-out>
 		</testcase>
 	</testsuite>
-	<testsuite name="marineinfo-publication-resource-availability" timestamp="2026-06-11T12:31:45.064290+00:00" tests="9" errors="0" failures="0" skipped="0" time="4.338947772979736">
-		<testcase name="dns_resolution [https://marineinfo.org/en/doc/publication/97613]" classname="marineinfo-publication-resource-availability" time="0.0031235218048095703">
+	<testsuite name="marineinfo-publication-resource-availability" timestamp="2026-06-11T12:47:01.687814+00:00" tests="9" errors="0" failures="0" skipped="0" time="3.686173915863037">
+		<testcase name="dns_resolution [https://marineinfo.org/en/doc/publication/97613]" classname="marineinfo-publication-resource-availability" time="0.0018496513366699219">
 			<system-out>Resolving hostname: marineinfo.org
 resolved_ip: 193.191.134.34
 </system-out>
@@ -831,62 +831,62 @@ resolved_ip: 193.191.134.34
 			<property name="check-http-availability" value="true"/>
 			<property name="check-https-availability" value="true"/>
 			<property name="verify-ssl" value="true"/>
-			<property name="provenance" value="https://github.com/vlizBE/GRMPy_VLIZ/blob/ab8b7444ba68e6f17302641bbc70b722b764c1a5/tests/tests.yaml"/>
+			<property name="provenance" value="https://github.com/vlizBE/GRMPy_VLIZ/blob/5217b90ba9b7ae5b4cb982b1aeff6ed0bb0edf65/tests/tests.yaml"/>
 			<property name="create-issue" value="true"/>
 		</properties>
-		<testcase name="http_availability [https://marineinfo.org/en/doc/publication/97613]" classname="marineinfo-publication-resource-availability" time="0.22166991233825684">
-			<system-out>response_time_s: 0.222
+		<testcase name="http_availability [https://marineinfo.org/en/doc/publication/97613]" classname="marineinfo-publication-resource-availability" time="0.18799614906311035">
+			<system-out>response_time_s: 0.188
 status_code: 301
 redirects_to: https://marineinfo.org/en/doc/publication/97613
 OK: HTTP endpoint reachable (redirects to HTTPS)
 </system-out>
 		</testcase>
-		<testcase name="https_availability [https://marineinfo.org/en/doc/publication/97613]" classname="marineinfo-publication-resource-availability" time="1.3663907051086426">
-			<system-out>response_time_s: 1.366
+		<testcase name="https_availability [https://marineinfo.org/en/doc/publication/97613]" classname="marineinfo-publication-resource-availability" time="1.4898934364318848">
+			<system-out>response_time_s: 1.490
 status_code: 200
-OK: HTTPS available, status 200 in 1.366s
+OK: HTTPS available, status 200 in 1.490s
 </system-out>
 		</testcase>
-		<testcase name="dns_resolution [https://marineinfo.org/doc/publication/97613]" classname="marineinfo-publication-resource-availability" time="0.00225830078125">
+		<testcase name="dns_resolution [https://marineinfo.org/doc/publication/97613]" classname="marineinfo-publication-resource-availability" time="0.001605987548828125">
 			<system-out>Resolving hostname: marineinfo.org
 resolved_ip: 193.191.134.34
 </system-out>
 		</testcase>
-		<testcase name="http_availability [https://marineinfo.org/doc/publication/97613]" classname="marineinfo-publication-resource-availability" time="0.21596956253051758">
-			<system-out>response_time_s: 0.216
+		<testcase name="http_availability [https://marineinfo.org/doc/publication/97613]" classname="marineinfo-publication-resource-availability" time="0.18726897239685059">
+			<system-out>response_time_s: 0.187
 status_code: 301
 redirects_to: https://marineinfo.org/doc/publication/97613
 OK: HTTP endpoint reachable (redirects to HTTPS)
 </system-out>
 		</testcase>
-		<testcase name="https_availability [https://marineinfo.org/doc/publication/97613]" classname="marineinfo-publication-resource-availability" time="1.5132050514221191">
-			<system-out>response_time_s: 1.513
+		<testcase name="https_availability [https://marineinfo.org/doc/publication/97613]" classname="marineinfo-publication-resource-availability" time="1.003835678100586">
+			<system-out>response_time_s: 1.004
 status_code: 200
 final_url: https://marineinfo.org/en/doc/publication/97613
-OK: HTTPS available, status 200 in 1.513s
+OK: HTTPS available, status 200 in 1.004s
 </system-out>
 		</testcase>
-		<testcase name="dns_resolution [https://marineinfo.org/id/publication/97613]" classname="marineinfo-publication-resource-availability" time="0.0037097930908203125">
+		<testcase name="dns_resolution [https://marineinfo.org/id/publication/97613]" classname="marineinfo-publication-resource-availability" time="0.0020208358764648438">
 			<system-out>Resolving hostname: marineinfo.org
 resolved_ip: 193.191.134.34
 </system-out>
 		</testcase>
-		<testcase name="http_availability [https://marineinfo.org/id/publication/97613]" classname="marineinfo-publication-resource-availability" time="0.22561097145080566">
-			<system-out>response_time_s: 0.226
+		<testcase name="http_availability [https://marineinfo.org/id/publication/97613]" classname="marineinfo-publication-resource-availability" time="0.18139028549194336">
+			<system-out>response_time_s: 0.181
 status_code: 301
 redirects_to: https://marineinfo.org/id/publication/97613
 OK: HTTP endpoint reachable (redirects to HTTPS)
 </system-out>
 		</testcase>
-		<testcase name="https_availability [https://marineinfo.org/id/publication/97613]" classname="marineinfo-publication-resource-availability" time="0.7870099544525146">
-			<system-out>response_time_s: 0.787
+		<testcase name="https_availability [https://marineinfo.org/id/publication/97613]" classname="marineinfo-publication-resource-availability" time="0.6303129196166992">
+			<system-out>response_time_s: 0.630
 status_code: 200
-OK: HTTPS available, status 200 in 0.787s
+OK: HTTPS available, status 200 in 0.630s
 </system-out>
 		</testcase>
 	</testsuite>
-	<testsuite name="marineinfo-institute-resource-availability" timestamp="2026-06-11T12:31:52.278093+00:00" tests="9" errors="0" failures="0" skipped="0" time="6.504992961883545">
-		<testcase name="dns_resolution [https://marineinfo.org/doc/institute/36]" classname="marineinfo-institute-resource-availability" time="0.002559185028076172">
+	<testsuite name="marineinfo-institute-resource-availability" timestamp="2026-06-11T12:47:08.147308+00:00" tests="9" errors="0" failures="0" skipped="0" time="5.898141145706177">
+		<testcase name="dns_resolution [https://marineinfo.org/doc/institute/36]" classname="marineinfo-institute-resource-availability" time="0.002371549606323242">
 			<system-out>Resolving hostname: marineinfo.org
 resolved_ip: 193.191.134.34
 </system-out>
@@ -900,62 +900,62 @@ resolved_ip: 193.191.134.34
 			<property name="check-http-availability" value="true"/>
 			<property name="check-https-availability" value="true"/>
 			<property name="verify-ssl" value="true"/>
-			<property name="provenance" value="https://github.com/vlizBE/GRMPy_VLIZ/blob/ab8b7444ba68e6f17302641bbc70b722b764c1a5/tests/tests.yaml"/>
+			<property name="provenance" value="https://github.com/vlizBE/GRMPy_VLIZ/blob/5217b90ba9b7ae5b4cb982b1aeff6ed0bb0edf65/tests/tests.yaml"/>
 			<property name="create-issue" value="true"/>
 		</properties>
-		<testcase name="http_availability [https://marineinfo.org/doc/institute/36]" classname="marineinfo-institute-resource-availability" time="0.22455906867980957">
-			<system-out>response_time_s: 0.225
+		<testcase name="http_availability [https://marineinfo.org/doc/institute/36]" classname="marineinfo-institute-resource-availability" time="0.18538188934326172">
+			<system-out>response_time_s: 0.185
 status_code: 301
 redirects_to: https://marineinfo.org/doc/institute/36
 OK: HTTP endpoint reachable (redirects to HTTPS)
 </system-out>
 		</testcase>
-		<testcase name="https_availability [https://marineinfo.org/doc/institute/36]" classname="marineinfo-institute-resource-availability" time="1.84024977684021">
-			<system-out>response_time_s: 1.840
+		<testcase name="https_availability [https://marineinfo.org/doc/institute/36]" classname="marineinfo-institute-resource-availability" time="2.271747350692749">
+			<system-out>response_time_s: 2.272
 status_code: 200
 final_url: https://marineinfo.org/en/doc/institute/36
-OK: HTTPS available, status 200 in 1.840s
+OK: HTTPS available, status 200 in 2.272s
 </system-out>
 		</testcase>
-		<testcase name="dns_resolution [https://marineinfo.org/en/doc/institute/36]" classname="marineinfo-institute-resource-availability" time="0.002146005630493164">
+		<testcase name="dns_resolution [https://marineinfo.org/en/doc/institute/36]" classname="marineinfo-institute-resource-availability" time="0.0020017623901367188">
 			<system-out>Resolving hostname: marineinfo.org
 resolved_ip: 193.191.134.34
 </system-out>
 		</testcase>
-		<testcase name="http_availability [https://marineinfo.org/en/doc/institute/36]" classname="marineinfo-institute-resource-availability" time="0.2203822135925293">
-			<system-out>response_time_s: 0.220
+		<testcase name="http_availability [https://marineinfo.org/en/doc/institute/36]" classname="marineinfo-institute-resource-availability" time="0.1853489875793457">
+			<system-out>response_time_s: 0.185
 status_code: 301
 redirects_to: https://marineinfo.org/en/doc/institute/36
 OK: HTTP endpoint reachable (redirects to HTTPS)
 </system-out>
 		</testcase>
-		<testcase name="https_availability [https://marineinfo.org/en/doc/institute/36]" classname="marineinfo-institute-resource-availability" time="2.087392807006836">
-			<system-out>response_time_s: 2.087
+		<testcase name="https_availability [https://marineinfo.org/en/doc/institute/36]" classname="marineinfo-institute-resource-availability" time="1.5620148181915283">
+			<system-out>response_time_s: 1.562
 status_code: 200
-OK: HTTPS available, status 200 in 2.087s
+OK: HTTPS available, status 200 in 1.562s
 </system-out>
 		</testcase>
-		<testcase name="dns_resolution [https://marineinfo.org/id/institute/36]" classname="marineinfo-institute-resource-availability" time="0.0037567615509033203">
+		<testcase name="dns_resolution [https://marineinfo.org/id/institute/36]" classname="marineinfo-institute-resource-availability" time="0.0019404888153076172">
 			<system-out>Resolving hostname: marineinfo.org
 resolved_ip: 193.191.134.34
 </system-out>
 		</testcase>
-		<testcase name="http_availability [https://marineinfo.org/id/institute/36]" classname="marineinfo-institute-resource-availability" time="0.22102999687194824">
-			<system-out>response_time_s: 0.221
+		<testcase name="http_availability [https://marineinfo.org/id/institute/36]" classname="marineinfo-institute-resource-availability" time="0.20074105262756348">
+			<system-out>response_time_s: 0.201
 status_code: 301
 redirects_to: https://marineinfo.org/id/institute/36
 OK: HTTP endpoint reachable (redirects to HTTPS)
 </system-out>
 		</testcase>
-		<testcase name="https_availability [https://marineinfo.org/id/institute/36]" classname="marineinfo-institute-resource-availability" time="1.9029171466827393">
-			<system-out>response_time_s: 1.903
+		<testcase name="https_availability [https://marineinfo.org/id/institute/36]" classname="marineinfo-institute-resource-availability" time="1.486593246459961">
+			<system-out>response_time_s: 1.487
 status_code: 200
-OK: HTTPS available, status 200 in 1.903s
+OK: HTTPS available, status 200 in 1.487s
 </system-out>
 		</testcase>
 	</testsuite>
-	<testsuite name="marineinfo-project-resource-availability" timestamp="2026-06-11T12:31:56.278254+00:00" tests="9" errors="0" failures="0" skipped="0" time="3.190432548522949">
-		<testcase name="dns_resolution [https://marineinfo.org/en/doc/project/5528]" classname="marineinfo-project-resource-availability" time="0.00312042236328125">
+	<testsuite name="marineinfo-project-resource-availability" timestamp="2026-06-11T12:47:11.061539+00:00" tests="9" errors="0" failures="0" skipped="0" time="2.3119709491729736">
+		<testcase name="dns_resolution [https://marineinfo.org/en/doc/project/5528]" classname="marineinfo-project-resource-availability" time="0.002076387405395508">
 			<system-out>Resolving hostname: marineinfo.org
 resolved_ip: 193.191.134.34
 </system-out>
@@ -969,62 +969,62 @@ resolved_ip: 193.191.134.34
 			<property name="check-http-availability" value="true"/>
 			<property name="check-https-availability" value="true"/>
 			<property name="verify-ssl" value="true"/>
-			<property name="provenance" value="https://github.com/vlizBE/GRMPy_VLIZ/blob/ab8b7444ba68e6f17302641bbc70b722b764c1a5/tests/tests.yaml"/>
+			<property name="provenance" value="https://github.com/vlizBE/GRMPy_VLIZ/blob/5217b90ba9b7ae5b4cb982b1aeff6ed0bb0edf65/tests/tests.yaml"/>
 			<property name="create-issue" value="true"/>
 		</properties>
-		<testcase name="http_availability [https://marineinfo.org/en/doc/project/5528]" classname="marineinfo-project-resource-availability" time="0.21795034408569336">
-			<system-out>response_time_s: 0.218
+		<testcase name="http_availability [https://marineinfo.org/en/doc/project/5528]" classname="marineinfo-project-resource-availability" time="0.18610215187072754">
+			<system-out>response_time_s: 0.186
 status_code: 301
 redirects_to: https://marineinfo.org/en/doc/project/5528
 OK: HTTP endpoint reachable (redirects to HTTPS)
 </system-out>
 		</testcase>
-		<testcase name="https_availability [https://marineinfo.org/en/doc/project/5528]" classname="marineinfo-project-resource-availability" time="1.018847942352295">
-			<system-out>response_time_s: 1.019
+		<testcase name="https_availability [https://marineinfo.org/en/doc/project/5528]" classname="marineinfo-project-resource-availability" time="0.6278667449951172">
+			<system-out>response_time_s: 0.628
 status_code: 200
-OK: HTTPS available, status 200 in 1.019s
+OK: HTTPS available, status 200 in 0.628s
 </system-out>
 		</testcase>
-		<testcase name="dns_resolution [https://marineinfo.org/id/project/5528]" classname="marineinfo-project-resource-availability" time="0.0020236968994140625">
+		<testcase name="dns_resolution [https://marineinfo.org/id/project/5528]" classname="marineinfo-project-resource-availability" time="0.0019600391387939453">
 			<system-out>Resolving hostname: marineinfo.org
 resolved_ip: 193.191.134.34
 </system-out>
 		</testcase>
-		<testcase name="http_availability [https://marineinfo.org/id/project/5528]" classname="marineinfo-project-resource-availability" time="0.2228701114654541">
-			<system-out>response_time_s: 0.223
+		<testcase name="http_availability [https://marineinfo.org/id/project/5528]" classname="marineinfo-project-resource-availability" time="0.18507003784179688">
+			<system-out>response_time_s: 0.185
 status_code: 301
 redirects_to: https://marineinfo.org/id/project/5528
 OK: HTTP endpoint reachable (redirects to HTTPS)
 </system-out>
 		</testcase>
-		<testcase name="https_availability [https://marineinfo.org/id/project/5528]" classname="marineinfo-project-resource-availability" time="0.7964766025543213">
-			<system-out>response_time_s: 0.796
+		<testcase name="https_availability [https://marineinfo.org/id/project/5528]" classname="marineinfo-project-resource-availability" time="0.3745300769805908">
+			<system-out>response_time_s: 0.375
 status_code: 200
-OK: HTTPS available, status 200 in 0.796s
+OK: HTTPS available, status 200 in 0.375s
 </system-out>
 		</testcase>
-		<testcase name="dns_resolution [https://marineinfo.org/doc/project/5528]" classname="marineinfo-project-resource-availability" time="0.004317522048950195">
+		<testcase name="dns_resolution [https://marineinfo.org/doc/project/5528]" classname="marineinfo-project-resource-availability" time="0.0020771026611328125">
 			<system-out>Resolving hostname: marineinfo.org
 resolved_ip: 193.191.134.34
 </system-out>
 		</testcase>
-		<testcase name="http_availability [https://marineinfo.org/doc/project/5528]" classname="marineinfo-project-resource-availability" time="0.21674036979675293">
-			<system-out>response_time_s: 0.217
+		<testcase name="http_availability [https://marineinfo.org/doc/project/5528]" classname="marineinfo-project-resource-availability" time="0.18085169792175293">
+			<system-out>response_time_s: 0.181
 status_code: 301
 redirects_to: https://marineinfo.org/doc/project/5528
 OK: HTTP endpoint reachable (redirects to HTTPS)
 </system-out>
 		</testcase>
-		<testcase name="https_availability [https://marineinfo.org/doc/project/5528]" classname="marineinfo-project-resource-availability" time="0.7080855369567871">
-			<system-out>response_time_s: 0.708
+		<testcase name="https_availability [https://marineinfo.org/doc/project/5528]" classname="marineinfo-project-resource-availability" time="0.751436710357666">
+			<system-out>response_time_s: 0.751
 status_code: 200
 final_url: https://marineinfo.org/en/doc/project/5528
-OK: HTTPS available, status 200 in 0.708s
+OK: HTTPS available, status 200 in 0.751s
 </system-out>
 		</testcase>
 	</testsuite>
-	<testsuite name="marineinfo-event-resource-availability" timestamp="2026-06-11T12:32:02.234547+00:00" tests="9" errors="0" failures="0" skipped="0" time="5.199195146560669">
-		<testcase name="dns_resolution [https://marineinfo.org/en/doc/event/3127]" classname="marineinfo-event-resource-availability" time="0.0019443035125732422">
+	<testsuite name="marineinfo-event-resource-availability" timestamp="2026-06-11T12:47:14.045512+00:00" tests="9" errors="0" failures="0" skipped="0" time="2.39707350730896">
+		<testcase name="dns_resolution [https://marineinfo.org/en/doc/event/3127]" classname="marineinfo-event-resource-availability" time="0.0016949176788330078">
 			<system-out>Resolving hostname: marineinfo.org
 resolved_ip: 193.191.134.34
 </system-out>
@@ -1038,62 +1038,62 @@ resolved_ip: 193.191.134.34
 			<property name="check-http-availability" value="true"/>
 			<property name="check-https-availability" value="true"/>
 			<property name="verify-ssl" value="true"/>
-			<property name="provenance" value="https://github.com/vlizBE/GRMPy_VLIZ/blob/ab8b7444ba68e6f17302641bbc70b722b764c1a5/tests/tests.yaml"/>
+			<property name="provenance" value="https://github.com/vlizBE/GRMPy_VLIZ/blob/5217b90ba9b7ae5b4cb982b1aeff6ed0bb0edf65/tests/tests.yaml"/>
 			<property name="create-issue" value="true"/>
 		</properties>
-		<testcase name="http_availability [https://marineinfo.org/en/doc/event/3127]" classname="marineinfo-event-resource-availability" time="0.21845555305480957">
-			<system-out>response_time_s: 0.218
+		<testcase name="http_availability [https://marineinfo.org/en/doc/event/3127]" classname="marineinfo-event-resource-availability" time="0.18662524223327637">
+			<system-out>response_time_s: 0.187
 status_code: 301
 redirects_to: https://marineinfo.org/en/doc/event/3127
 OK: HTTP endpoint reachable (redirects to HTTPS)
 </system-out>
 		</testcase>
-		<testcase name="https_availability [https://marineinfo.org/en/doc/event/3127]" classname="marineinfo-event-resource-availability" time="2.033268451690674">
-			<system-out>response_time_s: 2.033
+		<testcase name="https_availability [https://marineinfo.org/en/doc/event/3127]" classname="marineinfo-event-resource-availability" time="0.6286513805389404">
+			<system-out>response_time_s: 0.629
 status_code: 200
-OK: HTTPS available, status 200 in 2.033s
+OK: HTTPS available, status 200 in 0.629s
 </system-out>
 		</testcase>
-		<testcase name="dns_resolution [https://marineinfo.org/id/event/3127]" classname="marineinfo-event-resource-availability" time="0.009939193725585938">
+		<testcase name="dns_resolution [https://marineinfo.org/id/event/3127]" classname="marineinfo-event-resource-availability" time="0.0023338794708251953">
 			<system-out>Resolving hostname: marineinfo.org
 resolved_ip: 193.191.134.34
 </system-out>
 		</testcase>
-		<testcase name="http_availability [https://marineinfo.org/id/event/3127]" classname="marineinfo-event-resource-availability" time="0.22130179405212402">
-			<system-out>response_time_s: 0.221
+		<testcase name="http_availability [https://marineinfo.org/id/event/3127]" classname="marineinfo-event-resource-availability" time="0.18227553367614746">
+			<system-out>response_time_s: 0.182
 status_code: 301
 redirects_to: https://marineinfo.org/id/event/3127
 OK: HTTP endpoint reachable (redirects to HTTPS)
 </system-out>
 		</testcase>
-		<testcase name="https_availability [https://marineinfo.org/id/event/3127]" classname="marineinfo-event-resource-availability" time="0.6263072490692139">
-			<system-out>response_time_s: 0.626
+		<testcase name="https_availability [https://marineinfo.org/id/event/3127]" classname="marineinfo-event-resource-availability" time="0.48303699493408203">
+			<system-out>response_time_s: 0.483
 status_code: 200
-OK: HTTPS available, status 200 in 0.626s
+OK: HTTPS available, status 200 in 0.483s
 </system-out>
 		</testcase>
-		<testcase name="dns_resolution [https://marineinfo.org/doc/event/3127]" classname="marineinfo-event-resource-availability" time="0.0057163238525390625">
+		<testcase name="dns_resolution [https://marineinfo.org/doc/event/3127]" classname="marineinfo-event-resource-availability" time="0.0020105838775634766">
 			<system-out>Resolving hostname: marineinfo.org
 resolved_ip: 193.191.134.34
 </system-out>
 		</testcase>
-		<testcase name="http_availability [https://marineinfo.org/doc/event/3127]" classname="marineinfo-event-resource-availability" time="0.2683267593383789">
-			<system-out>response_time_s: 0.268
+		<testcase name="http_availability [https://marineinfo.org/doc/event/3127]" classname="marineinfo-event-resource-availability" time="0.18215727806091309">
+			<system-out>response_time_s: 0.182
 status_code: 301
 redirects_to: https://marineinfo.org/doc/event/3127
 OK: HTTP endpoint reachable (redirects to HTTPS)
 </system-out>
 		</testcase>
-		<testcase name="https_availability [https://marineinfo.org/doc/event/3127]" classname="marineinfo-event-resource-availability" time="1.8139355182647705">
-			<system-out>response_time_s: 1.814
+		<testcase name="https_availability [https://marineinfo.org/doc/event/3127]" classname="marineinfo-event-resource-availability" time="0.7282876968383789">
+			<system-out>response_time_s: 0.728
 status_code: 200
 final_url: https://marineinfo.org/en/doc/event/3127
-OK: HTTPS available, status 200 in 1.814s
+OK: HTTPS available, status 200 in 0.728s
 </system-out>
 		</testcase>
 	</testsuite>
-	<testsuite name="marineinfo-dataset-resource-availability" timestamp="2026-06-11T12:32:07.223413+00:00" tests="9" errors="0" failures="0" skipped="0" time="4.24100136756897">
-		<testcase name="dns_resolution [https://marineinfo.org/en/doc/dataset/3221]" classname="marineinfo-dataset-resource-availability" time="0.0034394264221191406">
+	<testsuite name="marineinfo-dataset-resource-availability" timestamp="2026-06-11T12:47:17.095788+00:00" tests="9" errors="0" failures="0" skipped="0" time="2.4411118030548096">
+		<testcase name="dns_resolution [https://marineinfo.org/en/doc/dataset/3221]" classname="marineinfo-dataset-resource-availability" time="0.00215911865234375">
 			<system-out>Resolving hostname: marineinfo.org
 resolved_ip: 193.191.134.34
 </system-out>
@@ -1107,351 +1107,279 @@ resolved_ip: 193.191.134.34
 			<property name="check-http-availability" value="true"/>
 			<property name="check-https-availability" value="true"/>
 			<property name="verify-ssl" value="true"/>
-			<property name="provenance" value="https://github.com/vlizBE/GRMPy_VLIZ/blob/ab8b7444ba68e6f17302641bbc70b722b764c1a5/tests/tests.yaml"/>
+			<property name="provenance" value="https://github.com/vlizBE/GRMPy_VLIZ/blob/5217b90ba9b7ae5b4cb982b1aeff6ed0bb0edf65/tests/tests.yaml"/>
 			<property name="create-issue" value="true"/>
 		</properties>
-		<testcase name="http_availability [https://marineinfo.org/en/doc/dataset/3221]" classname="marineinfo-dataset-resource-availability" time="0.2191774845123291">
-			<system-out>response_time_s: 0.219
+		<testcase name="http_availability [https://marineinfo.org/en/doc/dataset/3221]" classname="marineinfo-dataset-resource-availability" time="0.18686485290527344">
+			<system-out>response_time_s: 0.187
 status_code: 301
 redirects_to: https://marineinfo.org/en/doc/dataset/3221
 OK: HTTP endpoint reachable (redirects to HTTPS)
 </system-out>
 		</testcase>
-		<testcase name="https_availability [https://marineinfo.org/en/doc/dataset/3221]" classname="marineinfo-dataset-resource-availability" time="0.6994411945343018">
-			<system-out>response_time_s: 0.699
+		<testcase name="https_availability [https://marineinfo.org/en/doc/dataset/3221]" classname="marineinfo-dataset-resource-availability" time="0.6197333335876465">
+			<system-out>response_time_s: 0.620
 status_code: 200
-OK: HTTPS available, status 200 in 0.699s
+OK: HTTPS available, status 200 in 0.620s
 </system-out>
 		</testcase>
-		<testcase name="dns_resolution [https://marineinfo.org/id/dataset/3221]" classname="marineinfo-dataset-resource-availability" time="0.0025222301483154297">
+		<testcase name="dns_resolution [https://marineinfo.org/id/dataset/3221]" classname="marineinfo-dataset-resource-availability" time="0.0016276836395263672">
 			<system-out>Resolving hostname: marineinfo.org
 resolved_ip: 193.191.134.34
 </system-out>
 		</testcase>
-		<testcase name="http_availability [https://marineinfo.org/id/dataset/3221]" classname="marineinfo-dataset-resource-availability" time="0.2252180576324463">
-			<system-out>response_time_s: 0.225
+		<testcase name="http_availability [https://marineinfo.org/id/dataset/3221]" classname="marineinfo-dataset-resource-availability" time="0.185441255569458">
+			<system-out>response_time_s: 0.185
 status_code: 301
 redirects_to: https://marineinfo.org/id/dataset/3221
 OK: HTTP endpoint reachable (redirects to HTTPS)
 </system-out>
 		</testcase>
-		<testcase name="https_availability [https://marineinfo.org/id/dataset/3221]" classname="marineinfo-dataset-resource-availability" time="0.8213741779327393">
-			<system-out>response_time_s: 0.821
+		<testcase name="https_availability [https://marineinfo.org/id/dataset/3221]" classname="marineinfo-dataset-resource-availability" time="0.58150315284729">
+			<system-out>response_time_s: 0.582
 status_code: 200
-OK: HTTPS available, status 200 in 0.821s
+OK: HTTPS available, status 200 in 0.582s
 </system-out>
 		</testcase>
-		<testcase name="dns_resolution [https://marineinfo.org/doc/dataset/3221]" classname="marineinfo-dataset-resource-availability" time="0.002419710159301758">
+		<testcase name="dns_resolution [https://marineinfo.org/doc/dataset/3221]" classname="marineinfo-dataset-resource-availability" time="0.0016069412231445312">
 			<system-out>Resolving hostname: marineinfo.org
 resolved_ip: 193.191.134.34
 </system-out>
 		</testcase>
-		<testcase name="http_availability [https://marineinfo.org/doc/dataset/3221]" classname="marineinfo-dataset-resource-availability" time="0.22987699508666992">
-			<system-out>response_time_s: 0.230
+		<testcase name="http_availability [https://marineinfo.org/doc/dataset/3221]" classname="marineinfo-dataset-resource-availability" time="0.18267297744750977">
+			<system-out>response_time_s: 0.183
 status_code: 301
 redirects_to: https://marineinfo.org/doc/dataset/3221
 OK: HTTP endpoint reachable (redirects to HTTPS)
 </system-out>
 		</testcase>
-		<testcase name="https_availability [https://marineinfo.org/doc/dataset/3221]" classname="marineinfo-dataset-resource-availability" time="2.037532091140747">
-			<system-out>response_time_s: 2.038
+		<testcase name="https_availability [https://marineinfo.org/doc/dataset/3221]" classname="marineinfo-dataset-resource-availability" time="0.6795024871826172">
+			<system-out>response_time_s: 0.680
 status_code: 200
 final_url: https://marineinfo.org/en/doc/dataset/3221
-OK: HTTPS available, status 200 in 2.038s
+OK: HTTPS available, status 200 in 0.680s
 </system-out>
 		</testcase>
 	</testsuite>
-	<testsuite name="marineinfo-cors-compliance-basic-person" timestamp="2026-06-11T12:32:13.255068+00:00" tests="6" errors="0" failures="6" skipped="0" time="4.402601480484009">
-		<testcase name="access_control_allow_origin [https://marineinfo.org/en/doc/person/46372] [lenient]" classname="marineinfo-cors-compliance-basic-person" time="0.40425682067871094">
-			<failure message="Header 'access-control-allow-origin' is missing">Header absent in response from https://marineinfo.org/en/doc/person/46372</failure>
-			<system-out>OPTIONS https://marineinfo.org/en/doc/person/46372 with Origin: https://vliz.be
-access-control-allow-origin: ''
-</system-out>
-		</testcase>
-		<testcase name="access_control_allow_methods [https://marineinfo.org/en/doc/person/46372]" classname="marineinfo-cors-compliance-basic-person" time="0.8249809741973877">
-			<failure message="Header 'access-control-allow-methods' is missing">Expected methods ['GET', 'HEAD'] but header was absent</failure>
-			<system-out>OPTIONS https://marineinfo.org/en/doc/person/46372 (checking allow-methods)
-access-control-allow-methods: ''
-</system-out>
-		</testcase>
-		<testcase name="access_control_allow_origin [https://marineinfo.org/id/person/46372] [lenient]" classname="marineinfo-cors-compliance-basic-person" time="0.7177631855010986">
+	<testsuite name="marineinfo-cors-compliance-basic-person" timestamp="2026-06-11T12:47:20.304012+00:00" tests="4" errors="0" failures="4" skipped="0" time="1.9443163871765137">
+		<testcase name="access_control_allow_origin [https://marineinfo.org/id/person/46372] [lenient]" classname="marineinfo-cors-compliance-basic-person" time="0.3072226047515869">
 			<failure message="Header 'access-control-allow-origin' is missing">Header absent in response from https://marineinfo.org/id/person/46372</failure>
 			<system-out>OPTIONS https://marineinfo.org/id/person/46372 with Origin: https://vliz.be
 access-control-allow-origin: ''
 </system-out>
 		</testcase>
-		<testcase name="access_control_allow_methods [https://marineinfo.org/id/person/46372]" classname="marineinfo-cors-compliance-basic-person" time="0.39317846298217773">
+		<testcase name="access_control_allow_methods [https://marineinfo.org/id/person/46372]" classname="marineinfo-cors-compliance-basic-person" time="0.3162806034088135">
 			<failure message="Header 'access-control-allow-methods' is missing">Expected methods ['GET', 'HEAD'] but header was absent</failure>
 			<system-out>OPTIONS https://marineinfo.org/id/person/46372 (checking allow-methods)
 access-control-allow-methods: ''
 </system-out>
 		</testcase>
-		<testcase name="access_control_allow_origin [https://marineinfo.org/doc/person/46372] [lenient]" classname="marineinfo-cors-compliance-basic-person" time="1.0737032890319824">
+		<testcase name="access_control_allow_origin [https://marineinfo.org/doc/person/46372] [lenient]" classname="marineinfo-cors-compliance-basic-person" time="0.7186000347137451">
 			<failure message="Header 'access-control-allow-origin' is missing">Header absent in response from https://marineinfo.org/en/doc/person/46372</failure>
 			<system-out>OPTIONS https://marineinfo.org/doc/person/46372 with Origin: https://vliz.be
 Followed 1 redirect(s) to https://marineinfo.org/en/doc/person/46372
 access-control-allow-origin: ''
 </system-out>
 		</testcase>
-		<testcase name="access_control_allow_methods [https://marineinfo.org/doc/person/46372]" classname="marineinfo-cors-compliance-basic-person" time="0.9887187480926514">
+		<testcase name="access_control_allow_methods [https://marineinfo.org/doc/person/46372]" classname="marineinfo-cors-compliance-basic-person" time="0.6022131443023682">
 			<failure message="Header 'access-control-allow-methods' is missing">Expected methods ['GET', 'HEAD'] but header was absent</failure>
 			<system-out>OPTIONS https://marineinfo.org/doc/person/46372 (checking allow-methods)
 access-control-allow-methods: ''
 </system-out>
 		</testcase>
 		<properties>
-			<property name="urls" value="https://marineinfo.org/en/doc/person/46372, https://marineinfo.org/id/person/46372, https://marineinfo.org/doc/person/46372"/>
+			<property name="urls" value="https://marineinfo.org/id/person/46372, https://marineinfo.org/doc/person/46372"/>
 			<property name="hostnames" value="marineinfo.org"/>
 			<property name="timeout" value="30"/>
 			<property name="access-control-allow-methods" value="GET, HEAD"/>
 			<property name="https-redirect" value="false"/>
 			<property name="probe-origin" value="https://vliz.be"/>
-			<property name="provenance" value="https://github.com/vlizBE/GRMPy_VLIZ/blob/ab8b7444ba68e6f17302641bbc70b722b764c1a5/tests/tests.yaml"/>
+			<property name="provenance" value="https://github.com/vlizBE/GRMPy_VLIZ/blob/5217b90ba9b7ae5b4cb982b1aeff6ed0bb0edf65/tests/tests.yaml"/>
 			<property name="create-issue" value="false"/>
 		</properties>
 	</testsuite>
-	<testsuite name="marineinfo-cors-compliance-basic-publication" timestamp="2026-06-11T12:32:17.251749+00:00" tests="6" errors="0" failures="6" skipped="0" time="3.2479233741760254">
-		<testcase name="access_control_allow_origin [https://marineinfo.org/en/doc/publication/97613] [lenient]" classname="marineinfo-cors-compliance-basic-publication" time="0.3965764045715332">
-			<failure message="Header 'access-control-allow-origin' is missing">Header absent in response from https://marineinfo.org/en/doc/publication/97613</failure>
-			<system-out>OPTIONS https://marineinfo.org/en/doc/publication/97613 with Origin: https://vliz.be
-access-control-allow-origin: ''
-</system-out>
-		</testcase>
-		<testcase name="access_control_allow_methods [https://marineinfo.org/en/doc/publication/97613]" classname="marineinfo-cors-compliance-basic-publication" time="0.42464685440063477">
-			<failure message="Header 'access-control-allow-methods' is missing">Expected methods ['GET', 'HEAD'] but header was absent</failure>
-			<system-out>OPTIONS https://marineinfo.org/en/doc/publication/97613 (checking allow-methods)
-access-control-allow-methods: ''
-</system-out>
-		</testcase>
-		<testcase name="access_control_allow_origin [https://marineinfo.org/doc/publication/97613] [lenient]" classname="marineinfo-cors-compliance-basic-publication" time="0.710803747177124">
+	<testsuite name="marineinfo-cors-compliance-basic-publication" timestamp="2026-06-11T12:47:23.282032+00:00" tests="4" errors="0" failures="4" skipped="0" time="2.437798023223877">
+		<testcase name="access_control_allow_origin [https://marineinfo.org/doc/publication/97613] [lenient]" classname="marineinfo-cors-compliance-basic-publication" time="0.634972095489502">
 			<failure message="Header 'access-control-allow-origin' is missing">Header absent in response from https://marineinfo.org/en/doc/publication/97613</failure>
 			<system-out>OPTIONS https://marineinfo.org/doc/publication/97613 with Origin: https://vliz.be
 Followed 1 redirect(s) to https://marineinfo.org/en/doc/publication/97613
 access-control-allow-origin: ''
 </system-out>
 		</testcase>
-		<testcase name="access_control_allow_methods [https://marineinfo.org/doc/publication/97613]" classname="marineinfo-cors-compliance-basic-publication" time="0.7054007053375244">
-			<failure message="Header 'access-control-allow-methods' is missing">Expected methods ['GET', 'HEAD'] but header was absent</failure>
+		<testcase name="access_control_allow_methods [https://marineinfo.org/doc/publication/97613]" classname="marineinfo-cors-compliance-basic-publication" time="0.6262736320495605">
+			<failure message="Header 'access-control-allow-methods' is missing">Expected methods ['HEAD'] but header was absent</failure>
 			<system-out>OPTIONS https://marineinfo.org/doc/publication/97613 (checking allow-methods)
 access-control-allow-methods: ''
 </system-out>
 		</testcase>
-		<testcase name="access_control_allow_origin [https://marineinfo.org/id/publication/97613] [lenient]" classname="marineinfo-cors-compliance-basic-publication" time="0.49890732765197754">
+		<testcase name="access_control_allow_origin [https://marineinfo.org/id/publication/97613] [lenient]" classname="marineinfo-cors-compliance-basic-publication" time="0.5906589031219482">
 			<failure message="Header 'access-control-allow-origin' is missing">Header absent in response from https://marineinfo.org/id/publication/97613</failure>
 			<system-out>OPTIONS https://marineinfo.org/id/publication/97613 with Origin: https://vliz.be
 access-control-allow-origin: ''
 </system-out>
 		</testcase>
-		<testcase name="access_control_allow_methods [https://marineinfo.org/id/publication/97613]" classname="marineinfo-cors-compliance-basic-publication" time="0.5115883350372314">
-			<failure message="Header 'access-control-allow-methods' is missing">Expected methods ['GET', 'HEAD'] but header was absent</failure>
+		<testcase name="access_control_allow_methods [https://marineinfo.org/id/publication/97613]" classname="marineinfo-cors-compliance-basic-publication" time="0.5858933925628662">
+			<failure message="Header 'access-control-allow-methods' is missing">Expected methods ['HEAD'] but header was absent</failure>
 			<system-out>OPTIONS https://marineinfo.org/id/publication/97613 (checking allow-methods)
 access-control-allow-methods: ''
 </system-out>
 		</testcase>
 		<properties>
-			<property name="urls" value="https://marineinfo.org/en/doc/publication/97613, https://marineinfo.org/doc/publication/97613, https://marineinfo.org/id/publication/97613"/>
+			<property name="urls" value="https://marineinfo.org/doc/publication/97613, https://marineinfo.org/id/publication/97613"/>
 			<property name="hostnames" value="marineinfo.org"/>
 			<property name="timeout" value="30"/>
-			<property name="access-control-allow-methods" value="GET, HEAD"/>
+			<property name="access-control-allow-methods" value="HEAD"/>
 			<property name="https-redirect" value="false"/>
 			<property name="probe-origin" value="https://vliz.be"/>
-			<property name="provenance" value="https://github.com/vlizBE/GRMPy_VLIZ/blob/ab8b7444ba68e6f17302641bbc70b722b764c1a5/tests/tests.yaml"/>
+			<property name="provenance" value="https://github.com/vlizBE/GRMPy_VLIZ/blob/5217b90ba9b7ae5b4cb982b1aeff6ed0bb0edf65/tests/tests.yaml"/>
 			<property name="create-issue" value="false"/>
 		</properties>
 	</testsuite>
-	<testsuite name="marineinfo-cors-compliance-basic-institute" timestamp="2026-06-11T12:32:21.395340+00:00" tests="6" errors="0" failures="6" skipped="0" time="3.335317850112915">
-		<testcase name="access_control_allow_origin [https://marineinfo.org/doc/institute/36] [lenient]" classname="marineinfo-cors-compliance-basic-institute" time="0.7984151840209961">
+	<testsuite name="marineinfo-cors-compliance-basic-institute" timestamp="2026-06-11T12:47:26.983650+00:00" tests="4" errors="0" failures="4" skipped="0" time="3.1111621856689453">
+		<testcase name="access_control_allow_origin [https://marineinfo.org/doc/institute/36] [lenient]" classname="marineinfo-cors-compliance-basic-institute" time="1.139195203781128">
 			<failure message="Header 'access-control-allow-origin' is missing">Header absent in response from https://marineinfo.org/en/doc/institute/36</failure>
 			<system-out>OPTIONS https://marineinfo.org/doc/institute/36 with Origin: https://vliz.be
 Followed 1 redirect(s) to https://marineinfo.org/en/doc/institute/36
 access-control-allow-origin: ''
 </system-out>
 		</testcase>
-		<testcase name="access_control_allow_methods [https://marineinfo.org/doc/institute/36]" classname="marineinfo-cors-compliance-basic-institute" time="0.8089685440063477">
-			<failure message="Header 'access-control-allow-methods' is missing">Expected methods ['GET', 'HEAD'] but header was absent</failure>
+		<testcase name="access_control_allow_methods [https://marineinfo.org/doc/institute/36]" classname="marineinfo-cors-compliance-basic-institute" time="0.9734287261962891">
+			<failure message="Header 'access-control-allow-methods' is missing">Expected methods ['HEAD'] but header was absent</failure>
 			<system-out>OPTIONS https://marineinfo.org/doc/institute/36 (checking allow-methods)
 access-control-allow-methods: ''
 </system-out>
 		</testcase>
-		<testcase name="access_control_allow_origin [https://marineinfo.org/en/doc/institute/36] [lenient]" classname="marineinfo-cors-compliance-basic-institute" time="0.5191354751586914">
-			<failure message="Header 'access-control-allow-origin' is missing">Header absent in response from https://marineinfo.org/en/doc/institute/36</failure>
-			<system-out>OPTIONS https://marineinfo.org/en/doc/institute/36 with Origin: https://vliz.be
-access-control-allow-origin: ''
-</system-out>
-		</testcase>
-		<testcase name="access_control_allow_methods [https://marineinfo.org/en/doc/institute/36]" classname="marineinfo-cors-compliance-basic-institute" time="0.4237797260284424">
-			<failure message="Header 'access-control-allow-methods' is missing">Expected methods ['GET', 'HEAD'] but header was absent</failure>
-			<system-out>OPTIONS https://marineinfo.org/en/doc/institute/36 (checking allow-methods)
-access-control-allow-methods: ''
-</system-out>
-		</testcase>
-		<testcase name="access_control_allow_origin [https://marineinfo.org/id/institute/36] [lenient]" classname="marineinfo-cors-compliance-basic-institute" time="0.4034767150878906">
+		<testcase name="access_control_allow_origin [https://marineinfo.org/id/institute/36] [lenient]" classname="marineinfo-cors-compliance-basic-institute" time="0.5734174251556396">
 			<failure message="Header 'access-control-allow-origin' is missing">Header absent in response from https://marineinfo.org/id/institute/36</failure>
 			<system-out>OPTIONS https://marineinfo.org/id/institute/36 with Origin: https://vliz.be
 access-control-allow-origin: ''
 </system-out>
 		</testcase>
-		<testcase name="access_control_allow_methods [https://marineinfo.org/id/institute/36]" classname="marineinfo-cors-compliance-basic-institute" time="0.3815422058105469">
-			<failure message="Header 'access-control-allow-methods' is missing">Expected methods ['GET', 'HEAD'] but header was absent</failure>
+		<testcase name="access_control_allow_methods [https://marineinfo.org/id/institute/36]" classname="marineinfo-cors-compliance-basic-institute" time="0.42512083053588867">
+			<failure message="Header 'access-control-allow-methods' is missing">Expected methods ['HEAD'] but header was absent</failure>
 			<system-out>OPTIONS https://marineinfo.org/id/institute/36 (checking allow-methods)
 access-control-allow-methods: ''
 </system-out>
 		</testcase>
 		<properties>
-			<property name="urls" value="https://marineinfo.org/doc/institute/36, https://marineinfo.org/en/doc/institute/36, https://marineinfo.org/id/institute/36"/>
+			<property name="urls" value="https://marineinfo.org/doc/institute/36, https://marineinfo.org/id/institute/36"/>
 			<property name="hostnames" value="marineinfo.org"/>
 			<property name="timeout" value="30"/>
-			<property name="access-control-allow-methods" value="GET, HEAD"/>
+			<property name="access-control-allow-methods" value="HEAD"/>
 			<property name="https-redirect" value="false"/>
 			<property name="probe-origin" value="https://vliz.be"/>
-			<property name="provenance" value="https://github.com/vlizBE/GRMPy_VLIZ/blob/ab8b7444ba68e6f17302641bbc70b722b764c1a5/tests/tests.yaml"/>
+			<property name="provenance" value="https://github.com/vlizBE/GRMPy_VLIZ/blob/5217b90ba9b7ae5b4cb982b1aeff6ed0bb0edf65/tests/tests.yaml"/>
 			<property name="create-issue" value="false"/>
 		</properties>
 	</testsuite>
-	<testsuite name="marineinfo-cors-compliance-basic-project" timestamp="2026-06-11T12:32:25.483659+00:00" tests="6" errors="0" failures="6" skipped="0" time="3.3581502437591553">
-		<testcase name="access_control_allow_origin [https://marineinfo.org/en/doc/project/5528] [lenient]" classname="marineinfo-cors-compliance-basic-project" time="0.3842620849609375">
-			<failure message="Header 'access-control-allow-origin' is missing">Header absent in response from https://marineinfo.org/en/doc/project/5528</failure>
-			<system-out>OPTIONS https://marineinfo.org/en/doc/project/5528 with Origin: https://vliz.be
-access-control-allow-origin: ''
-</system-out>
-		</testcase>
-		<testcase name="access_control_allow_methods [https://marineinfo.org/en/doc/project/5528]" classname="marineinfo-cors-compliance-basic-project" time="0.6507906913757324">
-			<failure message="Header 'access-control-allow-methods' is missing">Expected methods ['GET', 'HEAD'] but header was absent</failure>
-			<system-out>OPTIONS https://marineinfo.org/en/doc/project/5528 (checking allow-methods)
-access-control-allow-methods: ''
-</system-out>
-		</testcase>
-		<testcase name="access_control_allow_origin [https://marineinfo.org/id/project/5528] [lenient]" classname="marineinfo-cors-compliance-basic-project" time="0.35272669792175293">
+	<testsuite name="marineinfo-cors-compliance-basic-project" timestamp="2026-06-11T12:47:30.939740+00:00" tests="4" errors="0" failures="4" skipped="0" time="3.374366521835327">
+		<testcase name="access_control_allow_origin [https://marineinfo.org/id/project/5528] [lenient]" classname="marineinfo-cors-compliance-basic-project" time="0.597644567489624">
 			<failure message="Header 'access-control-allow-origin' is missing">Header absent in response from https://marineinfo.org/id/project/5528</failure>
 			<system-out>OPTIONS https://marineinfo.org/id/project/5528 with Origin: https://vliz.be
 access-control-allow-origin: ''
 </system-out>
 		</testcase>
-		<testcase name="access_control_allow_methods [https://marineinfo.org/id/project/5528]" classname="marineinfo-cors-compliance-basic-project" time="0.47882628440856934">
-			<failure message="Header 'access-control-allow-methods' is missing">Expected methods ['GET', 'HEAD'] but header was absent</failure>
+		<testcase name="access_control_allow_methods [https://marineinfo.org/id/project/5528]" classname="marineinfo-cors-compliance-basic-project" time="0.5833108425140381">
+			<failure message="Header 'access-control-allow-methods' is missing">Expected methods ['HEAD'] but header was absent</failure>
 			<system-out>OPTIONS https://marineinfo.org/id/project/5528 (checking allow-methods)
 access-control-allow-methods: ''
 </system-out>
 		</testcase>
-		<testcase name="access_control_allow_origin [https://marineinfo.org/doc/project/5528] [lenient]" classname="marineinfo-cors-compliance-basic-project" time="0.7676956653594971">
+		<testcase name="access_control_allow_origin [https://marineinfo.org/doc/project/5528] [lenient]" classname="marineinfo-cors-compliance-basic-project" time="0.9751682281494141">
 			<failure message="Header 'access-control-allow-origin' is missing">Header absent in response from https://marineinfo.org/en/doc/project/5528</failure>
 			<system-out>OPTIONS https://marineinfo.org/doc/project/5528 with Origin: https://vliz.be
 Followed 1 redirect(s) to https://marineinfo.org/en/doc/project/5528
 access-control-allow-origin: ''
 </system-out>
 		</testcase>
-		<testcase name="access_control_allow_methods [https://marineinfo.org/doc/project/5528]" classname="marineinfo-cors-compliance-basic-project" time="0.723848819732666">
-			<failure message="Header 'access-control-allow-methods' is missing">Expected methods ['GET', 'HEAD'] but header was absent</failure>
+		<testcase name="access_control_allow_methods [https://marineinfo.org/doc/project/5528]" classname="marineinfo-cors-compliance-basic-project" time="1.218242883682251">
+			<failure message="Header 'access-control-allow-methods' is missing">Expected methods ['HEAD'] but header was absent</failure>
 			<system-out>OPTIONS https://marineinfo.org/doc/project/5528 (checking allow-methods)
 access-control-allow-methods: ''
 </system-out>
 		</testcase>
 		<properties>
-			<property name="urls" value="https://marineinfo.org/en/doc/project/5528, https://marineinfo.org/id/project/5528, https://marineinfo.org/doc/project/5528"/>
+			<property name="urls" value="https://marineinfo.org/id/project/5528, https://marineinfo.org/doc/project/5528"/>
 			<property name="hostnames" value="marineinfo.org"/>
 			<property name="timeout" value="30"/>
-			<property name="access-control-allow-methods" value="GET, HEAD"/>
+			<property name="access-control-allow-methods" value="HEAD"/>
 			<property name="https-redirect" value="false"/>
 			<property name="probe-origin" value="https://vliz.be"/>
-			<property name="provenance" value="https://github.com/vlizBE/GRMPy_VLIZ/blob/ab8b7444ba68e6f17302641bbc70b722b764c1a5/tests/tests.yaml"/>
+			<property name="provenance" value="https://github.com/vlizBE/GRMPy_VLIZ/blob/5217b90ba9b7ae5b4cb982b1aeff6ed0bb0edf65/tests/tests.yaml"/>
 			<property name="create-issue" value="false"/>
 		</properties>
 	</testsuite>
-	<testsuite name="marineinfo-cors-compliance-basic-event" timestamp="2026-06-11T12:32:29.659544+00:00" tests="6" errors="0" failures="6" skipped="0" time="3.4274098873138428">
-		<testcase name="access_control_allow_origin [https://marineinfo.org/en/doc/event/3127] [lenient]" classname="marineinfo-cors-compliance-basic-event" time="0.5923018455505371">
-			<failure message="Header 'access-control-allow-origin' is missing">Header absent in response from https://marineinfo.org/en/doc/event/3127</failure>
-			<system-out>OPTIONS https://marineinfo.org/en/doc/event/3127 with Origin: https://vliz.be
-access-control-allow-origin: ''
-</system-out>
-		</testcase>
-		<testcase name="access_control_allow_methods [https://marineinfo.org/en/doc/event/3127]" classname="marineinfo-cors-compliance-basic-event" time="0.4355909824371338">
-			<failure message="Header 'access-control-allow-methods' is missing">Expected methods ['GET', 'HEAD'] but header was absent</failure>
-			<system-out>OPTIONS https://marineinfo.org/en/doc/event/3127 (checking allow-methods)
-access-control-allow-methods: ''
-</system-out>
-		</testcase>
-		<testcase name="access_control_allow_origin [https://marineinfo.org/doc/event/3127] [lenient]" classname="marineinfo-cors-compliance-basic-event" time="0.8644812107086182">
+	<testsuite name="marineinfo-cors-compliance-basic-event" timestamp="2026-06-11T12:47:34.597221+00:00" tests="4" errors="0" failures="4" skipped="0" time="3.0378739833831787">
+		<testcase name="access_control_allow_origin [https://marineinfo.org/doc/event/3127] [lenient]" classname="marineinfo-cors-compliance-basic-event" time="0.7914912700653076">
 			<failure message="Header 'access-control-allow-origin' is missing">Header absent in response from https://marineinfo.org/en/doc/event/3127</failure>
 			<system-out>OPTIONS https://marineinfo.org/doc/event/3127 with Origin: https://vliz.be
 Followed 1 redirect(s) to https://marineinfo.org/en/doc/event/3127
 access-control-allow-origin: ''
 </system-out>
 		</testcase>
-		<testcase name="access_control_allow_methods [https://marineinfo.org/doc/event/3127]" classname="marineinfo-cors-compliance-basic-event" time="0.8026785850524902">
-			<failure message="Header 'access-control-allow-methods' is missing">Expected methods ['GET', 'HEAD'] but header was absent</failure>
+		<testcase name="access_control_allow_methods [https://marineinfo.org/doc/event/3127]" classname="marineinfo-cors-compliance-basic-event" time="1.131908893585205">
+			<failure message="Header 'access-control-allow-methods' is missing">Expected methods ['HEAD'] but header was absent</failure>
 			<system-out>OPTIONS https://marineinfo.org/doc/event/3127 (checking allow-methods)
 access-control-allow-methods: ''
 </system-out>
 		</testcase>
-		<testcase name="access_control_allow_origin [https://marineinfo.org/id/event/3127] [lenient]" classname="marineinfo-cors-compliance-basic-event" time="0.37137889862060547">
+		<testcase name="access_control_allow_origin [https://marineinfo.org/id/event/3127] [lenient]" classname="marineinfo-cors-compliance-basic-event" time="0.6949830055236816">
 			<failure message="Header 'access-control-allow-origin' is missing">Header absent in response from https://marineinfo.org/id/event/3127</failure>
 			<system-out>OPTIONS https://marineinfo.org/id/event/3127 with Origin: https://vliz.be
 access-control-allow-origin: ''
 </system-out>
 		</testcase>
-		<testcase name="access_control_allow_methods [https://marineinfo.org/id/event/3127]" classname="marineinfo-cors-compliance-basic-event" time="0.360978364944458">
-			<failure message="Header 'access-control-allow-methods' is missing">Expected methods ['GET', 'HEAD'] but header was absent</failure>
+		<testcase name="access_control_allow_methods [https://marineinfo.org/id/event/3127]" classname="marineinfo-cors-compliance-basic-event" time="0.4194908142089844">
+			<failure message="Header 'access-control-allow-methods' is missing">Expected methods ['HEAD'] but header was absent</failure>
 			<system-out>OPTIONS https://marineinfo.org/id/event/3127 (checking allow-methods)
 access-control-allow-methods: ''
 </system-out>
 		</testcase>
 		<properties>
-			<property name="urls" value="https://marineinfo.org/en/doc/event/3127, https://marineinfo.org/doc/event/3127, https://marineinfo.org/id/event/3127"/>
+			<property name="urls" value="https://marineinfo.org/doc/event/3127, https://marineinfo.org/id/event/3127"/>
 			<property name="hostnames" value="marineinfo.org"/>
 			<property name="timeout" value="30"/>
-			<property name="access-control-allow-methods" value="GET, HEAD"/>
+			<property name="access-control-allow-methods" value="HEAD"/>
 			<property name="https-redirect" value="false"/>
 			<property name="probe-origin" value="https://vliz.be"/>
-			<property name="provenance" value="https://github.com/vlizBE/GRMPy_VLIZ/blob/ab8b7444ba68e6f17302641bbc70b722b764c1a5/tests/tests.yaml"/>
+			<property name="provenance" value="https://github.com/vlizBE/GRMPy_VLIZ/blob/5217b90ba9b7ae5b4cb982b1aeff6ed0bb0edf65/tests/tests.yaml"/>
 			<property name="create-issue" value="false"/>
 		</properties>
 	</testsuite>
-	<testsuite name="marineinfo-cors-compliance-basic-dataset" timestamp="2026-06-11T12:32:33.649031+00:00" tests="6" errors="0" failures="6" skipped="0" time="3.2408268451690674">
-		<testcase name="access_control_allow_origin [https://marineinfo.org/en/doc/dataset/3221] [lenient]" classname="marineinfo-cors-compliance-basic-dataset" time="0.5135574340820312">
-			<failure message="Header 'access-control-allow-origin' is missing">Header absent in response from https://marineinfo.org/en/doc/dataset/3221</failure>
-			<system-out>OPTIONS https://marineinfo.org/en/doc/dataset/3221 with Origin: https://vliz.be
-access-control-allow-origin: ''
-</system-out>
-		</testcase>
-		<testcase name="access_control_allow_methods [https://marineinfo.org/en/doc/dataset/3221]" classname="marineinfo-cors-compliance-basic-dataset" time="0.37007665634155273">
-			<failure message="Header 'access-control-allow-methods' is missing">Expected methods ['GET', 'HEAD'] but header was absent</failure>
-			<system-out>OPTIONS https://marineinfo.org/en/doc/dataset/3221 (checking allow-methods)
-access-control-allow-methods: ''
-</system-out>
-		</testcase>
-		<testcase name="access_control_allow_origin [https://marineinfo.org/doc/dataset/3221] [lenient]" classname="marineinfo-cors-compliance-basic-dataset" time="0.7132241725921631">
+	<testsuite name="marineinfo-cors-compliance-basic-dataset" timestamp="2026-06-11T12:47:38.104449+00:00" tests="4" errors="0" failures="4" skipped="0" time="2.8180196285247803">
+		<testcase name="access_control_allow_origin [https://marineinfo.org/doc/dataset/3221] [lenient]" classname="marineinfo-cors-compliance-basic-dataset" time="0.6386408805847168">
 			<failure message="Header 'access-control-allow-origin' is missing">Header absent in response from https://marineinfo.org/en/doc/dataset/3221</failure>
 			<system-out>OPTIONS https://marineinfo.org/doc/dataset/3221 with Origin: https://vliz.be
 Followed 1 redirect(s) to https://marineinfo.org/en/doc/dataset/3221
 access-control-allow-origin: ''
 </system-out>
 		</testcase>
-		<testcase name="access_control_allow_methods [https://marineinfo.org/doc/dataset/3221]" classname="marineinfo-cors-compliance-basic-dataset" time="0.8178753852844238">
-			<failure message="Header 'access-control-allow-methods' is missing">Expected methods ['GET', 'HEAD'] but header was absent</failure>
+		<testcase name="access_control_allow_methods [https://marineinfo.org/doc/dataset/3221]" classname="marineinfo-cors-compliance-basic-dataset" time="1.0752794742584229">
+			<failure message="Header 'access-control-allow-methods' is missing">Expected methods ['HEAD'] but header was absent</failure>
 			<system-out>OPTIONS https://marineinfo.org/doc/dataset/3221 (checking allow-methods)
 access-control-allow-methods: ''
 </system-out>
 		</testcase>
-		<testcase name="access_control_allow_origin [https://marineinfo.org/id/dataset/3221] [lenient]" classname="marineinfo-cors-compliance-basic-dataset" time="0.44948792457580566">
+		<testcase name="access_control_allow_origin [https://marineinfo.org/id/dataset/3221] [lenient]" classname="marineinfo-cors-compliance-basic-dataset" time="0.5070180892944336">
 			<failure message="Header 'access-control-allow-origin' is missing">Header absent in response from https://marineinfo.org/id/dataset/3221</failure>
 			<system-out>OPTIONS https://marineinfo.org/id/dataset/3221 with Origin: https://vliz.be
 access-control-allow-origin: ''
 </system-out>
 		</testcase>
-		<testcase name="access_control_allow_methods [https://marineinfo.org/id/dataset/3221]" classname="marineinfo-cors-compliance-basic-dataset" time="0.3766052722930908">
-			<failure message="Header 'access-control-allow-methods' is missing">Expected methods ['GET', 'HEAD'] but header was absent</failure>
+		<testcase name="access_control_allow_methods [https://marineinfo.org/id/dataset/3221]" classname="marineinfo-cors-compliance-basic-dataset" time="0.597081184387207">
+			<failure message="Header 'access-control-allow-methods' is missing">Expected methods ['HEAD'] but header was absent</failure>
 			<system-out>OPTIONS https://marineinfo.org/id/dataset/3221 (checking allow-methods)
 access-control-allow-methods: ''
 </system-out>
 		</testcase>
 		<properties>
-			<property name="urls" value="https://marineinfo.org/en/doc/dataset/3221, https://marineinfo.org/doc/dataset/3221, https://marineinfo.org/id/dataset/3221"/>
+			<property name="urls" value="https://marineinfo.org/doc/dataset/3221, https://marineinfo.org/id/dataset/3221"/>
 			<property name="hostnames" value="marineinfo.org"/>
 			<property name="timeout" value="30"/>
-			<property name="access-control-allow-methods" value="GET, HEAD"/>
+			<property name="access-control-allow-methods" value="HEAD"/>
 			<property name="https-redirect" value="false"/>
 			<property name="probe-origin" value="https://vliz.be"/>
-			<property name="provenance" value="https://github.com/vlizBE/GRMPy_VLIZ/blob/ab8b7444ba68e6f17302641bbc70b722b764c1a5/tests/tests.yaml"/>
+			<property name="provenance" value="https://github.com/vlizBE/GRMPy_VLIZ/blob/5217b90ba9b7ae5b4cb982b1aeff6ed0bb0edf65/tests/tests.yaml"/>
 			<property name="create-issue" value="false"/>
 		</properties>
 	</testsuite>
