@@ -108,7 +108,6 @@ tests:
     image: ghcr.io/vliz-be-opsci/grmp-test-implementations-cors-compliance:main
     config:
       urls: 
-         - https://marineinfo.org/en/doc/person/46372
          - https://marineinfo.org/id/person/46372
          - https://marineinfo.org/doc/person/46372
       access-control-allow-methods:
@@ -118,49 +117,39 @@ tests:
     image: ghcr.io/vliz-be-opsci/grmp-test-implementations-cors-compliance:main
     config:
       urls: 
-         - https://marineinfo.org/en/doc/publication/97613
          - https://marineinfo.org/doc/publication/97613
          - https://marineinfo.org/id/publication/97613
       access-control-allow-methods:
-        - GET
         - HEAD
   marineinfo-cors-compliance-basic-institute:
     image: ghcr.io/vliz-be-opsci/grmp-test-implementations-cors-compliance:main
     config:
       urls: 
          - https://marineinfo.org/doc/institute/36
-         - https://marineinfo.org/en/doc/institute/36
          - https://marineinfo.org/id/institute/36
       access-control-allow-methods:
-        - GET
         - HEAD
   marineinfo-cors-compliance-basic-project:
     image: ghcr.io/vliz-be-opsci/grmp-test-implementations-cors-compliance:main
     config:
       urls: 
-         - https://marineinfo.org/en/doc/project/5528
          - https://marineinfo.org/id/project/5528
          - https://marineinfo.org/doc/project/5528
       access-control-allow-methods:
-        - GET
         - HEAD
   marineinfo-cors-compliance-basic-event:
     image: ghcr.io/vliz-be-opsci/grmp-test-implementations-cors-compliance:main
     config:
       urls: 
-         - https://marineinfo.org/en/doc/event/3127
          - https://marineinfo.org/doc/event/3127
          - https://marineinfo.org/id/event/3127
       access-control-allow-methods:
-        - GET
         - HEAD
   marineinfo-cors-compliance-basic-dataset:
     image: ghcr.io/vliz-be-opsci/grmp-test-implementations-cors-compliance:main
     config:
       urls: 
-         - https://marineinfo.org/en/doc/dataset/3221
          - https://marineinfo.org/doc/dataset/3221
          - https://marineinfo.org/id/dataset/3221
       access-control-allow-methods:
-        - GET
         - HEAD
