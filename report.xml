@@ -1,29 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <testsuites>
-	<testsuite name="LDES-feeds-marineinfo" timestamp="2026-09-09T12:26:35.973453+00:00" tests="36" errors="0" failures="5" skipped="15" time="66.65037608146667">
-		<testcase name="ldes_harvest [https://marineinfo.org/feed/institute]" classname="LDES-feeds-marineinfo" time="2.3854167461395264">
+	<testsuite name="LDES-feeds-marineinfo" timestamp="2026-09-28T08:27:17.784437+00:00" tests="36" errors="0" failures="6" skipped="20" time="68.22727298736572">
+		<testcase name="ldes_harvest [https://marineinfo.org/feed/institute]" classname="LDES-feeds-marineinfo" time="3.7151968479156494">
 			<system-out>Fetching RDF graph from: https://marineinfo.org/feed/institute
 HTTP 200, Content-Type: 'text/turtle; charset=utf-8;', format: turtle
-Successfully parsed 197 triple(s)
+Successfully parsed 3422 triple(s)
 </system-out>
 		</testcase>
-		<testcase name="ldes_event_stream [https://marineinfo.org/feed/institute]" classname="LDES-feeds-marineinfo" time="7.963180541992188e-05">
+		<testcase name="ldes_event_stream [https://marineinfo.org/feed/institute]" classname="LDES-feeds-marineinfo" time="9.250640869140625e-05">
 			<system-out>Found 1 ldes:EventStream declaration(s)
   EventStream: https://marineinfo.org/feed/institute
 </system-out>
 		</testcase>
 		<testcase name="ldes_tree_view [https://marineinfo.org/feed/institute]" classname="LDES-feeds-marineinfo" time="2.288818359375e-05">
 			<system-out>Found 1 tree:view relation(s)
-  tree:view: https://marineinfo.org/feed/institute?fragment=2026-09-09T09%3A00%3A00Z%2F2026-09-09T10%3A00%3A00Z
+  tree:view: https://marineinfo.org/feed/institute?fragment=2026-09-24T20%3A00%3A00Z%2F2026-09-24T21%3A00%3A00Z
 </system-out>
 		</testcase>
-		<testcase name="ldes_min_members [https://marineinfo.org/feed/institute]" classname="LDES-feeds-marineinfo" time="0.0005924701690673828">
+		<testcase name="ldes_min_members [https://marineinfo.org/feed/institute]" classname="LDES-feeds-marineinfo" time="0.0005857944488525391">
 			<system-out>Traversing LDES feed from: https://marineinfo.org/feed/institute
-Fetching LDES fragment: https://marineinfo.org/feed/institute?fragment=2026-09-09T09%3A00%3A00Z%2F2026-09-09T10%3A00%3A00Z
+Fetching LDES fragment: https://marineinfo.org/feed/institute?fragment=2026-09-24T20%3A00%3A00Z%2F2026-09-24T21%3A00%3A00Z
+HTTP 200, Content-Type: 'text/turtle; charset=utf-8;', format: turtle
+Fetching LDES fragment: https://marineinfo.org/feed/institute?fragment=2026-09-17T20%3A00%3A00Z%2F2026-09-17T21%3A00%3A00Z
+HTTP 200, Content-Type: 'text/turtle; charset=utf-8;', format: turtle
+Fetching LDES fragment: https://marineinfo.org/feed/institute?fragment=2026-09-11T13%3A00%3A00Z%2F2026-09-11T14%3A00%3A00Z
+HTTP 200, Content-Type: 'text/turtle; charset=utf-8;', format: turtle
+Fetching LDES fragment: https://marineinfo.org/feed/institute?fragment=2026-09-10T20%3A00%3A00Z%2F2026-09-10T21%3A00%3A00Z
 HTTP 200, Content-Type: 'text/turtle; charset=utf-8;', format: turtle
 Fetching LDES fragment: https://marineinfo.org/feed/institute?fragment=2026-09-07T08%3A00%3A00Z%2F2026-09-07T09%3A00%3A00Z
-HTTP 200, Content-Type: 'text/turtle; charset=utf-8;', format: turtle
-Fetching LDES fragment: https://marineinfo.org/feed/institute?fragment=2026-09-03T20%3A00%3A00Z%2F2026-09-03T21%3A00%3A00Z
 HTTP 200, Content-Type: 'text/turtle; charset=utf-8;', format: turtle
 Fetching LDES fragment: https://marineinfo.org/feed/institute?fragment=2026-09-03T15%3A00%3A00Z%2F2026-09-03T16%3A00%3A00Z
 HTTP 200, Content-Type: 'text/turtle; charset=utf-8;', format: turtle
@@ -33,21 +37,21 @@ Fetching LDES fragment: https://marineinfo.org/feed/institute?fragment=2026-08-2
 HTTP 200, Content-Type: 'text/turtle; charset=utf-8;', format: turtle
 Fetching LDES fragment: https://marineinfo.org/feed/institute?fragment=2026-08-24T12%3A00%3A00Z%2F2026-08-24T13%3A00%3A00Z
 HTTP 200, Content-Type: 'text/turtle; charset=utf-8;', format: turtle
-Fetching LDES fragment: https://marineinfo.org/feed/institute?fragment=2026-08-24T10%3A00%3A00Z%2F2026-08-24T11%3A00%3A00Z
-HTTP 200, Content-Type: 'text/turtle; charset=utf-8;', format: turtle
-Fetching LDES fragment: https://marineinfo.org/feed/institute?fragment=2026-08-11T23%3A00%3A00Z%2F2026-08-12T00%3A00%3A00Z
-HTTP 200, Content-Type: 'text/turtle; charset=utf-8;', format: turtle
-Traversal complete: 10 fragment(s) fetched, 5144 total triple(s)
-Found 500 tree:member(s) across 10 traversed fragment(s); required minimum: 20
+Traversal complete: 10 fragment(s) fetched, 5178 total triple(s)
+Found 505 tree:member(s) across 10 traversed fragment(s); required minimum: 20
 </system-out>
 		</testcase>
-		<testcase name="ldes_min_fragments [https://marineinfo.org/feed/institute]" classname="LDES-feeds-marineinfo" time="2.6941299438476562e-05">
+		<testcase name="ldes_min_fragments [https://marineinfo.org/feed/institute]" classname="LDES-feeds-marineinfo" time="3.123283386230469e-05">
 			<system-out>Traversing LDES feed from: https://marineinfo.org/feed/institute
-Fetching LDES fragment: https://marineinfo.org/feed/institute?fragment=2026-09-09T09%3A00%3A00Z%2F2026-09-09T10%3A00%3A00Z
+Fetching LDES fragment: https://marineinfo.org/feed/institute?fragment=2026-09-24T20%3A00%3A00Z%2F2026-09-24T21%3A00%3A00Z
+HTTP 200, Content-Type: 'text/turtle; charset=utf-8;', format: turtle
+Fetching LDES fragment: https://marineinfo.org/feed/institute?fragment=2026-09-17T20%3A00%3A00Z%2F2026-09-17T21%3A00%3A00Z
+HTTP 200, Content-Type: 'text/turtle; charset=utf-8;', format: turtle
+Fetching LDES fragment: https://marineinfo.org/feed/institute?fragment=2026-09-11T13%3A00%3A00Z%2F2026-09-11T14%3A00%3A00Z
+HTTP 200, Content-Type: 'text/turtle; charset=utf-8;', format: turtle
+Fetching LDES fragment: https://marineinfo.org/feed/institute?fragment=2026-09-10T20%3A00%3A00Z%2F2026-09-10T21%3A00%3A00Z
 HTTP 200, Content-Type: 'text/turtle; charset=utf-8;', format: turtle
 Fetching LDES fragment: https://marineinfo.org/feed/institute?fragment=2026-09-07T08%3A00%3A00Z%2F2026-09-07T09%3A00%3A00Z
-HTTP 200, Content-Type: 'text/turtle; charset=utf-8;', format: turtle
-Fetching LDES fragment: https://marineinfo.org/feed/institute?fragment=2026-09-03T20%3A00%3A00Z%2F2026-09-03T21%3A00%3A00Z
 HTTP 200, Content-Type: 'text/turtle; charset=utf-8;', format: turtle
 Fetching LDES fragment: https://marineinfo.org/feed/institute?fragment=2026-09-03T15%3A00%3A00Z%2F2026-09-03T16%3A00%3A00Z
 HTTP 200, Content-Type: 'text/turtle; charset=utf-8;', format: turtle
@@ -57,31 +61,31 @@ Fetching LDES fragment: https://marineinfo.org/feed/institute?fragment=2026-08-2
 HTTP 200, Content-Type: 'text/turtle; charset=utf-8;', format: turtle
 Fetching LDES fragment: https://marineinfo.org/feed/institute?fragment=2026-08-24T12%3A00%3A00Z%2F2026-08-24T13%3A00%3A00Z
 HTTP 200, Content-Type: 'text/turtle; charset=utf-8;', format: turtle
-Fetching LDES fragment: https://marineinfo.org/feed/institute?fragment=2026-08-24T10%3A00%3A00Z%2F2026-08-24T11%3A00%3A00Z
-HTTP 200, Content-Type: 'text/turtle; charset=utf-8;', format: turtle
-Fetching LDES fragment: https://marineinfo.org/feed/institute?fragment=2026-08-11T23%3A00%3A00Z%2F2026-08-12T00%3A00%3A00Z
-HTTP 200, Content-Type: 'text/turtle; charset=utf-8;', format: turtle
-Traversal complete: 10 fragment(s) fetched, 5144 total triple(s)
+Traversal complete: 10 fragment(s) fetched, 5178 total triple(s)
 Traversed 10 LDES fragment(s) (following tree:Relation → tree:node links); required minimum: 10
   fragment: https://marineinfo.org/feed/institute
-  fragment: https://marineinfo.org/feed/institute?fragment=2026-08-11T23%3A00%3A00Z%2F2026-08-12T00%3A00%3A00Z
-  fragment: https://marineinfo.org/feed/institute?fragment=2026-08-24T10%3A00%3A00Z%2F2026-08-24T11%3A00%3A00Z
   fragment: https://marineinfo.org/feed/institute?fragment=2026-08-24T12%3A00%3A00Z%2F2026-08-24T13%3A00%3A00Z
   fragment: https://marineinfo.org/feed/institute?fragment=2026-08-25T14%3A00%3A00Z%2F2026-08-25T15%3A00%3A00Z
   fragment: https://marineinfo.org/feed/institute?fragment=2026-09-03T10%3A00%3A00Z%2F2026-09-03T11%3A00%3A00Z
   fragment: https://marineinfo.org/feed/institute?fragment=2026-09-03T15%3A00%3A00Z%2F2026-09-03T16%3A00%3A00Z
-  fragment: https://marineinfo.org/feed/institute?fragment=2026-09-03T20%3A00%3A00Z%2F2026-09-03T21%3A00%3A00Z
   fragment: https://marineinfo.org/feed/institute?fragment=2026-09-07T08%3A00%3A00Z%2F2026-09-07T09%3A00%3A00Z
-  fragment: https://marineinfo.org/feed/institute?fragment=2026-09-09T09%3A00%3A00Z%2F2026-09-09T10%3A00%3A00Z
+  fragment: https://marineinfo.org/feed/institute?fragment=2026-09-10T20%3A00%3A00Z%2F2026-09-10T21%3A00%3A00Z
+  fragment: https://marineinfo.org/feed/institute?fragment=2026-09-11T13%3A00%3A00Z%2F2026-09-11T14%3A00%3A00Z
+  fragment: https://marineinfo.org/feed/institute?fragment=2026-09-17T20%3A00%3A00Z%2F2026-09-17T21%3A00%3A00Z
+  fragment: https://marineinfo.org/feed/institute?fragment=2026-09-24T20%3A00%3A00Z%2F2026-09-24T21%3A00%3A00Z
 </system-out>
 		</testcase>
-		<testcase name="ldes_max_age_youngest_member [https://marineinfo.org/feed/institute]" classname="LDES-feeds-marineinfo" time="0.0037620067596435547">
+		<testcase name="ldes_max_age_youngest_member [https://marineinfo.org/feed/institute]" classname="LDES-feeds-marineinfo" time="0.003889799118041992">
 			<system-out>Traversing LDES feed from: https://marineinfo.org/feed/institute
-Fetching LDES fragment: https://marineinfo.org/feed/institute?fragment=2026-09-09T09%3A00%3A00Z%2F2026-09-09T10%3A00%3A00Z
+Fetching LDES fragment: https://marineinfo.org/feed/institute?fragment=2026-09-24T20%3A00%3A00Z%2F2026-09-24T21%3A00%3A00Z
+HTTP 200, Content-Type: 'text/turtle; charset=utf-8;', format: turtle
+Fetching LDES fragment: https://marineinfo.org/feed/institute?fragment=2026-09-17T20%3A00%3A00Z%2F2026-09-17T21%3A00%3A00Z
+HTTP 200, Content-Type: 'text/turtle; charset=utf-8;', format: turtle
+Fetching LDES fragment: https://marineinfo.org/feed/institute?fragment=2026-09-11T13%3A00%3A00Z%2F2026-09-11T14%3A00%3A00Z
+HTTP 200, Content-Type: 'text/turtle; charset=utf-8;', format: turtle
+Fetching LDES fragment: https://marineinfo.org/feed/institute?fragment=2026-09-10T20%3A00%3A00Z%2F2026-09-10T21%3A00%3A00Z
 HTTP 200, Content-Type: 'text/turtle; charset=utf-8;', format: turtle
 Fetching LDES fragment: https://marineinfo.org/feed/institute?fragment=2026-09-07T08%3A00%3A00Z%2F2026-09-07T09%3A00%3A00Z
-HTTP 200, Content-Type: 'text/turtle; charset=utf-8;', format: turtle
-Fetching LDES fragment: https://marineinfo.org/feed/institute?fragment=2026-09-03T20%3A00%3A00Z%2F2026-09-03T21%3A00%3A00Z
 HTTP 200, Content-Type: 'text/turtle; charset=utf-8;', format: turtle
 Fetching LDES fragment: https://marineinfo.org/feed/institute?fragment=2026-09-03T15%3A00%3A00Z%2F2026-09-03T16%3A00%3A00Z
 HTTP 200, Content-Type: 'text/turtle; charset=utf-8;', format: turtle
@@ -91,170 +95,109 @@ Fetching LDES fragment: https://marineinfo.org/feed/institute?fragment=2026-08-2
 HTTP 200, Content-Type: 'text/turtle; charset=utf-8;', format: turtle
 Fetching LDES fragment: https://marineinfo.org/feed/institute?fragment=2026-08-24T12%3A00%3A00Z%2F2026-08-24T13%3A00%3A00Z
 HTTP 200, Content-Type: 'text/turtle; charset=utf-8;', format: turtle
-Fetching LDES fragment: https://marineinfo.org/feed/institute?fragment=2026-08-24T10%3A00%3A00Z%2F2026-08-24T11%3A00%3A00Z
-HTTP 200, Content-Type: 'text/turtle; charset=utf-8;', format: turtle
-Fetching LDES fragment: https://marineinfo.org/feed/institute?fragment=2026-08-11T23%3A00%3A00Z%2F2026-08-12T00%3A00%3A00Z
-HTTP 200, Content-Type: 'text/turtle; charset=utf-8;', format: turtle
-Traversal complete: 10 fragment(s) fetched, 5144 total triple(s)
+Traversal complete: 10 fragment(s) fetched, 5178 total triple(s)
 Checking age of youngest tree:member across 10 traversed fragment(s) of: https://marineinfo.org/feed/institute
 Using ldes:timestampPath predicate(s): http://purl.org/dc/elements/1.1/modified
-Youngest member timestamp: 2026-09-09T11:38:40+02:00; age: 2.74 hour(s); maximum allowed: 730 hour(s)
+Youngest member timestamp: 2026-09-24T22:15:20+02:00; age: 84.16 hour(s); maximum allowed: 730 hour(s)
 </system-out>
 		</testcase>
-		<testcase name="ldes_harvest [https://marineinfo.org/feed/dataset]" classname="LDES-feeds-marineinfo" time="1.6267707347869873">
+		<testcase name="ldes_harvest [https://marineinfo.org/feed/dataset]" classname="LDES-feeds-marineinfo" time="1.3737995624542236">
 			<system-out>Fetching RDF graph from: https://marineinfo.org/feed/dataset
 HTTP 200, Content-Type: 'text/turtle; charset=utf-8;', format: turtle
 Successfully parsed 208 triple(s)
 </system-out>
 		</testcase>
-		<testcase name="ldes_event_stream [https://marineinfo.org/feed/dataset]" classname="LDES-feeds-marineinfo" time="4.4345855712890625e-05">
+		<testcase name="ldes_event_stream [https://marineinfo.org/feed/dataset]" classname="LDES-feeds-marineinfo" time="5.078315734863281e-05">
 			<system-out>Found 1 ldes:EventStream declaration(s)
   EventStream: https://marineinfo.org/feed/dataset
 </system-out>
 		</testcase>
-		<testcase name="ldes_tree_view [https://marineinfo.org/feed/dataset]" classname="LDES-feeds-marineinfo" time="2.2649765014648438e-05">
+		<testcase name="ldes_tree_view [https://marineinfo.org/feed/dataset]" classname="LDES-feeds-marineinfo" time="2.1457672119140625e-05">
 			<system-out>Found 1 tree:view relation(s)
-  tree:view: https://marineinfo.org/feed/dataset?fragment=2026-09-08T10%3A00%3A00Z%2F2026-09-08T11%3A00%3A00Z
+  tree:view: https://marineinfo.org/feed/dataset?fragment=2026-09-22T09%3A00%3A00Z%2F2026-09-22T10%3A00%3A00Z
 </system-out>
 		</testcase>
-		<testcase name="ldes_min_members [https://marineinfo.org/feed/dataset]" classname="LDES-feeds-marineinfo" time="0.004848003387451172">
+		<testcase name="ldes_min_members [https://marineinfo.org/feed/dataset]" classname="LDES-feeds-marineinfo" time="8.487701416015625e-05">
+			<failure message="Insufficient members: found 12, expected at least 20">The event stream at https://marineinfo.org/feed/dataset exposes only 12 tree:member triple(s) across 4 traversed fragment(s), but at least 20 are required</failure>
 			<system-out>Traversing LDES feed from: https://marineinfo.org/feed/dataset
-Fetching LDES fragment: https://marineinfo.org/feed/dataset?fragment=2026-09-08T10%3A00%3A00Z%2F2026-09-08T11%3A00%3A00Z
+Fetching LDES fragment: https://marineinfo.org/feed/dataset?fragment=2026-09-22T09%3A00%3A00Z%2F2026-09-22T10%3A00%3A00Z
 HTTP 200, Content-Type: 'text/turtle; charset=utf-8;', format: turtle
-Fetching LDES fragment: https://marineinfo.org/feed/dataset?fragment=2026-09-08T09%3A00%3A00Z%2F2026-09-08T10%3A00%3A00Z
+Fetching LDES fragment: https://marineinfo.org/feed/dataset?fragment=2026-09-22T08%3A00%3A00Z%2F2026-09-22T09%3A00%3A00Z
 HTTP 200, Content-Type: 'text/turtle; charset=utf-8;', format: turtle
-Fetching LDES fragment: https://marineinfo.org/feed/dataset?fragment=2026-09-08T08%3A00%3A00Z%2F2026-09-08T09%3A00%3A00Z
+Fetching LDES fragment: https://marineinfo.org/feed/dataset?fragment=2026-09-22T07%3A00%3A00Z%2F2026-09-22T08%3A00%3A00Z
 HTTP 200, Content-Type: 'text/turtle; charset=utf-8;', format: turtle
-Fetching LDES fragment: https://marineinfo.org/feed/dataset?fragment=2026-09-07T23%3A00%3A00Z%2F2026-09-08T00%3A00%3A00Z
-HTTP 200, Content-Type: 'text/turtle; charset=utf-8;', format: turtle
-Fetching LDES fragment: https://marineinfo.org/feed/dataset?fragment=2026-09-07T13%3A00%3A00Z%2F2026-09-07T14%3A00%3A00Z
-HTTP 200, Content-Type: 'text/turtle; charset=utf-8;', format: turtle
-Fetching LDES fragment: https://marineinfo.org/feed/dataset?fragment=2026-09-07T12%3A00%3A00Z%2F2026-09-07T13%3A00%3A00Z
-HTTP 200, Content-Type: 'text/turtle; charset=utf-8;', format: turtle
-Fetching LDES fragment: https://marineinfo.org/feed/dataset?fragment=2026-09-07T11%3A00%3A00Z%2F2026-09-07T12%3A00%3A00Z
-HTTP 200, Content-Type: 'text/turtle; charset=utf-8;', format: turtle
-Fetching LDES fragment: https://marineinfo.org/feed/dataset?fragment=2026-09-04T11%3A00%3A00Z%2F2026-09-04T12%3A00%3A00Z
-HTTP 200, Content-Type: 'text/turtle; charset=utf-8;', format: turtle
-Fetching LDES fragment: https://marineinfo.org/feed/dataset?fragment=2026-09-04T09%3A00%3A00Z%2F2026-09-04T10%3A00%3A00Z
-HTTP 200, Content-Type: 'text/turtle; charset=utf-8;', format: turtle
-Traversal complete: 10 fragment(s) fetched, 29074 total triple(s)
-Found 4293 tree:member(s) across 10 traversed fragment(s); required minimum: 20
+Fetching LDES fragment: https://marineinfo.org/feed/dataset?fragment=2026-09-19T23%3A00%3A00Z%2F2026-09-20T00%3A00%3A00Z
+Traversal complete: 4 fragment(s) fetched, 867 total triple(s)
+Found 12 tree:member(s) across 4 traversed fragment(s); required minimum: 20
 </system-out>
+			<system-err>Could not fetch fragment https://marineinfo.org/feed/dataset?fragment=2026-09-19T23%3A00%3A00Z%2F2026-09-20T00%3A00%3A00Z: 500 Server Error: Internal Server Error for url: https://marineinfo.org/imis?module=dataset&amp;show=feed&amp;format=ttl&amp;fragment=2026-09-19T23%253A00%253A00Z%252F2026-09-20T00%253A00%253A00Z
+Warning: could not fetch fragment https://marineinfo.org/feed/dataset?fragment=2026-09-19T23%3A00%3A00Z%2F2026-09-20T00%3A00%3A00Z: 500 Server Error: Internal Server Error for url: https://marineinfo.org/imis?module=dataset&amp;show=feed&amp;format=ttl&amp;fragment=2026-09-19T23%253A00%253A00Z%252F2026-09-20T00%253A00%253A00Z
+Insufficient members: 12 &lt; 20
+</system-err>
 		</testcase>
-		<testcase name="ldes_min_fragments [https://marineinfo.org/feed/dataset]" classname="LDES-feeds-marineinfo" time="1.71661376953125e-05">
+		<testcase name="ldes_min_fragments [https://marineinfo.org/feed/dataset]" classname="LDES-feeds-marineinfo" time="1.33514404296875e-05">
+			<failure message="Insufficient fragments: traversed 4, expected at least 10">The LDES feed at https://marineinfo.org/feed/dataset yielded only 4 traversed fragment(s) (following tree:Relation → tree:node links), but at least 10 are required</failure>
 			<system-out>Traversing LDES feed from: https://marineinfo.org/feed/dataset
-Fetching LDES fragment: https://marineinfo.org/feed/dataset?fragment=2026-09-08T10%3A00%3A00Z%2F2026-09-08T11%3A00%3A00Z
+Fetching LDES fragment: https://marineinfo.org/feed/dataset?fragment=2026-09-22T09%3A00%3A00Z%2F2026-09-22T10%3A00%3A00Z
 HTTP 200, Content-Type: 'text/turtle; charset=utf-8;', format: turtle
-Fetching LDES fragment: https://marineinfo.org/feed/dataset?fragment=2026-09-08T09%3A00%3A00Z%2F2026-09-08T10%3A00%3A00Z
+Fetching LDES fragment: https://marineinfo.org/feed/dataset?fragment=2026-09-22T08%3A00%3A00Z%2F2026-09-22T09%3A00%3A00Z
 HTTP 200, Content-Type: 'text/turtle; charset=utf-8;', format: turtle
-Fetching LDES fragment: https://marineinfo.org/feed/dataset?fragment=2026-09-08T08%3A00%3A00Z%2F2026-09-08T09%3A00%3A00Z
+Fetching LDES fragment: https://marineinfo.org/feed/dataset?fragment=2026-09-22T07%3A00%3A00Z%2F2026-09-22T08%3A00%3A00Z
 HTTP 200, Content-Type: 'text/turtle; charset=utf-8;', format: turtle
-Fetching LDES fragment: https://marineinfo.org/feed/dataset?fragment=2026-09-07T23%3A00%3A00Z%2F2026-09-08T00%3A00%3A00Z
-HTTP 200, Content-Type: 'text/turtle; charset=utf-8;', format: turtle
-Fetching LDES fragment: https://marineinfo.org/feed/dataset?fragment=2026-09-07T13%3A00%3A00Z%2F2026-09-07T14%3A00%3A00Z
-HTTP 200, Content-Type: 'text/turtle; charset=utf-8;', format: turtle
-Fetching LDES fragment: https://marineinfo.org/feed/dataset?fragment=2026-09-07T12%3A00%3A00Z%2F2026-09-07T13%3A00%3A00Z
-HTTP 200, Content-Type: 'text/turtle; charset=utf-8;', format: turtle
-Fetching LDES fragment: https://marineinfo.org/feed/dataset?fragment=2026-09-07T11%3A00%3A00Z%2F2026-09-07T12%3A00%3A00Z
-HTTP 200, Content-Type: 'text/turtle; charset=utf-8;', format: turtle
-Fetching LDES fragment: https://marineinfo.org/feed/dataset?fragment=2026-09-04T11%3A00%3A00Z%2F2026-09-04T12%3A00%3A00Z
-HTTP 200, Content-Type: 'text/turtle; charset=utf-8;', format: turtle
-Fetching LDES fragment: https://marineinfo.org/feed/dataset?fragment=2026-09-04T09%3A00%3A00Z%2F2026-09-04T10%3A00%3A00Z
-HTTP 200, Content-Type: 'text/turtle; charset=utf-8;', format: turtle
-Traversal complete: 10 fragment(s) fetched, 29074 total triple(s)
-Traversed 10 LDES fragment(s) (following tree:Relation → tree:node links); required minimum: 10
+Fetching LDES fragment: https://marineinfo.org/feed/dataset?fragment=2026-09-19T23%3A00%3A00Z%2F2026-09-20T00%3A00%3A00Z
+Traversal complete: 4 fragment(s) fetched, 867 total triple(s)
+Traversed 4 LDES fragment(s) (following tree:Relation → tree:node links); required minimum: 10
   fragment: https://marineinfo.org/feed/dataset
-  fragment: https://marineinfo.org/feed/dataset?fragment=2026-09-04T09%3A00%3A00Z%2F2026-09-04T10%3A00%3A00Z
-  fragment: https://marineinfo.org/feed/dataset?fragment=2026-09-04T11%3A00%3A00Z%2F2026-09-04T12%3A00%3A00Z
-  fragment: https://marineinfo.org/feed/dataset?fragment=2026-09-07T11%3A00%3A00Z%2F2026-09-07T12%3A00%3A00Z
-  fragment: https://marineinfo.org/feed/dataset?fragment=2026-09-07T12%3A00%3A00Z%2F2026-09-07T13%3A00%3A00Z
-  fragment: https://marineinfo.org/feed/dataset?fragment=2026-09-07T13%3A00%3A00Z%2F2026-09-07T14%3A00%3A00Z
-  fragment: https://marineinfo.org/feed/dataset?fragment=2026-09-07T23%3A00%3A00Z%2F2026-09-08T00%3A00%3A00Z
-  fragment: https://marineinfo.org/feed/dataset?fragment=2026-09-08T08%3A00%3A00Z%2F2026-09-08T09%3A00%3A00Z
-  fragment: https://marineinfo.org/feed/dataset?fragment=2026-09-08T09%3A00%3A00Z%2F2026-09-08T10%3A00%3A00Z
-  fragment: https://marineinfo.org/feed/dataset?fragment=2026-09-08T10%3A00%3A00Z%2F2026-09-08T11%3A00%3A00Z
+  fragment: https://marineinfo.org/feed/dataset?fragment=2026-09-22T07%3A00%3A00Z%2F2026-09-22T08%3A00%3A00Z
+  fragment: https://marineinfo.org/feed/dataset?fragment=2026-09-22T08%3A00%3A00Z%2F2026-09-22T09%3A00%3A00Z
+  fragment: https://marineinfo.org/feed/dataset?fragment=2026-09-22T09%3A00%3A00Z%2F2026-09-22T10%3A00%3A00Z
 </system-out>
+			<system-err>Could not fetch fragment https://marineinfo.org/feed/dataset?fragment=2026-09-19T23%3A00%3A00Z%2F2026-09-20T00%3A00%3A00Z: 500 Server Error: Internal Server Error for url: https://marineinfo.org/imis?module=dataset&amp;show=feed&amp;format=ttl&amp;fragment=2026-09-19T23%253A00%253A00Z%252F2026-09-20T00%253A00%253A00Z
+Warning: could not fetch fragment https://marineinfo.org/feed/dataset?fragment=2026-09-19T23%3A00%3A00Z%2F2026-09-20T00%3A00%3A00Z: 500 Server Error: Internal Server Error for url: https://marineinfo.org/imis?module=dataset&amp;show=feed&amp;format=ttl&amp;fragment=2026-09-19T23%253A00%253A00Z%252F2026-09-20T00%253A00%253A00Z
+Insufficient fragments: 4 &lt; 10
+</system-err>
 		</testcase>
-		<testcase name="ldes_max_age_youngest_member [https://marineinfo.org/feed/dataset]" classname="LDES-feeds-marineinfo" time="0.031764984130859375">
+		<testcase name="ldes_max_age_youngest_member [https://marineinfo.org/feed/dataset]" classname="LDES-feeds-marineinfo" time="0.00019931793212890625">
 			<system-out>Traversing LDES feed from: https://marineinfo.org/feed/dataset
-Fetching LDES fragment: https://marineinfo.org/feed/dataset?fragment=2026-09-08T10%3A00%3A00Z%2F2026-09-08T11%3A00%3A00Z
+Fetching LDES fragment: https://marineinfo.org/feed/dataset?fragment=2026-09-22T09%3A00%3A00Z%2F2026-09-22T10%3A00%3A00Z
 HTTP 200, Content-Type: 'text/turtle; charset=utf-8;', format: turtle
-Fetching LDES fragment: https://marineinfo.org/feed/dataset?fragment=2026-09-08T09%3A00%3A00Z%2F2026-09-08T10%3A00%3A00Z
+Fetching LDES fragment: https://marineinfo.org/feed/dataset?fragment=2026-09-22T08%3A00%3A00Z%2F2026-09-22T09%3A00%3A00Z
 HTTP 200, Content-Type: 'text/turtle; charset=utf-8;', format: turtle
-Fetching LDES fragment: https://marineinfo.org/feed/dataset?fragment=2026-09-08T08%3A00%3A00Z%2F2026-09-08T09%3A00%3A00Z
+Fetching LDES fragment: https://marineinfo.org/feed/dataset?fragment=2026-09-22T07%3A00%3A00Z%2F2026-09-22T08%3A00%3A00Z
 HTTP 200, Content-Type: 'text/turtle; charset=utf-8;', format: turtle
-Fetching LDES fragment: https://marineinfo.org/feed/dataset?fragment=2026-09-07T23%3A00%3A00Z%2F2026-09-08T00%3A00%3A00Z
-HTTP 200, Content-Type: 'text/turtle; charset=utf-8;', format: turtle
-Fetching LDES fragment: https://marineinfo.org/feed/dataset?fragment=2026-09-07T13%3A00%3A00Z%2F2026-09-07T14%3A00%3A00Z
-HTTP 200, Content-Type: 'text/turtle; charset=utf-8;', format: turtle
-Fetching LDES fragment: https://marineinfo.org/feed/dataset?fragment=2026-09-07T12%3A00%3A00Z%2F2026-09-07T13%3A00%3A00Z
-HTTP 200, Content-Type: 'text/turtle; charset=utf-8;', format: turtle
-Fetching LDES fragment: https://marineinfo.org/feed/dataset?fragment=2026-09-07T11%3A00%3A00Z%2F2026-09-07T12%3A00%3A00Z
-HTTP 200, Content-Type: 'text/turtle; charset=utf-8;', format: turtle
-Fetching LDES fragment: https://marineinfo.org/feed/dataset?fragment=2026-09-04T11%3A00%3A00Z%2F2026-09-04T12%3A00%3A00Z
-HTTP 200, Content-Type: 'text/turtle; charset=utf-8;', format: turtle
-Fetching LDES fragment: https://marineinfo.org/feed/dataset?fragment=2026-09-04T09%3A00%3A00Z%2F2026-09-04T10%3A00%3A00Z
-HTTP 200, Content-Type: 'text/turtle; charset=utf-8;', format: turtle
-Traversal complete: 10 fragment(s) fetched, 29074 total triple(s)
-Checking age of youngest tree:member across 10 traversed fragment(s) of: https://marineinfo.org/feed/dataset
+Fetching LDES fragment: https://marineinfo.org/feed/dataset?fragment=2026-09-19T23%3A00%3A00Z%2F2026-09-20T00%3A00%3A00Z
+Traversal complete: 4 fragment(s) fetched, 867 total triple(s)
+Checking age of youngest tree:member across 4 traversed fragment(s) of: https://marineinfo.org/feed/dataset
 Using ldes:timestampPath predicate(s): http://purl.org/dc/elements/1.1/modified
-Youngest member timestamp: 2026-09-08T12:13:16+02:00; age: 26.19 hour(s); maximum allowed: 730 hour(s)
+Youngest member timestamp: 2026-09-22T09:24:19+00:00; age: 143.03 hour(s); maximum allowed: 730 hour(s)
 </system-out>
+			<system-err>Could not fetch fragment https://marineinfo.org/feed/dataset?fragment=2026-09-19T23%3A00%3A00Z%2F2026-09-20T00%3A00%3A00Z: 500 Server Error: Internal Server Error for url: https://marineinfo.org/imis?module=dataset&amp;show=feed&amp;format=ttl&amp;fragment=2026-09-19T23%253A00%253A00Z%252F2026-09-20T00%253A00%253A00Z
+Warning: could not fetch fragment https://marineinfo.org/feed/dataset?fragment=2026-09-19T23%3A00%3A00Z%2F2026-09-20T00%3A00%3A00Z: 500 Server Error: Internal Server Error for url: https://marineinfo.org/imis?module=dataset&amp;show=feed&amp;format=ttl&amp;fragment=2026-09-19T23%253A00%253A00Z%252F2026-09-20T00%253A00%253A00Z
+</system-err>
 		</testcase>
-		<testcase name="ldes_harvest [https://marineinfo.org/feed/publication]" classname="LDES-feeds-marineinfo" time="61.184592485427856">
+		<testcase name="ldes_harvest [https://marineinfo.org/feed/publication]" classname="LDES-feeds-marineinfo" time="15.83953046798706">
+			<failure message="Could not fetch or parse RDF from https://marineinfo.org/feed/publication">HTTPSConnectionPool(host='marineinfo.org', port=443): Max retries exceeded with url: /feed/publication (Caused by NewConnectionError(&quot;HTTPSConnection(host='marineinfo.org', port=443): Failed to establish a new connection: [Errno 111] Connection refused&quot;))</failure>
 			<system-out>Fetching RDF graph from: https://marineinfo.org/feed/publication
-HTTP 200, Content-Type: 'text/turtle; charset=utf-8;', format: turtle
-Successfully parsed 275 triple(s)
 </system-out>
-		</testcase>
-		<testcase name="ldes_event_stream [https://marineinfo.org/feed/publication]" classname="LDES-feeds-marineinfo" time="5.650520324707031e-05">
-			<system-out>Found 1 ldes:EventStream declaration(s)
-  EventStream: https://marineinfo.org/feed/publication
-</system-out>
-		</testcase>
-		<testcase name="ldes_tree_view [https://marineinfo.org/feed/publication]" classname="LDES-feeds-marineinfo" time="2.2172927856445312e-05">
-			<system-out>Found 1 tree:view relation(s)
-  tree:view: https://marineinfo.org/feed/publication?fragment=2026-09-09T11%3A00%3A00Z%2F2026-09-09T12%3A00%3A00Z
-</system-out>
-		</testcase>
-		<testcase name="ldes_min_members [https://marineinfo.org/feed/publication]" classname="LDES-feeds-marineinfo" time="0.0001010894775390625">
-			<failure message="Insufficient members: found 6, expected at least 20">The event stream at https://marineinfo.org/feed/publication exposes only 6 tree:member triple(s) across 1 traversed fragment(s), but at least 20 are required</failure>
-			<system-out>Traversing LDES feed from: https://marineinfo.org/feed/publication
-Fetching LDES fragment: https://marineinfo.org/feed/publication?fragment=2026-09-09T11%3A00%3A00Z%2F2026-09-09T12%3A00%3A00Z
-Traversal complete: 1 fragment(s) fetched, 275 total triple(s)
-Found 6 tree:member(s) across 1 traversed fragment(s); required minimum: 20
-</system-out>
-			<system-err>Could not fetch fragment https://marineinfo.org/feed/publication?fragment=2026-09-09T11%3A00%3A00Z%2F2026-09-09T12%3A00%3A00Z: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-Warning: could not fetch fragment https://marineinfo.org/feed/publication?fragment=2026-09-09T11%3A00%3A00Z%2F2026-09-09T12%3A00%3A00Z: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-Insufficient members: 6 &lt; 20
+			<system-err>Failed to fetch/parse RDF: HTTPSConnectionPool(host='marineinfo.org', port=443): Max retries exceeded with url: /feed/publication (Caused by NewConnectionError(&quot;HTTPSConnection(host='marineinfo.org', port=443): Failed to establish a new connection: [Errno 111] Connection refused&quot;))
 </system-err>
 		</testcase>
-		<testcase name="ldes_min_fragments [https://marineinfo.org/feed/publication]" classname="LDES-feeds-marineinfo" time="1.33514404296875e-05">
-			<failure message="Insufficient fragments: traversed 1, expected at least 10">The LDES feed at https://marineinfo.org/feed/publication yielded only 1 traversed fragment(s) (following tree:Relation → tree:node links), but at least 10 are required</failure>
-			<system-out>Traversing LDES feed from: https://marineinfo.org/feed/publication
-Fetching LDES fragment: https://marineinfo.org/feed/publication?fragment=2026-09-09T11%3A00%3A00Z%2F2026-09-09T12%3A00%3A00Z
-Traversal complete: 1 fragment(s) fetched, 275 total triple(s)
-Traversed 1 LDES fragment(s) (following tree:Relation → tree:node links); required minimum: 10
-  fragment: https://marineinfo.org/feed/publication
-</system-out>
-			<system-err>Could not fetch fragment https://marineinfo.org/feed/publication?fragment=2026-09-09T11%3A00%3A00Z%2F2026-09-09T12%3A00%3A00Z: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-Warning: could not fetch fragment https://marineinfo.org/feed/publication?fragment=2026-09-09T11%3A00%3A00Z%2F2026-09-09T12%3A00%3A00Z: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-Insufficient fragments: 1 &lt; 10
-</system-err>
+		<testcase name="ldes_event_stream [https://marineinfo.org/feed/publication]" classname="LDES-feeds-marineinfo" time="0.0">
+			<skipped message="RDF harvest failed"/>
 		</testcase>
-		<testcase name="ldes_max_age_youngest_member [https://marineinfo.org/feed/publication]" classname="LDES-feeds-marineinfo" time="0.0001666545867919922">
-			<system-out>Traversing LDES feed from: https://marineinfo.org/feed/publication
-Fetching LDES fragment: https://marineinfo.org/feed/publication?fragment=2026-09-09T11%3A00%3A00Z%2F2026-09-09T12%3A00%3A00Z
-Traversal complete: 1 fragment(s) fetched, 275 total triple(s)
-Checking age of youngest tree:member across 1 traversed fragment(s) of: https://marineinfo.org/feed/publication
-Using ldes:timestampPath predicate(s): http://purl.org/dc/elements/1.1/modified
-Youngest member timestamp: 2026-09-09T13:32:08+02:00; age: 0.91 hour(s); maximum allowed: 730 hour(s)
-</system-out>
-			<system-err>Could not fetch fragment https://marineinfo.org/feed/publication?fragment=2026-09-09T11%3A00%3A00Z%2F2026-09-09T12%3A00%3A00Z: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-Warning: could not fetch fragment https://marineinfo.org/feed/publication?fragment=2026-09-09T11%3A00%3A00Z%2F2026-09-09T12%3A00%3A00Z: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-</system-err>
+		<testcase name="ldes_tree_view [https://marineinfo.org/feed/publication]" classname="LDES-feeds-marineinfo" time="0.0">
+			<skipped message="RDF harvest failed"/>
 		</testcase>
-		<testcase name="ldes_harvest [https://marineinfo.org/feed/person]" classname="LDES-feeds-marineinfo" time="0.43852686882019043">
+		<testcase name="ldes_min_members [https://marineinfo.org/feed/publication]" classname="LDES-feeds-marineinfo" time="0.0">
+			<skipped message="RDF harvest failed"/>
+		</testcase>
+		<testcase name="ldes_min_fragments [https://marineinfo.org/feed/publication]" classname="LDES-feeds-marineinfo" time="0.0">
+			<skipped message="RDF harvest failed"/>
+		</testcase>
+		<testcase name="ldes_max_age_youngest_member [https://marineinfo.org/feed/publication]" classname="LDES-feeds-marineinfo" time="0.0">
+			<skipped message="RDF harvest failed"/>
+		</testcase>
+		<testcase name="ldes_harvest [https://marineinfo.org/feed/person]" classname="LDES-feeds-marineinfo" time="15.991482019424438">
 			<failure message="Could not fetch or parse RDF from https://marineinfo.org/feed/person">HTTPSConnectionPool(host='marineinfo.org', port=443): Max retries exceeded with url: /feed/person (Caused by NewConnectionError(&quot;HTTPSConnection(host='marineinfo.org', port=443): Failed to establish a new connection: [Errno 111] Connection refused&quot;))</failure>
 			<system-out>Fetching RDF graph from: https://marineinfo.org/feed/person
 </system-out>
@@ -276,7 +219,7 @@ Warning: could not fetch fragment https://marineinfo.org/feed/publication?fragme
 		<testcase name="ldes_max_age_youngest_member [https://marineinfo.org/feed/person]" classname="LDES-feeds-marineinfo" time="0.0">
 			<skipped message="RDF harvest failed"/>
 		</testcase>
-		<testcase name="ldes_harvest [https://marineinfo.org/feed/project]" classname="LDES-feeds-marineinfo" time="0.4377617835998535">
+		<testcase name="ldes_harvest [https://marineinfo.org/feed/project]" classname="LDES-feeds-marineinfo" time="15.55026650428772">
 			<failure message="Could not fetch or parse RDF from https://marineinfo.org/feed/project">HTTPSConnectionPool(host='marineinfo.org', port=443): Max retries exceeded with url: /feed/project (Caused by NewConnectionError(&quot;HTTPSConnection(host='marineinfo.org', port=443): Failed to establish a new connection: [Errno 111] Connection refused&quot;))</failure>
 			<system-out>Fetching RDF graph from: https://marineinfo.org/feed/project
 </system-out>
@@ -298,7 +241,7 @@ Warning: could not fetch fragment https://marineinfo.org/feed/publication?fragme
 		<testcase name="ldes_max_age_youngest_member [https://marineinfo.org/feed/project]" classname="LDES-feeds-marineinfo" time="0.0">
 			<skipped message="RDF harvest failed"/>
 		</testcase>
-		<testcase name="ldes_harvest [https://marineinfo.org/feed/event]" classname="LDES-feeds-marineinfo" time="0.5357666015625">
+		<testcase name="ldes_harvest [https://marineinfo.org/feed/event]" classname="LDES-feeds-marineinfo" time="15.752005577087402">
 			<failure message="Could not fetch or parse RDF from https://marineinfo.org/feed/event">HTTPSConnectionPool(host='marineinfo.org', port=443): Max retries exceeded with url: /feed/event (Caused by NewConnectionError(&quot;HTTPSConnection(host='marineinfo.org', port=443): Failed to establish a new connection: [Errno 111] Connection refused&quot;))</failure>
 			<system-out>Fetching RDF graph from: https://marineinfo.org/feed/event
 </system-out>
@@ -329,12 +272,12 @@ Warning: could not fetch fragment https://marineinfo.org/feed/publication?fragme
 			<property name="create-issue" value="true"/>
 		</properties>
 	</testsuite>
-	<testsuite name="LDES-feed-aphia" timestamp="2026-09-09T12:26:37.495151+00:00" tests="6" errors="0" failures="1" skipped="5" time="0.4448082447052002">
-		<testcase name="ldes_harvest [http://aphia.org/feed]" classname="LDES-feed-aphia" time="0.4448082447052002">
-			<failure message="Could not fetch or parse RDF from http://aphia.org/feed">HTTPConnectionPool(host='aphia.org', port=80): Max retries exceeded with url: /feed (Caused by NewConnectionError(&quot;HTTPConnection(host='aphia.org', port=80): Failed to establish a new connection: [Errno 111] Connection refused&quot;))</failure>
+	<testsuite name="LDES-feed-aphia" timestamp="2026-09-28T08:27:35.329390+00:00" tests="6" errors="0" failures="1" skipped="5" time="16.416486978530884">
+		<testcase name="ldes_harvest [http://aphia.org/feed]" classname="LDES-feed-aphia" time="16.416486978530884">
+			<failure message="Could not fetch or parse RDF from http://aphia.org/feed">HTTPSConnectionPool(host='aphia.org', port=443): Max retries exceeded with url: /feed (Caused by NewConnectionError(&quot;HTTPSConnection(host='aphia.org', port=443): Failed to establish a new connection: [Errno 111] Connection refused&quot;))</failure>
 			<system-out>Fetching RDF graph from: http://aphia.org/feed
 </system-out>
-			<system-err>Failed to fetch/parse RDF: HTTPConnectionPool(host='aphia.org', port=80): Max retries exceeded with url: /feed (Caused by NewConnectionError(&quot;HTTPConnection(host='aphia.org', port=80): Failed to establish a new connection: [Errno 111] Connection refused&quot;))
+			<system-err>Failed to fetch/parse RDF: HTTPSConnectionPool(host='aphia.org', port=443): Max retries exceeded with url: /feed (Caused by NewConnectionError(&quot;HTTPSConnection(host='aphia.org', port=443): Failed to establish a new connection: [Errno 111] Connection refused&quot;))
 </system-err>
 		</testcase>
 		<testcase name="ldes_event_stream [http://aphia.org/feed]" classname="LDES-feed-aphia" time="0.0">
@@ -361,8 +304,8 @@ Warning: could not fetch fragment https://marineinfo.org/feed/publication?fragme
 			<property name="create-issue" value="true"/>
 		</properties>
 	</testsuite>
-	<testsuite name="LDES-feed-marine-regions" timestamp="2026-09-09T12:26:42.798894+00:00" tests="6" errors="0" failures="1" skipped="5" time="4.385148525238037">
-		<testcase name="ldes_harvest [https://marineregions.org/feed.ttl]" classname="LDES-feed-marine-regions" time="4.385148525238037">
+	<testsuite name="LDES-feed-marine-regions" timestamp="2026-09-28T08:27:52.073412+00:00" tests="6" errors="0" failures="1" skipped="5" time="15.713267087936401">
+		<testcase name="ldes_harvest [https://marineregions.org/feed.ttl]" classname="LDES-feed-marine-regions" time="15.713267087936401">
 			<failure message="Could not fetch or parse RDF from https://marineregions.org/feed.ttl">HTTPSConnectionPool(host='marineregions.org', port=443): Max retries exceeded with url: /feed.ttl (Caused by NewConnectionError(&quot;HTTPSConnection(host='marineregions.org', port=443): Failed to establish a new connection: [Errno 111] Connection refused&quot;))</failure>
 			<system-out>Fetching RDF graph from: https://marineregions.org/feed.ttl
 </system-out>
@@ -393,8 +336,8 @@ Warning: could not fetch fragment https://marineinfo.org/feed/publication?fragme
 			<property name="create-issue" value="true"/>
 		</properties>
 	</testsuite>
-	<testsuite name="marineinfo-person-resource-availability" timestamp="2026-09-09T12:26:49.135504+00:00" tests="9" errors="0" failures="6" skipped="0" time="2.2178523540496826">
-		<testcase name="dns_resolution [https://marineinfo.org/en/doc/person/46372]" classname="marineinfo-person-resource-availability" time="0.14921188354492188">
+	<testsuite name="marineinfo-person-resource-availability" timestamp="2026-09-28T08:28:27.822605+00:00" tests="9" errors="3" failures="0" skipped="0" time="31.620192050933838">
+		<testcase name="dns_resolution [https://marineinfo.org/en/doc/person/46372]" classname="marineinfo-person-resource-availability" time="0.1182861328125">
 			<system-out>Resolving hostname: marineinfo.org
 resolved_ip: 193.191.134.34
 </system-out>
@@ -411,67 +354,67 @@ resolved_ip: 193.191.134.34
 			<property name="provenance" value="https://github.com/vlizBE/GRMPy_VLIZ/blob/5217b90ba9b7ae5b4cb982b1aeff6ed0bb0edf65/tests/tests.yaml"/>
 			<property name="create-issue" value="true"/>
 		</properties>
-		<testcase name="http_availability [https://marineinfo.org/en/doc/person/46372]" classname="marineinfo-person-resource-availability" time="0.3027029037475586">
-			<failure message="HTTP availability check failed">HTTPConnectionPool(host='marineinfo.org', port=80): Max retries exceeded with url: /en/doc/person/46372 (Caused by NewConnectionError(&quot;HTTPConnection(host='marineinfo.org', port=80): Failed to establish a new connection: [Errno 111] Connection refused&quot;))</failure>
-			<system-out>response_time_s: 0.303
-Checking HTTP availability for: http://marineinfo.org/en/doc/person/46372
-Timeout: 10s, Max redirects: 3, Verify SSL: True
-Availability check failed: HTTPConnectionPool(host='marineinfo.org', port=80): Max retries exceeded with url: /en/doc/person/46372 (Caused by NewConnectionError(&quot;HTTPConnection(host='marineinfo.org', port=80): Failed to establish a new connection: [Errno 111] Connection refused&quot;))
+		<testcase name="http_availability [https://marineinfo.org/en/doc/person/46372]" classname="marineinfo-person-resource-availability" time="0.3876941204071045">
+			<system-out>response_time_s: 0.388
+status_code: 301
+redirects_to: https://marineinfo.org/en/doc/person/46372
+OK: HTTP endpoint reachable (redirects to HTTPS)
 </system-out>
 		</testcase>
-		<testcase name="https_availability [https://marineinfo.org/en/doc/person/46372]" classname="marineinfo-person-resource-availability" time="0.2887706756591797">
-			<failure message="HTTPS availability check failed">HTTPSConnectionPool(host='marineinfo.org', port=443): Max retries exceeded with url: /en/doc/person/46372 (Caused by NewConnectionError(&quot;HTTPSConnection(host='marineinfo.org', port=443): Failed to establish a new connection: [Errno 111] Connection refused&quot;))</failure>
-			<system-out>response_time_s: 0.289
-Checking HTTPS availability for: https://marineinfo.org/en/doc/person/46372
-Timeout: 10s, Max redirects: 3, Verify SSL: True
-Availability check failed: HTTPSConnectionPool(host='marineinfo.org', port=443): Max retries exceeded with url: /en/doc/person/46372 (Caused by NewConnectionError(&quot;HTTPSConnection(host='marineinfo.org', port=443): Failed to establish a new connection: [Errno 111] Connection refused&quot;))
+		<testcase name="https_availability [https://marineinfo.org/en/doc/person/46372]" classname="marineinfo-person-resource-availability" time="10.013431072235107">
+			<error message="Unexpected error">Response time 10.013s exceeded timeout of 10s</error>
+			<system-out>response_time_s: 10.013
 </system-out>
+			<system-err>Checking HTTPS availability for: https://marineinfo.org/en/doc/person/46372
+Timeout: 10s, Max redirects: 3, Verify SSL: True
+Response time 10.013s exceeded timeout of 10s
+</system-err>
 		</testcase>
-		<testcase name="dns_resolution [https://marineinfo.org/id/person/46372]" classname="marineinfo-person-resource-availability" time="0.1494436264038086">
+		<testcase name="dns_resolution [https://marineinfo.org/id/person/46372]" classname="marineinfo-person-resource-availability" time="0.0033884048461914062">
 			<system-out>Resolving hostname: marineinfo.org
 resolved_ip: 193.191.134.34
 </system-out>
 		</testcase>
-		<testcase name="http_availability [https://marineinfo.org/id/person/46372]" classname="marineinfo-person-resource-availability" time="0.447476863861084">
-			<failure message="HTTP availability check failed">HTTPConnectionPool(host='marineinfo.org', port=80): Max retries exceeded with url: /id/person/46372 (Caused by NewConnectionError(&quot;HTTPConnection(host='marineinfo.org', port=80): Failed to establish a new connection: [Errno 111] Connection refused&quot;))</failure>
-			<system-out>response_time_s: 0.447
-Checking HTTP availability for: http://marineinfo.org/id/person/46372
-Timeout: 10s, Max redirects: 3, Verify SSL: True
-Availability check failed: HTTPConnectionPool(host='marineinfo.org', port=80): Max retries exceeded with url: /id/person/46372 (Caused by NewConnectionError(&quot;HTTPConnection(host='marineinfo.org', port=80): Failed to establish a new connection: [Errno 111] Connection refused&quot;))
+		<testcase name="http_availability [https://marineinfo.org/id/person/46372]" classname="marineinfo-person-resource-availability" time="0.6723229885101318">
+			<system-out>response_time_s: 0.672
+status_code: 301
+redirects_to: https://marineinfo.org/id/person/46372
+OK: HTTP endpoint reachable (redirects to HTTPS)
 </system-out>
 		</testcase>
-		<testcase name="https_availability [https://marineinfo.org/id/person/46372]" classname="marineinfo-person-resource-availability" time="0.2884023189544678">
-			<failure message="HTTPS availability check failed">HTTPSConnectionPool(host='marineinfo.org', port=443): Max retries exceeded with url: /id/person/46372 (Caused by NewConnectionError(&quot;HTTPSConnection(host='marineinfo.org', port=443): Failed to establish a new connection: [Errno 111] Connection refused&quot;))</failure>
-			<system-out>response_time_s: 0.288
-Checking HTTPS availability for: https://marineinfo.org/id/person/46372
-Timeout: 10s, Max redirects: 3, Verify SSL: True
-Availability check failed: HTTPSConnectionPool(host='marineinfo.org', port=443): Max retries exceeded with url: /id/person/46372 (Caused by NewConnectionError(&quot;HTTPSConnection(host='marineinfo.org', port=443): Failed to establish a new connection: [Errno 111] Connection refused&quot;))
+		<testcase name="https_availability [https://marineinfo.org/id/person/46372]" classname="marineinfo-person-resource-availability" time="10.018524885177612">
+			<error message="Unexpected error">Response time 10.019s exceeded timeout of 10s</error>
+			<system-out>response_time_s: 10.019
 </system-out>
+			<system-err>Checking HTTPS availability for: https://marineinfo.org/id/person/46372
+Timeout: 10s, Max redirects: 3, Verify SSL: True
+Response time 10.019s exceeded timeout of 10s
+</system-err>
 		</testcase>
-		<testcase name="dns_resolution [https://marineinfo.org/doc/person/46372]" classname="marineinfo-person-resource-availability" time="0.14036083221435547">
+		<testcase name="dns_resolution [https://marineinfo.org/doc/person/46372]" classname="marineinfo-person-resource-availability" time="0.0019588470458984375">
 			<system-out>Resolving hostname: marineinfo.org
 resolved_ip: 193.191.134.34
 </system-out>
 		</testcase>
-		<testcase name="http_availability [https://marineinfo.org/doc/person/46372]" classname="marineinfo-person-resource-availability" time="0.14961004257202148">
-			<failure message="HTTP availability check failed">HTTPConnectionPool(host='marineinfo.org', port=80): Max retries exceeded with url: /doc/person/46372 (Caused by NewConnectionError(&quot;HTTPConnection(host='marineinfo.org', port=80): Failed to establish a new connection: [Errno 111] Connection refused&quot;))</failure>
-			<system-out>response_time_s: 0.150
-Checking HTTP availability for: http://marineinfo.org/doc/person/46372
-Timeout: 10s, Max redirects: 3, Verify SSL: True
-Availability check failed: HTTPConnectionPool(host='marineinfo.org', port=80): Max retries exceeded with url: /doc/person/46372 (Caused by NewConnectionError(&quot;HTTPConnection(host='marineinfo.org', port=80): Failed to establish a new connection: [Errno 111] Connection refused&quot;))
+		<testcase name="http_availability [https://marineinfo.org/doc/person/46372]" classname="marineinfo-person-resource-availability" time="0.3883659839630127">
+			<system-out>response_time_s: 0.388
+status_code: 301
+redirects_to: https://marineinfo.org/doc/person/46372
+OK: HTTP endpoint reachable (redirects to HTTPS)
 </system-out>
 		</testcase>
-		<testcase name="https_availability [https://marineinfo.org/doc/person/46372]" classname="marineinfo-person-resource-availability" time="0.30187320709228516">
-			<failure message="HTTPS availability check failed">HTTPSConnectionPool(host='marineinfo.org', port=443): Max retries exceeded with url: /doc/person/46372 (Caused by NewConnectionError(&quot;HTTPSConnection(host='marineinfo.org', port=443): Failed to establish a new connection: [Errno 111] Connection refused&quot;))</failure>
-			<system-out>response_time_s: 0.302
-Checking HTTPS availability for: https://marineinfo.org/doc/person/46372
-Timeout: 10s, Max redirects: 3, Verify SSL: True
-Availability check failed: HTTPSConnectionPool(host='marineinfo.org', port=443): Max retries exceeded with url: /doc/person/46372 (Caused by NewConnectionError(&quot;HTTPSConnection(host='marineinfo.org', port=443): Failed to establish a new connection: [Errno 111] Connection refused&quot;))
+		<testcase name="https_availability [https://marineinfo.org/doc/person/46372]" classname="marineinfo-person-resource-availability" time="10.01621961593628">
+			<error message="Unexpected error">Response time 10.016s exceeded timeout of 10s</error>
+			<system-out>response_time_s: 10.016
 </system-out>
+			<system-err>Checking HTTPS availability for: https://marineinfo.org/doc/person/46372
+Timeout: 10s, Max redirects: 3, Verify SSL: True
+Response time 10.016s exceeded timeout of 10s
+</system-err>
 		</testcase>
 	</testsuite>
-	<testsuite name="marineinfo-publication-resource-availability" timestamp="2026-09-09T12:26:51.753475+00:00" tests="9" errors="0" failures="6" skipped="0" time="1.8007338047027588">
-		<testcase name="dns_resolution [https://marineinfo.org/en/doc/publication/97613]" classname="marineinfo-publication-resource-availability" time="0.14466500282287598">
+	<testsuite name="marineinfo-publication-resource-availability" timestamp="2026-09-28T08:28:35.267341+00:00" tests="9" errors="0" failures="0" skipped="0" time="6.471841096878052">
+		<testcase name="dns_resolution [https://marineinfo.org/en/doc/publication/97613]" classname="marineinfo-publication-resource-availability" time="0.1188199520111084">
 			<system-out>Resolving hostname: marineinfo.org
 resolved_ip: 193.191.134.34
 </system-out>
@@ -488,67 +431,59 @@ resolved_ip: 193.191.134.34
 			<property name="provenance" value="https://github.com/vlizBE/GRMPy_VLIZ/blob/5217b90ba9b7ae5b4cb982b1aeff6ed0bb0edf65/tests/tests.yaml"/>
 			<property name="create-issue" value="true"/>
 		</properties>
-		<testcase name="http_availability [https://marineinfo.org/en/doc/publication/97613]" classname="marineinfo-publication-resource-availability" time="0.1668872833251953">
-			<failure message="HTTP availability check failed">HTTPConnectionPool(host='marineinfo.org', port=80): Max retries exceeded with url: /en/doc/publication/97613 (Caused by NewConnectionError(&quot;HTTPConnection(host='marineinfo.org', port=80): Failed to establish a new connection: [Errno 111] Connection refused&quot;))</failure>
-			<system-out>response_time_s: 0.167
-Checking HTTP availability for: http://marineinfo.org/en/doc/publication/97613
-Timeout: 10s, Max redirects: 3, Verify SSL: True
-Availability check failed: HTTPConnectionPool(host='marineinfo.org', port=80): Max retries exceeded with url: /en/doc/publication/97613 (Caused by NewConnectionError(&quot;HTTPConnection(host='marineinfo.org', port=80): Failed to establish a new connection: [Errno 111] Connection refused&quot;))
+		<testcase name="http_availability [https://marineinfo.org/en/doc/publication/97613]" classname="marineinfo-publication-resource-availability" time="0.27849602699279785">
+			<system-out>response_time_s: 0.278
+status_code: 301
+redirects_to: https://marineinfo.org/en/doc/publication/97613
+OK: HTTP endpoint reachable (redirects to HTTPS)
 </system-out>
 		</testcase>
-		<testcase name="https_availability [https://marineinfo.org/en/doc/publication/97613]" classname="marineinfo-publication-resource-availability" time="0.14969587326049805">
-			<failure message="HTTPS availability check failed">HTTPSConnectionPool(host='marineinfo.org', port=443): Max retries exceeded with url: /en/doc/publication/97613 (Caused by NewConnectionError(&quot;HTTPSConnection(host='marineinfo.org', port=443): Failed to establish a new connection: [Errno 111] Connection refused&quot;))</failure>
-			<system-out>response_time_s: 0.150
-Checking HTTPS availability for: https://marineinfo.org/en/doc/publication/97613
-Timeout: 10s, Max redirects: 3, Verify SSL: True
-Availability check failed: HTTPSConnectionPool(host='marineinfo.org', port=443): Max retries exceeded with url: /en/doc/publication/97613 (Caused by NewConnectionError(&quot;HTTPSConnection(host='marineinfo.org', port=443): Failed to establish a new connection: [Errno 111] Connection refused&quot;))
+		<testcase name="https_availability [https://marineinfo.org/en/doc/publication/97613]" classname="marineinfo-publication-resource-availability" time="2.8266761302948">
+			<system-out>response_time_s: 2.827
+status_code: 200
+OK: HTTPS available, status 200 in 2.827s
 </system-out>
 		</testcase>
-		<testcase name="dns_resolution [https://marineinfo.org/doc/publication/97613]" classname="marineinfo-publication-resource-availability" time="0.14897894859313965">
+		<testcase name="dns_resolution [https://marineinfo.org/doc/publication/97613]" classname="marineinfo-publication-resource-availability" time="0.0028123855590820312">
 			<system-out>Resolving hostname: marineinfo.org
 resolved_ip: 193.191.134.34
 </system-out>
 		</testcase>
-		<testcase name="http_availability [https://marineinfo.org/doc/publication/97613]" classname="marineinfo-publication-resource-availability" time="0.44855260848999023">
-			<failure message="HTTP availability check failed">HTTPConnectionPool(host='marineinfo.org', port=80): Max retries exceeded with url: /doc/publication/97613 (Caused by NewConnectionError(&quot;HTTPConnection(host='marineinfo.org', port=80): Failed to establish a new connection: [Errno 111] Connection refused&quot;))</failure>
-			<system-out>response_time_s: 0.449
-Checking HTTP availability for: http://marineinfo.org/doc/publication/97613
-Timeout: 10s, Max redirects: 3, Verify SSL: True
-Availability check failed: HTTPConnectionPool(host='marineinfo.org', port=80): Max retries exceeded with url: /doc/publication/97613 (Caused by NewConnectionError(&quot;HTTPConnection(host='marineinfo.org', port=80): Failed to establish a new connection: [Errno 111] Connection refused&quot;))
+		<testcase name="http_availability [https://marineinfo.org/doc/publication/97613]" classname="marineinfo-publication-resource-availability" time="0.3898653984069824">
+			<system-out>response_time_s: 0.390
+status_code: 301
+redirects_to: https://marineinfo.org/doc/publication/97613
+OK: HTTP endpoint reachable (redirects to HTTPS)
 </system-out>
 		</testcase>
-		<testcase name="https_availability [https://marineinfo.org/doc/publication/97613]" classname="marineinfo-publication-resource-availability" time="0.29073357582092285">
-			<failure message="HTTPS availability check failed">HTTPSConnectionPool(host='marineinfo.org', port=443): Max retries exceeded with url: /doc/publication/97613 (Caused by NewConnectionError(&quot;HTTPSConnection(host='marineinfo.org', port=443): Failed to establish a new connection: [Errno 111] Connection refused&quot;))</failure>
-			<system-out>response_time_s: 0.291
-Checking HTTPS availability for: https://marineinfo.org/doc/publication/97613
-Timeout: 10s, Max redirects: 3, Verify SSL: True
-Availability check failed: HTTPSConnectionPool(host='marineinfo.org', port=443): Max retries exceeded with url: /doc/publication/97613 (Caused by NewConnectionError(&quot;HTTPSConnection(host='marineinfo.org', port=443): Failed to establish a new connection: [Errno 111] Connection refused&quot;))
+		<testcase name="https_availability [https://marineinfo.org/doc/publication/97613]" classname="marineinfo-publication-resource-availability" time="1.5676324367523193">
+			<system-out>response_time_s: 1.568
+status_code: 200
+final_url: https://marineinfo.org/en/doc/publication/97613
+OK: HTTPS available, status 200 in 1.568s
 </system-out>
 		</testcase>
-		<testcase name="dns_resolution [https://marineinfo.org/id/publication/97613]" classname="marineinfo-publication-resource-availability" time="0.0016641616821289062">
+		<testcase name="dns_resolution [https://marineinfo.org/id/publication/97613]" classname="marineinfo-publication-resource-availability" time="0.003034830093383789">
 			<system-out>Resolving hostname: marineinfo.org
 resolved_ip: 193.191.134.34
 </system-out>
 		</testcase>
-		<testcase name="http_availability [https://marineinfo.org/id/publication/97613]" classname="marineinfo-publication-resource-availability" time="0.14941930770874023">
-			<failure message="HTTP availability check failed">HTTPConnectionPool(host='marineinfo.org', port=80): Max retries exceeded with url: /id/publication/97613 (Caused by NewConnectionError(&quot;HTTPConnection(host='marineinfo.org', port=80): Failed to establish a new connection: [Errno 111] Connection refused&quot;))</failure>
-			<system-out>response_time_s: 0.149
-Checking HTTP availability for: http://marineinfo.org/id/publication/97613
-Timeout: 10s, Max redirects: 3, Verify SSL: True
-Availability check failed: HTTPConnectionPool(host='marineinfo.org', port=80): Max retries exceeded with url: /id/publication/97613 (Caused by NewConnectionError(&quot;HTTPConnection(host='marineinfo.org', port=80): Failed to establish a new connection: [Errno 111] Connection refused&quot;))
+		<testcase name="http_availability [https://marineinfo.org/id/publication/97613]" classname="marineinfo-publication-resource-availability" time="0.24663734436035156">
+			<system-out>response_time_s: 0.247
+status_code: 301
+redirects_to: https://marineinfo.org/id/publication/97613
+OK: HTTP endpoint reachable (redirects to HTTPS)
 </system-out>
 		</testcase>
-		<testcase name="https_availability [https://marineinfo.org/id/publication/97613]" classname="marineinfo-publication-resource-availability" time="0.3001370429992676">
-			<failure message="HTTPS availability check failed">HTTPSConnectionPool(host='marineinfo.org', port=443): Max retries exceeded with url: /id/publication/97613 (Caused by NewConnectionError(&quot;HTTPSConnection(host='marineinfo.org', port=443): Failed to establish a new connection: [Errno 111] Connection refused&quot;))</failure>
-			<system-out>response_time_s: 0.300
-Checking HTTPS availability for: https://marineinfo.org/id/publication/97613
-Timeout: 10s, Max redirects: 3, Verify SSL: True
-Availability check failed: HTTPSConnectionPool(host='marineinfo.org', port=443): Max retries exceeded with url: /id/publication/97613 (Caused by NewConnectionError(&quot;HTTPSConnection(host='marineinfo.org', port=443): Failed to establish a new connection: [Errno 111] Connection refused&quot;))
+		<testcase name="https_availability [https://marineinfo.org/id/publication/97613]" classname="marineinfo-publication-resource-availability" time="1.0378665924072266">
+			<system-out>response_time_s: 1.038
+status_code: 200
+OK: HTTPS available, status 200 in 1.038s
 </system-out>
 		</testcase>
 	</testsuite>
-	<testsuite name="marineinfo-institute-resource-availability" timestamp="2026-09-09T12:26:53.632177+00:00" tests="9" errors="0" failures="6" skipped="0" time="1.0402109622955322">
-		<testcase name="dns_resolution [https://marineinfo.org/doc/institute/36]" classname="marineinfo-institute-resource-availability" time="0.0020055770874023438">
+	<testsuite name="marineinfo-institute-resource-availability" timestamp="2026-09-28T08:28:44.688129+00:00" tests="9" errors="0" failures="0" skipped="0" time="8.484299421310425">
+		<testcase name="dns_resolution [https://marineinfo.org/doc/institute/36]" classname="marineinfo-institute-resource-availability" time="0.0024154186248779297">
 			<system-out>Resolving hostname: marineinfo.org
 resolved_ip: 193.191.134.34
 </system-out>
@@ -565,67 +500,59 @@ resolved_ip: 193.191.134.34
 			<property name="provenance" value="https://github.com/vlizBE/GRMPy_VLIZ/blob/5217b90ba9b7ae5b4cb982b1aeff6ed0bb0edf65/tests/tests.yaml"/>
 			<property name="create-issue" value="true"/>
 		</properties>
-		<testcase name="http_availability [https://marineinfo.org/doc/institute/36]" classname="marineinfo-institute-resource-availability" time="0.14985918998718262">
-			<failure message="HTTP availability check failed">HTTPConnectionPool(host='marineinfo.org', port=80): Max retries exceeded with url: /doc/institute/36 (Caused by NewConnectionError(&quot;HTTPConnection(host='marineinfo.org', port=80): Failed to establish a new connection: [Errno 111] Connection refused&quot;))</failure>
-			<system-out>response_time_s: 0.150
-Checking HTTP availability for: http://marineinfo.org/doc/institute/36
-Timeout: 10s, Max redirects: 3, Verify SSL: True
-Availability check failed: HTTPConnectionPool(host='marineinfo.org', port=80): Max retries exceeded with url: /doc/institute/36 (Caused by NewConnectionError(&quot;HTTPConnection(host='marineinfo.org', port=80): Failed to establish a new connection: [Errno 111] Connection refused&quot;))
+		<testcase name="http_availability [https://marineinfo.org/doc/institute/36]" classname="marineinfo-institute-resource-availability" time="0.2801191806793213">
+			<system-out>response_time_s: 0.280
+status_code: 301
+redirects_to: https://marineinfo.org/doc/institute/36
+OK: HTTP endpoint reachable (redirects to HTTPS)
 </system-out>
 		</testcase>
-		<testcase name="https_availability [https://marineinfo.org/doc/institute/36]" classname="marineinfo-institute-resource-availability" time="0.14947509765625">
-			<failure message="HTTPS availability check failed">HTTPSConnectionPool(host='marineinfo.org', port=443): Max retries exceeded with url: /doc/institute/36 (Caused by NewConnectionError(&quot;HTTPSConnection(host='marineinfo.org', port=443): Failed to establish a new connection: [Errno 111] Connection refused&quot;))</failure>
-			<system-out>response_time_s: 0.149
-Checking HTTPS availability for: https://marineinfo.org/doc/institute/36
-Timeout: 10s, Max redirects: 3, Verify SSL: True
-Availability check failed: HTTPSConnectionPool(host='marineinfo.org', port=443): Max retries exceeded with url: /doc/institute/36 (Caused by NewConnectionError(&quot;HTTPSConnection(host='marineinfo.org', port=443): Failed to establish a new connection: [Errno 111] Connection refused&quot;))
+		<testcase name="https_availability [https://marineinfo.org/doc/institute/36]" classname="marineinfo-institute-resource-availability" time="2.434598207473755">
+			<system-out>response_time_s: 2.435
+status_code: 200
+final_url: https://marineinfo.org/en/doc/institute/36
+OK: HTTPS available, status 200 in 2.435s
 </system-out>
 		</testcase>
-		<testcase name="dns_resolution [https://marineinfo.org/en/doc/institute/36]" classname="marineinfo-institute-resource-availability" time="0.0013725757598876953">
+		<testcase name="dns_resolution [https://marineinfo.org/en/doc/institute/36]" classname="marineinfo-institute-resource-availability" time="0.0018970966339111328">
 			<system-out>Resolving hostname: marineinfo.org
 resolved_ip: 193.191.134.34
 </system-out>
 		</testcase>
-		<testcase name="http_availability [https://marineinfo.org/en/doc/institute/36]" classname="marineinfo-institute-resource-availability" time="0.14934802055358887">
-			<failure message="HTTP availability check failed">HTTPConnectionPool(host='marineinfo.org', port=80): Max retries exceeded with url: /en/doc/institute/36 (Caused by NewConnectionError(&quot;HTTPConnection(host='marineinfo.org', port=80): Failed to establish a new connection: [Errno 111] Connection refused&quot;))</failure>
-			<system-out>response_time_s: 0.149
-Checking HTTP availability for: http://marineinfo.org/en/doc/institute/36
-Timeout: 10s, Max redirects: 3, Verify SSL: True
-Availability check failed: HTTPConnectionPool(host='marineinfo.org', port=80): Max retries exceeded with url: /en/doc/institute/36 (Caused by NewConnectionError(&quot;HTTPConnection(host='marineinfo.org', port=80): Failed to establish a new connection: [Errno 111] Connection refused&quot;))
+		<testcase name="http_availability [https://marineinfo.org/en/doc/institute/36]" classname="marineinfo-institute-resource-availability" time="0.2607429027557373">
+			<system-out>response_time_s: 0.261
+status_code: 301
+redirects_to: https://marineinfo.org/en/doc/institute/36
+OK: HTTP endpoint reachable (redirects to HTTPS)
 </system-out>
 		</testcase>
-		<testcase name="https_availability [https://marineinfo.org/en/doc/institute/36]" classname="marineinfo-institute-resource-availability" time="0.1491842269897461">
-			<failure message="HTTPS availability check failed">HTTPSConnectionPool(host='marineinfo.org', port=443): Max retries exceeded with url: /en/doc/institute/36 (Caused by NewConnectionError(&quot;HTTPSConnection(host='marineinfo.org', port=443): Failed to establish a new connection: [Errno 111] Connection refused&quot;))</failure>
-			<system-out>response_time_s: 0.149
-Checking HTTPS availability for: https://marineinfo.org/en/doc/institute/36
-Timeout: 10s, Max redirects: 3, Verify SSL: True
-Availability check failed: HTTPSConnectionPool(host='marineinfo.org', port=443): Max retries exceeded with url: /en/doc/institute/36 (Caused by NewConnectionError(&quot;HTTPSConnection(host='marineinfo.org', port=443): Failed to establish a new connection: [Errno 111] Connection refused&quot;))
+		<testcase name="https_availability [https://marineinfo.org/en/doc/institute/36]" classname="marineinfo-institute-resource-availability" time="2.3290622234344482">
+			<system-out>response_time_s: 2.329
+status_code: 200
+OK: HTTPS available, status 200 in 2.329s
 </system-out>
 		</testcase>
-		<testcase name="dns_resolution [https://marineinfo.org/id/institute/36]" classname="marineinfo-institute-resource-availability" time="0.0014569759368896484">
+		<testcase name="dns_resolution [https://marineinfo.org/id/institute/36]" classname="marineinfo-institute-resource-availability" time="0.0020711421966552734">
 			<system-out>Resolving hostname: marineinfo.org
 resolved_ip: 193.191.134.34
 </system-out>
 		</testcase>
-		<testcase name="http_availability [https://marineinfo.org/id/institute/36]" classname="marineinfo-institute-resource-availability" time="0.2880127429962158">
-			<failure message="HTTP availability check failed">HTTPConnectionPool(host='marineinfo.org', port=80): Max retries exceeded with url: /id/institute/36 (Caused by NewConnectionError(&quot;HTTPConnection(host='marineinfo.org', port=80): Failed to establish a new connection: [Errno 111] Connection refused&quot;))</failure>
-			<system-out>response_time_s: 0.288
-Checking HTTP availability for: http://marineinfo.org/id/institute/36
-Timeout: 10s, Max redirects: 3, Verify SSL: True
-Availability check failed: HTTPConnectionPool(host='marineinfo.org', port=80): Max retries exceeded with url: /id/institute/36 (Caused by NewConnectionError(&quot;HTTPConnection(host='marineinfo.org', port=80): Failed to establish a new connection: [Errno 111] Connection refused&quot;))
+		<testcase name="http_availability [https://marineinfo.org/id/institute/36]" classname="marineinfo-institute-resource-availability" time="0.24659276008605957">
+			<system-out>response_time_s: 0.247
+status_code: 301
+redirects_to: https://marineinfo.org/id/institute/36
+OK: HTTP endpoint reachable (redirects to HTTPS)
 </system-out>
 		</testcase>
-		<testcase name="https_availability [https://marineinfo.org/id/institute/36]" classname="marineinfo-institute-resource-availability" time="0.14949655532836914">
-			<failure message="HTTPS availability check failed">HTTPSConnectionPool(host='marineinfo.org', port=443): Max retries exceeded with url: /id/institute/36 (Caused by NewConnectionError(&quot;HTTPSConnection(host='marineinfo.org', port=443): Failed to establish a new connection: [Errno 111] Connection refused&quot;))</failure>
-			<system-out>response_time_s: 0.149
-Checking HTTPS availability for: https://marineinfo.org/id/institute/36
-Timeout: 10s, Max redirects: 3, Verify SSL: True
-Availability check failed: HTTPSConnectionPool(host='marineinfo.org', port=443): Max retries exceeded with url: /id/institute/36 (Caused by NewConnectionError(&quot;HTTPSConnection(host='marineinfo.org', port=443): Failed to establish a new connection: [Errno 111] Connection refused&quot;))
+		<testcase name="https_availability [https://marineinfo.org/id/institute/36]" classname="marineinfo-institute-resource-availability" time="2.926800489425659">
+			<system-out>response_time_s: 2.927
+status_code: 200
+OK: HTTPS available, status 200 in 2.927s
 </system-out>
 		</testcase>
 	</testsuite>
-	<testsuite name="marineinfo-project-resource-availability" timestamp="2026-09-09T12:26:55.623851+00:00" tests="9" errors="0" failures="6" skipped="0" time="1.1827003955841064">
-		<testcase name="dns_resolution [https://marineinfo.org/en/doc/project/5528]" classname="marineinfo-project-resource-availability" time="0.002005338668823242">
+	<testsuite name="marineinfo-project-resource-availability" timestamp="2026-09-28T08:29:17.278761+00:00" tests="9" errors="3" failures="0" skipped="0" time="31.677570581436157">
+		<testcase name="dns_resolution [https://marineinfo.org/en/doc/project/5528]" classname="marineinfo-project-resource-availability" time="0.0035219192504882812">
 			<system-out>Resolving hostname: marineinfo.org
 resolved_ip: 193.191.134.34
 </system-out>
@@ -642,67 +569,67 @@ resolved_ip: 193.191.134.34
 			<property name="provenance" value="https://github.com/vlizBE/GRMPy_VLIZ/blob/5217b90ba9b7ae5b4cb982b1aeff6ed0bb0edf65/tests/tests.yaml"/>
 			<property name="create-issue" value="true"/>
 		</properties>
-		<testcase name="http_availability [https://marineinfo.org/en/doc/project/5528]" classname="marineinfo-project-resource-availability" time="0.1540379524230957">
-			<failure message="HTTP availability check failed">HTTPConnectionPool(host='marineinfo.org', port=80): Max retries exceeded with url: /en/doc/project/5528 (Caused by NewConnectionError(&quot;HTTPConnection(host='marineinfo.org', port=80): Failed to establish a new connection: [Errno 111] Connection refused&quot;))</failure>
-			<system-out>response_time_s: 0.154
-Checking HTTP availability for: http://marineinfo.org/en/doc/project/5528
-Timeout: 10s, Max redirects: 3, Verify SSL: True
-Availability check failed: HTTPConnectionPool(host='marineinfo.org', port=80): Max retries exceeded with url: /en/doc/project/5528 (Caused by NewConnectionError(&quot;HTTPConnection(host='marineinfo.org', port=80): Failed to establish a new connection: [Errno 111] Connection refused&quot;))
+		<testcase name="http_availability [https://marineinfo.org/en/doc/project/5528]" classname="marineinfo-project-resource-availability" time="0.9659109115600586">
+			<system-out>response_time_s: 0.966
+status_code: 301
+redirects_to: https://marineinfo.org/en/doc/project/5528
+OK: HTTP endpoint reachable (redirects to HTTPS)
 </system-out>
 		</testcase>
-		<testcase name="https_availability [https://marineinfo.org/en/doc/project/5528]" classname="marineinfo-project-resource-availability" time="0.1493523120880127">
-			<failure message="HTTPS availability check failed">HTTPSConnectionPool(host='marineinfo.org', port=443): Max retries exceeded with url: /en/doc/project/5528 (Caused by NewConnectionError(&quot;HTTPSConnection(host='marineinfo.org', port=443): Failed to establish a new connection: [Errno 111] Connection refused&quot;))</failure>
-			<system-out>response_time_s: 0.149
-Checking HTTPS availability for: https://marineinfo.org/en/doc/project/5528
-Timeout: 10s, Max redirects: 3, Verify SSL: True
-Availability check failed: HTTPSConnectionPool(host='marineinfo.org', port=443): Max retries exceeded with url: /en/doc/project/5528 (Caused by NewConnectionError(&quot;HTTPSConnection(host='marineinfo.org', port=443): Failed to establish a new connection: [Errno 111] Connection refused&quot;))
+		<testcase name="https_availability [https://marineinfo.org/en/doc/project/5528]" classname="marineinfo-project-resource-availability" time="10.014044046401978">
+			<error message="Unexpected error">Response time 10.014s exceeded timeout of 10s</error>
+			<system-out>response_time_s: 10.014
 </system-out>
+			<system-err>Checking HTTPS availability for: https://marineinfo.org/en/doc/project/5528
+Timeout: 10s, Max redirects: 3, Verify SSL: True
+Response time 10.014s exceeded timeout of 10s
+</system-err>
 		</testcase>
-		<testcase name="dns_resolution [https://marineinfo.org/id/project/5528]" classname="marineinfo-project-resource-availability" time="0.002096891403198242">
+		<testcase name="dns_resolution [https://marineinfo.org/id/project/5528]" classname="marineinfo-project-resource-availability" time="0.12152218818664551">
 			<system-out>Resolving hostname: marineinfo.org
 resolved_ip: 193.191.134.34
 </system-out>
 		</testcase>
-		<testcase name="http_availability [https://marineinfo.org/id/project/5528]" classname="marineinfo-project-resource-availability" time="0.2871823310852051">
-			<failure message="HTTP availability check failed">HTTPConnectionPool(host='marineinfo.org', port=80): Max retries exceeded with url: /id/project/5528 (Caused by NewConnectionError(&quot;HTTPConnection(host='marineinfo.org', port=80): Failed to establish a new connection: [Errno 111] Connection refused&quot;))</failure>
-			<system-out>response_time_s: 0.287
-Checking HTTP availability for: http://marineinfo.org/id/project/5528
-Timeout: 10s, Max redirects: 3, Verify SSL: True
-Availability check failed: HTTPConnectionPool(host='marineinfo.org', port=80): Max retries exceeded with url: /id/project/5528 (Caused by NewConnectionError(&quot;HTTPConnection(host='marineinfo.org', port=80): Failed to establish a new connection: [Errno 111] Connection refused&quot;))
+		<testcase name="http_availability [https://marineinfo.org/id/project/5528]" classname="marineinfo-project-resource-availability" time="0.27409934997558594">
+			<system-out>response_time_s: 0.274
+status_code: 301
+redirects_to: https://marineinfo.org/id/project/5528
+OK: HTTP endpoint reachable (redirects to HTTPS)
 </system-out>
 		</testcase>
-		<testcase name="https_availability [https://marineinfo.org/id/project/5528]" classname="marineinfo-project-resource-availability" time="0.28804707527160645">
-			<failure message="HTTPS availability check failed">HTTPSConnectionPool(host='marineinfo.org', port=443): Max retries exceeded with url: /id/project/5528 (Caused by NewConnectionError(&quot;HTTPSConnection(host='marineinfo.org', port=443): Failed to establish a new connection: [Errno 111] Connection refused&quot;))</failure>
-			<system-out>response_time_s: 0.288
-Checking HTTPS availability for: https://marineinfo.org/id/project/5528
-Timeout: 10s, Max redirects: 3, Verify SSL: True
-Availability check failed: HTTPSConnectionPool(host='marineinfo.org', port=443): Max retries exceeded with url: /id/project/5528 (Caused by NewConnectionError(&quot;HTTPSConnection(host='marineinfo.org', port=443): Failed to establish a new connection: [Errno 111] Connection refused&quot;))
+		<testcase name="https_availability [https://marineinfo.org/id/project/5528]" classname="marineinfo-project-resource-availability" time="10.01326584815979">
+			<error message="Unexpected error">Response time 10.013s exceeded timeout of 10s</error>
+			<system-out>response_time_s: 10.013
 </system-out>
+			<system-err>Checking HTTPS availability for: https://marineinfo.org/id/project/5528
+Timeout: 10s, Max redirects: 3, Verify SSL: True
+Response time 10.013s exceeded timeout of 10s
+</system-err>
 		</testcase>
-		<testcase name="dns_resolution [https://marineinfo.org/doc/project/5528]" classname="marineinfo-project-resource-availability" time="0.0015859603881835938">
+		<testcase name="dns_resolution [https://marineinfo.org/doc/project/5528]" classname="marineinfo-project-resource-availability" time="0.0037941932678222656">
 			<system-out>Resolving hostname: marineinfo.org
 resolved_ip: 193.191.134.34
 </system-out>
 		</testcase>
-		<testcase name="http_availability [https://marineinfo.org/doc/project/5528]" classname="marineinfo-project-resource-availability" time="0.1491861343383789">
-			<failure message="HTTP availability check failed">HTTPConnectionPool(host='marineinfo.org', port=80): Max retries exceeded with url: /doc/project/5528 (Caused by NewConnectionError(&quot;HTTPConnection(host='marineinfo.org', port=80): Failed to establish a new connection: [Errno 111] Connection refused&quot;))</failure>
-			<system-out>response_time_s: 0.149
-Checking HTTP availability for: http://marineinfo.org/doc/project/5528
-Timeout: 10s, Max redirects: 3, Verify SSL: True
-Availability check failed: HTTPConnectionPool(host='marineinfo.org', port=80): Max retries exceeded with url: /doc/project/5528 (Caused by NewConnectionError(&quot;HTTPConnection(host='marineinfo.org', port=80): Failed to establish a new connection: [Errno 111] Connection refused&quot;))
+		<testcase name="http_availability [https://marineinfo.org/doc/project/5528]" classname="marineinfo-project-resource-availability" time="0.2744474411010742">
+			<system-out>response_time_s: 0.274
+status_code: 301
+redirects_to: https://marineinfo.org/doc/project/5528
+OK: HTTP endpoint reachable (redirects to HTTPS)
 </system-out>
 		</testcase>
-		<testcase name="https_availability [https://marineinfo.org/doc/project/5528]" classname="marineinfo-project-resource-availability" time="0.14920639991760254">
-			<failure message="HTTPS availability check failed">HTTPSConnectionPool(host='marineinfo.org', port=443): Max retries exceeded with url: /doc/project/5528 (Caused by NewConnectionError(&quot;HTTPSConnection(host='marineinfo.org', port=443): Failed to establish a new connection: [Errno 111] Connection refused&quot;))</failure>
-			<system-out>response_time_s: 0.149
-Checking HTTPS availability for: https://marineinfo.org/doc/project/5528
-Timeout: 10s, Max redirects: 3, Verify SSL: True
-Availability check failed: HTTPSConnectionPool(host='marineinfo.org', port=443): Max retries exceeded with url: /doc/project/5528 (Caused by NewConnectionError(&quot;HTTPSConnection(host='marineinfo.org', port=443): Failed to establish a new connection: [Errno 111] Connection refused&quot;))
+		<testcase name="https_availability [https://marineinfo.org/doc/project/5528]" classname="marineinfo-project-resource-availability" time="10.006964683532715">
+			<error message="Unexpected error">Response time 10.007s exceeded timeout of 10s</error>
+			<system-out>response_time_s: 10.007
 </system-out>
+			<system-err>Checking HTTPS availability for: https://marineinfo.org/doc/project/5528
+Timeout: 10s, Max redirects: 3, Verify SSL: True
+Response time 10.007s exceeded timeout of 10s
+</system-err>
 		</testcase>
 	</testsuite>
-	<testsuite name="marineinfo-event-resource-availability" timestamp="2026-09-09T12:26:57.753638+00:00" tests="9" errors="0" failures="6" skipped="0" time="1.3235809803009033">
-		<testcase name="dns_resolution [https://marineinfo.org/en/doc/event/3127]" classname="marineinfo-event-resource-availability" time="0.0017056465148925781">
+	<testsuite name="marineinfo-event-resource-availability" timestamp="2026-09-28T08:29:49.030728+00:00" tests="9" errors="3" failures="0" skipped="0" time="30.837435483932495">
+		<testcase name="dns_resolution [https://marineinfo.org/en/doc/event/3127]" classname="marineinfo-event-resource-availability" time="0.005049467086791992">
 			<system-out>Resolving hostname: marineinfo.org
 resolved_ip: 193.191.134.34
 </system-out>
@@ -719,67 +646,67 @@ resolved_ip: 193.191.134.34
 			<property name="provenance" value="https://github.com/vlizBE/GRMPy_VLIZ/blob/5217b90ba9b7ae5b4cb982b1aeff6ed0bb0edf65/tests/tests.yaml"/>
 			<property name="create-issue" value="true"/>
 		</properties>
-		<testcase name="http_availability [https://marineinfo.org/en/doc/event/3127]" classname="marineinfo-event-resource-availability" time="0.14977192878723145">
-			<failure message="HTTP availability check failed">HTTPConnectionPool(host='marineinfo.org', port=80): Max retries exceeded with url: /en/doc/event/3127 (Caused by NewConnectionError(&quot;HTTPConnection(host='marineinfo.org', port=80): Failed to establish a new connection: [Errno 111] Connection refused&quot;))</failure>
-			<system-out>response_time_s: 0.150
-Checking HTTP availability for: http://marineinfo.org/en/doc/event/3127
-Timeout: 10s, Max redirects: 3, Verify SSL: True
-Availability check failed: HTTPConnectionPool(host='marineinfo.org', port=80): Max retries exceeded with url: /en/doc/event/3127 (Caused by NewConnectionError(&quot;HTTPConnection(host='marineinfo.org', port=80): Failed to establish a new connection: [Errno 111] Connection refused&quot;))
+		<testcase name="http_availability [https://marineinfo.org/en/doc/event/3127]" classname="marineinfo-event-resource-availability" time="0.2473442554473877">
+			<system-out>response_time_s: 0.247
+status_code: 301
+redirects_to: https://marineinfo.org/en/doc/event/3127
+OK: HTTP endpoint reachable (redirects to HTTPS)
 </system-out>
 		</testcase>
-		<testcase name="https_availability [https://marineinfo.org/en/doc/event/3127]" classname="marineinfo-event-resource-availability" time="0.14962983131408691">
-			<failure message="HTTPS availability check failed">HTTPSConnectionPool(host='marineinfo.org', port=443): Max retries exceeded with url: /en/doc/event/3127 (Caused by NewConnectionError(&quot;HTTPSConnection(host='marineinfo.org', port=443): Failed to establish a new connection: [Errno 111] Connection refused&quot;))</failure>
-			<system-out>response_time_s: 0.150
-Checking HTTPS availability for: https://marineinfo.org/en/doc/event/3127
-Timeout: 10s, Max redirects: 3, Verify SSL: True
-Availability check failed: HTTPSConnectionPool(host='marineinfo.org', port=443): Max retries exceeded with url: /en/doc/event/3127 (Caused by NewConnectionError(&quot;HTTPSConnection(host='marineinfo.org', port=443): Failed to establish a new connection: [Errno 111] Connection refused&quot;))
+		<testcase name="https_availability [https://marineinfo.org/en/doc/event/3127]" classname="marineinfo-event-resource-availability" time="10.015047788619995">
+			<error message="Unexpected error">Response time 10.015s exceeded timeout of 10s</error>
+			<system-out>response_time_s: 10.015
 </system-out>
+			<system-err>Checking HTTPS availability for: https://marineinfo.org/en/doc/event/3127
+Timeout: 10s, Max redirects: 3, Verify SSL: True
+Response time 10.015s exceeded timeout of 10s
+</system-err>
 		</testcase>
-		<testcase name="dns_resolution [https://marineinfo.org/id/event/3127]" classname="marineinfo-event-resource-availability" time="0.14631986618041992">
+		<testcase name="dns_resolution [https://marineinfo.org/id/event/3127]" classname="marineinfo-event-resource-availability" time="0.0024261474609375">
 			<system-out>Resolving hostname: marineinfo.org
 resolved_ip: 193.191.134.34
 </system-out>
 		</testcase>
-		<testcase name="http_availability [https://marineinfo.org/id/event/3127]" classname="marineinfo-event-resource-availability" time="0.2873044013977051">
-			<failure message="HTTP availability check failed">HTTPConnectionPool(host='marineinfo.org', port=80): Max retries exceeded with url: /id/event/3127 (Caused by NewConnectionError(&quot;HTTPConnection(host='marineinfo.org', port=80): Failed to establish a new connection: [Errno 111] Connection refused&quot;))</failure>
-			<system-out>response_time_s: 0.287
-Checking HTTP availability for: http://marineinfo.org/id/event/3127
-Timeout: 10s, Max redirects: 3, Verify SSL: True
-Availability check failed: HTTPConnectionPool(host='marineinfo.org', port=80): Max retries exceeded with url: /id/event/3127 (Caused by NewConnectionError(&quot;HTTPConnection(host='marineinfo.org', port=80): Failed to establish a new connection: [Errno 111] Connection refused&quot;))
+		<testcase name="http_availability [https://marineinfo.org/id/event/3127]" classname="marineinfo-event-resource-availability" time="0.2705039978027344">
+			<system-out>response_time_s: 0.271
+status_code: 301
+redirects_to: https://marineinfo.org/id/event/3127
+OK: HTTP endpoint reachable (redirects to HTTPS)
 </system-out>
 		</testcase>
-		<testcase name="https_availability [https://marineinfo.org/id/event/3127]" classname="marineinfo-event-resource-availability" time="0.28913402557373047">
-			<failure message="HTTPS availability check failed">HTTPSConnectionPool(host='marineinfo.org', port=443): Max retries exceeded with url: /id/event/3127 (Caused by NewConnectionError(&quot;HTTPSConnection(host='marineinfo.org', port=443): Failed to establish a new connection: [Errno 111] Connection refused&quot;))</failure>
-			<system-out>response_time_s: 0.289
-Checking HTTPS availability for: https://marineinfo.org/id/event/3127
-Timeout: 10s, Max redirects: 3, Verify SSL: True
-Availability check failed: HTTPSConnectionPool(host='marineinfo.org', port=443): Max retries exceeded with url: /id/event/3127 (Caused by NewConnectionError(&quot;HTTPSConnection(host='marineinfo.org', port=443): Failed to establish a new connection: [Errno 111] Connection refused&quot;))
+		<testcase name="https_availability [https://marineinfo.org/id/event/3127]" classname="marineinfo-event-resource-availability" time="10.012990474700928">
+			<error message="Unexpected error">Response time 10.013s exceeded timeout of 10s</error>
+			<system-out>response_time_s: 10.013
 </system-out>
+			<system-err>Checking HTTPS availability for: https://marineinfo.org/id/event/3127
+Timeout: 10s, Max redirects: 3, Verify SSL: True
+Response time 10.013s exceeded timeout of 10s
+</system-err>
 		</testcase>
-		<testcase name="dns_resolution [https://marineinfo.org/doc/event/3127]" classname="marineinfo-event-resource-availability" time="0.0016379356384277344">
+		<testcase name="dns_resolution [https://marineinfo.org/doc/event/3127]" classname="marineinfo-event-resource-availability" time="0.0025663375854492188">
 			<system-out>Resolving hostname: marineinfo.org
 resolved_ip: 193.191.134.34
 </system-out>
 		</testcase>
-		<testcase name="http_availability [https://marineinfo.org/doc/event/3127]" classname="marineinfo-event-resource-availability" time="0.14859509468078613">
-			<failure message="HTTP availability check failed">HTTPConnectionPool(host='marineinfo.org', port=80): Max retries exceeded with url: /doc/event/3127 (Caused by NewConnectionError(&quot;HTTPConnection(host='marineinfo.org', port=80): Failed to establish a new connection: [Errno 111] Connection refused&quot;))</failure>
-			<system-out>response_time_s: 0.149
-Checking HTTP availability for: http://marineinfo.org/doc/event/3127
-Timeout: 10s, Max redirects: 3, Verify SSL: True
-Availability check failed: HTTPConnectionPool(host='marineinfo.org', port=80): Max retries exceeded with url: /doc/event/3127 (Caused by NewConnectionError(&quot;HTTPConnection(host='marineinfo.org', port=80): Failed to establish a new connection: [Errno 111] Connection refused&quot;))
+		<testcase name="http_availability [https://marineinfo.org/doc/event/3127]" classname="marineinfo-event-resource-availability" time="0.26859569549560547">
+			<system-out>response_time_s: 0.269
+status_code: 301
+redirects_to: https://marineinfo.org/doc/event/3127
+OK: HTTP endpoint reachable (redirects to HTTPS)
 </system-out>
 		</testcase>
-		<testcase name="https_availability [https://marineinfo.org/doc/event/3127]" classname="marineinfo-event-resource-availability" time="0.14948225021362305">
-			<failure message="HTTPS availability check failed">HTTPSConnectionPool(host='marineinfo.org', port=443): Max retries exceeded with url: /doc/event/3127 (Caused by NewConnectionError(&quot;HTTPSConnection(host='marineinfo.org', port=443): Failed to establish a new connection: [Errno 111] Connection refused&quot;))</failure>
-			<system-out>response_time_s: 0.149
-Checking HTTPS availability for: https://marineinfo.org/doc/event/3127
-Timeout: 10s, Max redirects: 3, Verify SSL: True
-Availability check failed: HTTPSConnectionPool(host='marineinfo.org', port=443): Max retries exceeded with url: /doc/event/3127 (Caused by NewConnectionError(&quot;HTTPSConnection(host='marineinfo.org', port=443): Failed to establish a new connection: [Errno 111] Connection refused&quot;))
+		<testcase name="https_availability [https://marineinfo.org/doc/event/3127]" classname="marineinfo-event-resource-availability" time="10.012911319732666">
+			<error message="Unexpected error">Response time 10.013s exceeded timeout of 10s</error>
+			<system-out>response_time_s: 10.013
 </system-out>
+			<system-err>Checking HTTPS availability for: https://marineinfo.org/doc/event/3127
+Timeout: 10s, Max redirects: 3, Verify SSL: True
+Response time 10.013s exceeded timeout of 10s
+</system-err>
 		</testcase>
 	</testsuite>
-	<testsuite name="marineinfo-dataset-resource-availability" timestamp="2026-09-09T12:27:22.718292+00:00" tests="9" errors="2" failures="3" skipped="0" time="24.14644980430603">
-		<testcase name="dns_resolution [https://marineinfo.org/en/doc/dataset/3221]" classname="marineinfo-dataset-resource-availability" time="0.0018107891082763672">
+	<testsuite name="marineinfo-dataset-resource-availability" timestamp="2026-09-28T08:30:20.739971+00:00" tests="9" errors="3" failures="0" skipped="0" time="30.821935892105103">
+		<testcase name="dns_resolution [https://marineinfo.org/en/doc/dataset/3221]" classname="marineinfo-dataset-resource-availability" time="0.002682924270629883">
 			<system-out>Resolving hostname: marineinfo.org
 resolved_ip: 193.191.134.34
 </system-out>
@@ -796,92 +723,93 @@ resolved_ip: 193.191.134.34
 			<property name="provenance" value="https://github.com/vlizBE/GRMPy_VLIZ/blob/5217b90ba9b7ae5b4cb982b1aeff6ed0bb0edf65/tests/tests.yaml"/>
 			<property name="create-issue" value="true"/>
 		</properties>
-		<testcase name="http_availability [https://marineinfo.org/en/doc/dataset/3221]" classname="marineinfo-dataset-resource-availability" time="0.15048718452453613">
-			<failure message="HTTP availability check failed">HTTPConnectionPool(host='marineinfo.org', port=80): Max retries exceeded with url: /en/doc/dataset/3221 (Caused by NewConnectionError(&quot;HTTPConnection(host='marineinfo.org', port=80): Failed to establish a new connection: [Errno 111] Connection refused&quot;))</failure>
-			<system-out>response_time_s: 0.150
-Checking HTTP availability for: http://marineinfo.org/en/doc/dataset/3221
-Timeout: 10s, Max redirects: 3, Verify SSL: True
-Availability check failed: HTTPConnectionPool(host='marineinfo.org', port=80): Max retries exceeded with url: /en/doc/dataset/3221 (Caused by NewConnectionError(&quot;HTTPConnection(host='marineinfo.org', port=80): Failed to establish a new connection: [Errno 111] Connection refused&quot;))
+		<testcase name="http_availability [https://marineinfo.org/en/doc/dataset/3221]" classname="marineinfo-dataset-resource-availability" time="0.25908684730529785">
+			<system-out>response_time_s: 0.259
+status_code: 301
+redirects_to: https://marineinfo.org/en/doc/dataset/3221
+OK: HTTP endpoint reachable (redirects to HTTPS)
 </system-out>
 		</testcase>
-		<testcase name="https_availability [https://marineinfo.org/en/doc/dataset/3221]" classname="marineinfo-dataset-resource-availability" time="0.2884054183959961">
-			<failure message="HTTPS availability check failed">HTTPSConnectionPool(host='marineinfo.org', port=443): Max retries exceeded with url: /en/doc/dataset/3221 (Caused by NewConnectionError(&quot;HTTPSConnection(host='marineinfo.org', port=443): Failed to establish a new connection: [Errno 111] Connection refused&quot;))</failure>
-			<system-out>response_time_s: 0.288
-Checking HTTPS availability for: https://marineinfo.org/en/doc/dataset/3221
-Timeout: 10s, Max redirects: 3, Verify SSL: True
-Availability check failed: HTTPSConnectionPool(host='marineinfo.org', port=443): Max retries exceeded with url: /en/doc/dataset/3221 (Caused by NewConnectionError(&quot;HTTPSConnection(host='marineinfo.org', port=443): Failed to establish a new connection: [Errno 111] Connection refused&quot;))
+		<testcase name="https_availability [https://marineinfo.org/en/doc/dataset/3221]" classname="marineinfo-dataset-resource-availability" time="10.014052152633667">
+			<error message="Unexpected error">Response time 10.014s exceeded timeout of 10s</error>
+			<system-out>response_time_s: 10.014
 </system-out>
+			<system-err>Checking HTTPS availability for: https://marineinfo.org/en/doc/dataset/3221
+Timeout: 10s, Max redirects: 3, Verify SSL: True
+Response time 10.014s exceeded timeout of 10s
+</system-err>
 		</testcase>
-		<testcase name="dns_resolution [https://marineinfo.org/id/dataset/3221]" classname="marineinfo-dataset-resource-availability" time="0.0017402172088623047">
+		<testcase name="dns_resolution [https://marineinfo.org/id/dataset/3221]" classname="marineinfo-dataset-resource-availability" time="0.0022487640380859375">
 			<system-out>Resolving hostname: marineinfo.org
 resolved_ip: 193.191.134.34
 </system-out>
 		</testcase>
-		<testcase name="http_availability [https://marineinfo.org/id/dataset/3221]" classname="marineinfo-dataset-resource-availability" time="0.1496753692626953">
-			<failure message="HTTP availability check failed">HTTPConnectionPool(host='marineinfo.org', port=80): Max retries exceeded with url: /id/dataset/3221 (Caused by NewConnectionError(&quot;HTTPConnection(host='marineinfo.org', port=80): Failed to establish a new connection: [Errno 111] Connection refused&quot;))</failure>
-			<system-out>response_time_s: 0.150
-Checking HTTP availability for: http://marineinfo.org/id/dataset/3221
-Timeout: 10s, Max redirects: 3, Verify SSL: True
-Availability check failed: HTTPConnectionPool(host='marineinfo.org', port=80): Max retries exceeded with url: /id/dataset/3221 (Caused by NewConnectionError(&quot;HTTPConnection(host='marineinfo.org', port=80): Failed to establish a new connection: [Errno 111] Connection refused&quot;))
+		<testcase name="http_availability [https://marineinfo.org/id/dataset/3221]" classname="marineinfo-dataset-resource-availability" time="0.2584869861602783">
+			<system-out>response_time_s: 0.258
+status_code: 301
+redirects_to: https://marineinfo.org/id/dataset/3221
+OK: HTTP endpoint reachable (redirects to HTTPS)
 </system-out>
 		</testcase>
-		<testcase name="https_availability [https://marineinfo.org/id/dataset/3221]" classname="marineinfo-dataset-resource-availability" time="12.558382511138916">
-			<error message="Unexpected error">Response time 12.558s exceeded timeout of 10s</error>
-			<system-out>response_time_s: 12.558
+		<testcase name="https_availability [https://marineinfo.org/id/dataset/3221]" classname="marineinfo-dataset-resource-availability" time="10.014628410339355">
+			<error message="Unexpected error">Response time 10.015s exceeded timeout of 10s</error>
+			<system-out>response_time_s: 10.015
 </system-out>
 			<system-err>Checking HTTPS availability for: https://marineinfo.org/id/dataset/3221
 Timeout: 10s, Max redirects: 3, Verify SSL: True
-Response time 12.558s exceeded timeout of 10s
+Response time 10.015s exceeded timeout of 10s
 </system-err>
 		</testcase>
-		<testcase name="dns_resolution [https://marineinfo.org/doc/dataset/3221]" classname="marineinfo-dataset-resource-availability" time="0.0016033649444580078">
+		<testcase name="dns_resolution [https://marineinfo.org/doc/dataset/3221]" classname="marineinfo-dataset-resource-availability" time="0.0036771297454833984">
 			<system-out>Resolving hostname: marineinfo.org
 resolved_ip: 193.191.134.34
 </system-out>
 		</testcase>
-		<testcase name="http_availability [https://marineinfo.org/doc/dataset/3221]" classname="marineinfo-dataset-resource-availability" time="0.3703482151031494">
-			<system-out>response_time_s: 0.370
+		<testcase name="http_availability [https://marineinfo.org/doc/dataset/3221]" classname="marineinfo-dataset-resource-availability" time="0.2512979507446289">
+			<system-out>response_time_s: 0.251
 status_code: 301
 redirects_to: https://marineinfo.org/doc/dataset/3221
 OK: HTTP endpoint reachable (redirects to HTTPS)
 </system-out>
 		</testcase>
-		<testcase name="https_availability [https://marineinfo.org/doc/dataset/3221]" classname="marineinfo-dataset-resource-availability" time="10.62399673461914">
-			<error message="Unexpected error">Response time 10.624s exceeded timeout of 10s</error>
-			<system-out>response_time_s: 10.624
-final_url: https://marineinfo.org/en/doc/dataset/3221
+		<testcase name="https_availability [https://marineinfo.org/doc/dataset/3221]" classname="marineinfo-dataset-resource-availability" time="10.015774726867676">
+			<error message="Unexpected error">Response time 10.016s exceeded timeout of 10s</error>
+			<system-out>response_time_s: 10.016
 </system-out>
 			<system-err>Checking HTTPS availability for: https://marineinfo.org/doc/dataset/3221
 Timeout: 10s, Max redirects: 3, Verify SSL: True
-Response time 10.624s exceeded timeout of 10s
+Response time 10.016s exceeded timeout of 10s
 </system-err>
 		</testcase>
 	</testsuite>
-	<testsuite name="marineinfo-cors-compliance-basic-person" timestamp="2026-09-09T12:28:10.569215+00:00" tests="4" errors="0" failures="4" skipped="0" time="45.95991849899292">
-		<testcase name="access_control_allow_origin [https://marineinfo.org/id/person/46372] [lenient]" classname="marineinfo-cors-compliance-basic-person" time="4.871890306472778">
-			<failure message="Header 'access-control-allow-origin' is missing">Header absent in response from https://marineinfo.org/id/person/46372</failure>
+	<testsuite name="marineinfo-cors-compliance-basic-person" timestamp="2026-09-28T08:31:25.321867+00:00" tests="4" errors="4" failures="0" skipped="0" time="62.385945558547974">
+		<testcase name="access_control_allow_origin [https://marineinfo.org/id/person/46372] [lenient]" classname="marineinfo-cors-compliance-basic-person" time="15.650919675827026">
+			<error message="Unexpected error">Request failed: Connection error: HTTPSConnectionPool(host='marineinfo.org', port=443): Max retries exceeded with url: /id/person/46372 (Caused by NewConnectionError(&quot;HTTPSConnection(host='marineinfo.org', port=443): Failed to establish a new connection: [Errno 111] Connection refused&quot;))</error>
 			<system-out>OPTIONS https://marineinfo.org/id/person/46372 with Origin: https://vliz.be
-access-control-allow-origin: ''
 </system-out>
+			<system-err>Request failed: Connection error: HTTPSConnectionPool(host='marineinfo.org', port=443): Max retries exceeded with url: /id/person/46372 (Caused by NewConnectionError(&quot;HTTPSConnection(host='marineinfo.org', port=443): Failed to establish a new connection: [Errno 111] Connection refused&quot;))
+</system-err>
 		</testcase>
-		<testcase name="access_control_allow_methods [https://marineinfo.org/id/person/46372]" classname="marineinfo-cors-compliance-basic-person" time="2.2921597957611084">
-			<failure message="Header 'access-control-allow-methods' is missing">Expected methods ['GET', 'HEAD'] but header was absent</failure>
+		<testcase name="access_control_allow_methods [https://marineinfo.org/id/person/46372]" classname="marineinfo-cors-compliance-basic-person" time="15.60421371459961">
+			<error message="Unexpected error">Request failed: Connection error: HTTPSConnectionPool(host='marineinfo.org', port=443): Max retries exceeded with url: /id/person/46372 (Caused by NewConnectionError(&quot;HTTPSConnection(host='marineinfo.org', port=443): Failed to establish a new connection: [Errno 111] Connection refused&quot;))</error>
 			<system-out>OPTIONS https://marineinfo.org/id/person/46372 (checking allow-methods)
-access-control-allow-methods: ''
 </system-out>
+			<system-err>Request failed: Connection error: HTTPSConnectionPool(host='marineinfo.org', port=443): Max retries exceeded with url: /id/person/46372 (Caused by NewConnectionError(&quot;HTTPSConnection(host='marineinfo.org', port=443): Failed to establish a new connection: [Errno 111] Connection refused&quot;))
+</system-err>
 		</testcase>
-		<testcase name="access_control_allow_origin [https://marineinfo.org/doc/person/46372] [lenient]" classname="marineinfo-cors-compliance-basic-person" time="30.182903051376343">
-			<failure message="Header 'access-control-allow-origin' is missing">Header absent in response from https://marineinfo.org/en/doc/person/46372</failure>
+		<testcase name="access_control_allow_origin [https://marineinfo.org/doc/person/46372] [lenient]" classname="marineinfo-cors-compliance-basic-person" time="15.52031683921814">
+			<error message="Unexpected error">Request failed: Connection error: HTTPSConnectionPool(host='marineinfo.org', port=443): Max retries exceeded with url: /doc/person/46372 (Caused by NewConnectionError(&quot;HTTPSConnection(host='marineinfo.org', port=443): Failed to establish a new connection: [Errno 111] Connection refused&quot;))</error>
 			<system-out>OPTIONS https://marineinfo.org/doc/person/46372 with Origin: https://vliz.be
-Followed 1 redirect(s) to https://marineinfo.org/en/doc/person/46372
-access-control-allow-origin: ''
 </system-out>
+			<system-err>Request failed: Connection error: HTTPSConnectionPool(host='marineinfo.org', port=443): Max retries exceeded with url: /doc/person/46372 (Caused by NewConnectionError(&quot;HTTPSConnection(host='marineinfo.org', port=443): Failed to establish a new connection: [Errno 111] Connection refused&quot;))
+</system-err>
 		</testcase>
-		<testcase name="access_control_allow_methods [https://marineinfo.org/doc/person/46372]" classname="marineinfo-cors-compliance-basic-person" time="8.61296534538269">
-			<failure message="Header 'access-control-allow-methods' is missing">Expected methods ['GET', 'HEAD'] but header was absent</failure>
+		<testcase name="access_control_allow_methods [https://marineinfo.org/doc/person/46372]" classname="marineinfo-cors-compliance-basic-person" time="15.610495328903198">
+			<error message="Unexpected error">Request failed: Connection error: HTTPSConnectionPool(host='marineinfo.org', port=443): Max retries exceeded with url: /doc/person/46372 (Caused by NewConnectionError(&quot;HTTPSConnection(host='marineinfo.org', port=443): Failed to establish a new connection: [Errno 111] Connection refused&quot;))</error>
 			<system-out>OPTIONS https://marineinfo.org/doc/person/46372 (checking allow-methods)
-access-control-allow-methods: ''
 </system-out>
+			<system-err>Request failed: Connection error: HTTPSConnectionPool(host='marineinfo.org', port=443): Max retries exceeded with url: /doc/person/46372 (Caused by NewConnectionError(&quot;HTTPSConnection(host='marineinfo.org', port=443): Failed to establish a new connection: [Errno 111] Connection refused&quot;))
+</system-err>
 		</testcase>
 		<properties>
 			<property name="urls" value="https://marineinfo.org/id/person/46372, https://marineinfo.org/doc/person/46372"/>
@@ -894,27 +822,27 @@ access-control-allow-methods: ''
 			<property name="create-issue" value="false"/>
 		</properties>
 	</testsuite>
-	<testsuite name="marineinfo-cors-compliance-basic-publication" timestamp="2026-09-09T12:28:20.531830+00:00" tests="4" errors="0" failures="4" skipped="0" time="9.139663457870483">
-		<testcase name="access_control_allow_origin [https://marineinfo.org/doc/publication/97613] [lenient]" classname="marineinfo-cors-compliance-basic-publication" time="1.2555172443389893">
-			<failure message="Header 'access-control-allow-origin' is missing">Header absent in response from https://marineinfo.org/en/doc/publication/97613</failure>
+	<testsuite name="marineinfo-cors-compliance-basic-publication" timestamp="2026-09-28T08:31:43.841879+00:00" tests="4" errors="1" failures="3" skipped="0" time="17.53417420387268">
+		<testcase name="access_control_allow_origin [https://marineinfo.org/doc/publication/97613] [lenient]" classname="marineinfo-cors-compliance-basic-publication" time="15.590176343917847">
+			<error message="Unexpected error">Request failed: Connection error: HTTPSConnectionPool(host='marineinfo.org', port=443): Max retries exceeded with url: /doc/publication/97613 (Caused by NewConnectionError(&quot;HTTPSConnection(host='marineinfo.org', port=443): Failed to establish a new connection: [Errno 111] Connection refused&quot;))</error>
 			<system-out>OPTIONS https://marineinfo.org/doc/publication/97613 with Origin: https://vliz.be
-Followed 1 redirect(s) to https://marineinfo.org/en/doc/publication/97613
-access-control-allow-origin: ''
 </system-out>
+			<system-err>Request failed: Connection error: HTTPSConnectionPool(host='marineinfo.org', port=443): Max retries exceeded with url: /doc/publication/97613 (Caused by NewConnectionError(&quot;HTTPSConnection(host='marineinfo.org', port=443): Failed to establish a new connection: [Errno 111] Connection refused&quot;))
+</system-err>
 		</testcase>
-		<testcase name="access_control_allow_methods [https://marineinfo.org/doc/publication/97613]" classname="marineinfo-cors-compliance-basic-publication" time="5.092442035675049">
+		<testcase name="access_control_allow_methods [https://marineinfo.org/doc/publication/97613]" classname="marineinfo-cors-compliance-basic-publication" time="1.0568089485168457">
 			<failure message="Header 'access-control-allow-methods' is missing">Expected methods ['HEAD'] but header was absent</failure>
 			<system-out>OPTIONS https://marineinfo.org/doc/publication/97613 (checking allow-methods)
 access-control-allow-methods: ''
 </system-out>
 		</testcase>
-		<testcase name="access_control_allow_origin [https://marineinfo.org/id/publication/97613] [lenient]" classname="marineinfo-cors-compliance-basic-publication" time="0.7384746074676514">
+		<testcase name="access_control_allow_origin [https://marineinfo.org/id/publication/97613] [lenient]" classname="marineinfo-cors-compliance-basic-publication" time="0.4804494380950928">
 			<failure message="Header 'access-control-allow-origin' is missing">Header absent in response from https://marineinfo.org/id/publication/97613</failure>
 			<system-out>OPTIONS https://marineinfo.org/id/publication/97613 with Origin: https://vliz.be
 access-control-allow-origin: ''
 </system-out>
 		</testcase>
-		<testcase name="access_control_allow_methods [https://marineinfo.org/id/publication/97613]" classname="marineinfo-cors-compliance-basic-publication" time="2.053229570388794">
+		<testcase name="access_control_allow_methods [https://marineinfo.org/id/publication/97613]" classname="marineinfo-cors-compliance-basic-publication" time="0.4067394733428955">
 			<failure message="Header 'access-control-allow-methods' is missing">Expected methods ['HEAD'] but header was absent</failure>
 			<system-out>OPTIONS https://marineinfo.org/id/publication/97613 (checking allow-methods)
 access-control-allow-methods: ''
@@ -931,27 +859,27 @@ access-control-allow-methods: ''
 			<property name="create-issue" value="false"/>
 		</properties>
 	</testsuite>
-	<testsuite name="marineinfo-cors-compliance-basic-institute" timestamp="2026-09-09T12:28:26.507159+00:00" tests="4" errors="0" failures="4" skipped="0" time="5.168993234634399">
-		<testcase name="access_control_allow_origin [https://marineinfo.org/doc/institute/36] [lenient]" classname="marineinfo-cors-compliance-basic-institute" time="2.097895622253418">
+	<testsuite name="marineinfo-cors-compliance-basic-institute" timestamp="2026-09-28T08:31:47.691224+00:00" tests="4" errors="0" failures="4" skipped="0" time="2.829930543899536">
+		<testcase name="access_control_allow_origin [https://marineinfo.org/doc/institute/36] [lenient]" classname="marineinfo-cors-compliance-basic-institute" time="0.8412230014801025">
 			<failure message="Header 'access-control-allow-origin' is missing">Header absent in response from https://marineinfo.org/en/doc/institute/36</failure>
 			<system-out>OPTIONS https://marineinfo.org/doc/institute/36 with Origin: https://vliz.be
 Followed 1 redirect(s) to https://marineinfo.org/en/doc/institute/36
 access-control-allow-origin: ''
 </system-out>
 		</testcase>
-		<testcase name="access_control_allow_methods [https://marineinfo.org/doc/institute/36]" classname="marineinfo-cors-compliance-basic-institute" time="1.662757396697998">
+		<testcase name="access_control_allow_methods [https://marineinfo.org/doc/institute/36]" classname="marineinfo-cors-compliance-basic-institute" time="1.057664394378662">
 			<failure message="Header 'access-control-allow-methods' is missing">Expected methods ['HEAD'] but header was absent</failure>
 			<system-out>OPTIONS https://marineinfo.org/doc/institute/36 (checking allow-methods)
 access-control-allow-methods: ''
 </system-out>
 		</testcase>
-		<testcase name="access_control_allow_origin [https://marineinfo.org/id/institute/36] [lenient]" classname="marineinfo-cors-compliance-basic-institute" time="0.7974061965942383">
+		<testcase name="access_control_allow_origin [https://marineinfo.org/id/institute/36] [lenient]" classname="marineinfo-cors-compliance-basic-institute" time="0.40532636642456055">
 			<failure message="Header 'access-control-allow-origin' is missing">Header absent in response from https://marineinfo.org/id/institute/36</failure>
 			<system-out>OPTIONS https://marineinfo.org/id/institute/36 with Origin: https://vliz.be
 access-control-allow-origin: ''
 </system-out>
 		</testcase>
-		<testcase name="access_control_allow_methods [https://marineinfo.org/id/institute/36]" classname="marineinfo-cors-compliance-basic-institute" time="0.6109340190887451">
+		<testcase name="access_control_allow_methods [https://marineinfo.org/id/institute/36]" classname="marineinfo-cors-compliance-basic-institute" time="0.5257167816162109">
 			<failure message="Header 'access-control-allow-methods' is missing">Expected methods ['HEAD'] but header was absent</failure>
 			<system-out>OPTIONS https://marineinfo.org/id/institute/36 (checking allow-methods)
 access-control-allow-methods: ''
@@ -968,27 +896,27 @@ access-control-allow-methods: ''
 			<property name="create-issue" value="false"/>
 		</properties>
 	</testsuite>
-	<testsuite name="marineinfo-cors-compliance-basic-project" timestamp="2026-09-09T12:28:30.403830+00:00" tests="4" errors="0" failures="4" skipped="0" time="3.083181619644165">
-		<testcase name="access_control_allow_origin [https://marineinfo.org/id/project/5528] [lenient]" classname="marineinfo-cors-compliance-basic-project" time="0.5325243473052979">
+	<testsuite name="marineinfo-cors-compliance-basic-project" timestamp="2026-09-28T08:31:51.270714+00:00" tests="4" errors="0" failures="4" skipped="0" time="2.6081886291503906">
+		<testcase name="access_control_allow_origin [https://marineinfo.org/id/project/5528] [lenient]" classname="marineinfo-cors-compliance-basic-project" time="0.46323108673095703">
 			<failure message="Header 'access-control-allow-origin' is missing">Header absent in response from https://marineinfo.org/id/project/5528</failure>
 			<system-out>OPTIONS https://marineinfo.org/id/project/5528 with Origin: https://vliz.be
 access-control-allow-origin: ''
 </system-out>
 		</testcase>
-		<testcase name="access_control_allow_methods [https://marineinfo.org/id/project/5528]" classname="marineinfo-cors-compliance-basic-project" time="0.48995137214660645">
+		<testcase name="access_control_allow_methods [https://marineinfo.org/id/project/5528]" classname="marineinfo-cors-compliance-basic-project" time="0.4537835121154785">
 			<failure message="Header 'access-control-allow-methods' is missing">Expected methods ['HEAD'] but header was absent</failure>
 			<system-out>OPTIONS https://marineinfo.org/id/project/5528 (checking allow-methods)
 access-control-allow-methods: ''
 </system-out>
 		</testcase>
-		<testcase name="access_control_allow_origin [https://marineinfo.org/doc/project/5528] [lenient]" classname="marineinfo-cors-compliance-basic-project" time="0.9929914474487305">
+		<testcase name="access_control_allow_origin [https://marineinfo.org/doc/project/5528] [lenient]" classname="marineinfo-cors-compliance-basic-project" time="0.8308343887329102">
 			<failure message="Header 'access-control-allow-origin' is missing">Header absent in response from https://marineinfo.org/en/doc/project/5528</failure>
 			<system-out>OPTIONS https://marineinfo.org/doc/project/5528 with Origin: https://vliz.be
 Followed 1 redirect(s) to https://marineinfo.org/en/doc/project/5528
 access-control-allow-origin: ''
 </system-out>
 		</testcase>
-		<testcase name="access_control_allow_methods [https://marineinfo.org/doc/project/5528]" classname="marineinfo-cors-compliance-basic-project" time="1.0677144527435303">
+		<testcase name="access_control_allow_methods [https://marineinfo.org/doc/project/5528]" classname="marineinfo-cors-compliance-basic-project" time="0.8603396415710449">
 			<failure message="Header 'access-control-allow-methods' is missing">Expected methods ['HEAD'] but header was absent</failure>
 			<system-out>OPTIONS https://marineinfo.org/doc/project/5528 (checking allow-methods)
 access-control-allow-methods: ''
@@ -1005,27 +933,27 @@ access-control-allow-methods: ''
 			<property name="create-issue" value="false"/>
 		</properties>
 	</testsuite>
-	<testsuite name="marineinfo-cors-compliance-basic-event" timestamp="2026-09-09T12:28:34.330300+00:00" tests="4" errors="0" failures="4" skipped="0" time="3.110985279083252">
-		<testcase name="access_control_allow_origin [https://marineinfo.org/doc/event/3127] [lenient]" classname="marineinfo-cors-compliance-basic-event" time="0.9828178882598877">
+	<testsuite name="marineinfo-cors-compliance-basic-event" timestamp="2026-09-28T08:31:54.678157+00:00" tests="4" errors="0" failures="4" skipped="0" time="2.5108180046081543">
+		<testcase name="access_control_allow_origin [https://marineinfo.org/doc/event/3127] [lenient]" classname="marineinfo-cors-compliance-basic-event" time="0.8270871639251709">
 			<failure message="Header 'access-control-allow-origin' is missing">Header absent in response from https://marineinfo.org/en/doc/event/3127</failure>
 			<system-out>OPTIONS https://marineinfo.org/doc/event/3127 with Origin: https://vliz.be
 Followed 1 redirect(s) to https://marineinfo.org/en/doc/event/3127
 access-control-allow-origin: ''
 </system-out>
 		</testcase>
-		<testcase name="access_control_allow_methods [https://marineinfo.org/doc/event/3127]" classname="marineinfo-cors-compliance-basic-event" time="0.9843213558197021">
+		<testcase name="access_control_allow_methods [https://marineinfo.org/doc/event/3127]" classname="marineinfo-cors-compliance-basic-event" time="0.8334102630615234">
 			<failure message="Header 'access-control-allow-methods' is missing">Expected methods ['HEAD'] but header was absent</failure>
 			<system-out>OPTIONS https://marineinfo.org/doc/event/3127 (checking allow-methods)
 access-control-allow-methods: ''
 </system-out>
 		</testcase>
-		<testcase name="access_control_allow_origin [https://marineinfo.org/id/event/3127] [lenient]" classname="marineinfo-cors-compliance-basic-event" time="0.5906851291656494">
+		<testcase name="access_control_allow_origin [https://marineinfo.org/id/event/3127] [lenient]" classname="marineinfo-cors-compliance-basic-event" time="0.4135093688964844">
 			<failure message="Header 'access-control-allow-origin' is missing">Header absent in response from https://marineinfo.org/id/event/3127</failure>
 			<system-out>OPTIONS https://marineinfo.org/id/event/3127 with Origin: https://vliz.be
 access-control-allow-origin: ''
 </system-out>
 		</testcase>
-		<testcase name="access_control_allow_methods [https://marineinfo.org/id/event/3127]" classname="marineinfo-cors-compliance-basic-event" time="0.5531609058380127">
+		<testcase name="access_control_allow_methods [https://marineinfo.org/id/event/3127]" classname="marineinfo-cors-compliance-basic-event" time="0.4368112087249756">
 			<failure message="Header 'access-control-allow-methods' is missing">Expected methods ['HEAD'] but header was absent</failure>
 			<system-out>OPTIONS https://marineinfo.org/id/event/3127 (checking allow-methods)
 access-control-allow-methods: ''
@@ -1042,31 +970,34 @@ access-control-allow-methods: ''
 			<property name="create-issue" value="false"/>
 		</properties>
 	</testsuite>
-	<testsuite name="marineinfo-cors-compliance-basic-dataset" timestamp="2026-09-09T12:28:38.150273+00:00" tests="4" errors="0" failures="4" skipped="0" time="2.981609344482422">
-		<testcase name="access_control_allow_origin [https://marineinfo.org/doc/dataset/3221] [lenient]" classname="marineinfo-cors-compliance-basic-dataset" time="0.9792313575744629">
-			<failure message="Header 'access-control-allow-origin' is missing">Header absent in response from https://marineinfo.org/en/doc/dataset/3221</failure>
+	<testsuite name="marineinfo-cors-compliance-basic-dataset" timestamp="2026-09-28T08:32:57.930015+00:00" tests="4" errors="4" failures="0" skipped="0" time="62.3809814453125">
+		<testcase name="access_control_allow_origin [https://marineinfo.org/doc/dataset/3221] [lenient]" classname="marineinfo-cors-compliance-basic-dataset" time="15.582497119903564">
+			<error message="Unexpected error">Request failed: Connection error: HTTPSConnectionPool(host='marineinfo.org', port=443): Max retries exceeded with url: /doc/dataset/3221 (Caused by NewConnectionError(&quot;HTTPSConnection(host='marineinfo.org', port=443): Failed to establish a new connection: [Errno 111] Connection refused&quot;))</error>
 			<system-out>OPTIONS https://marineinfo.org/doc/dataset/3221 with Origin: https://vliz.be
-Followed 1 redirect(s) to https://marineinfo.org/en/doc/dataset/3221
-access-control-allow-origin: ''
 </system-out>
+			<system-err>Request failed: Connection error: HTTPSConnectionPool(host='marineinfo.org', port=443): Max retries exceeded with url: /doc/dataset/3221 (Caused by NewConnectionError(&quot;HTTPSConnection(host='marineinfo.org', port=443): Failed to establish a new connection: [Errno 111] Connection refused&quot;))
+</system-err>
 		</testcase>
-		<testcase name="access_control_allow_methods [https://marineinfo.org/doc/dataset/3221]" classname="marineinfo-cors-compliance-basic-dataset" time="1.0041391849517822">
-			<failure message="Header 'access-control-allow-methods' is missing">Expected methods ['HEAD'] but header was absent</failure>
+		<testcase name="access_control_allow_methods [https://marineinfo.org/doc/dataset/3221]" classname="marineinfo-cors-compliance-basic-dataset" time="15.716455459594727">
+			<error message="Unexpected error">Request failed: Connection error: HTTPSConnectionPool(host='marineinfo.org', port=443): Max retries exceeded with url: /doc/dataset/3221 (Caused by NewConnectionError(&quot;HTTPSConnection(host='marineinfo.org', port=443): Failed to establish a new connection: [Errno 111] Connection refused&quot;))</error>
 			<system-out>OPTIONS https://marineinfo.org/doc/dataset/3221 (checking allow-methods)
-access-control-allow-methods: ''
 </system-out>
+			<system-err>Request failed: Connection error: HTTPSConnectionPool(host='marineinfo.org', port=443): Max retries exceeded with url: /doc/dataset/3221 (Caused by NewConnectionError(&quot;HTTPSConnection(host='marineinfo.org', port=443): Failed to establish a new connection: [Errno 111] Connection refused&quot;))
+</system-err>
 		</testcase>
-		<testcase name="access_control_allow_origin [https://marineinfo.org/id/dataset/3221] [lenient]" classname="marineinfo-cors-compliance-basic-dataset" time="0.49401068687438965">
-			<failure message="Header 'access-control-allow-origin' is missing">Header absent in response from https://marineinfo.org/id/dataset/3221</failure>
+		<testcase name="access_control_allow_origin [https://marineinfo.org/id/dataset/3221] [lenient]" classname="marineinfo-cors-compliance-basic-dataset" time="15.639096736907959">
+			<error message="Unexpected error">Request failed: Connection error: HTTPSConnectionPool(host='marineinfo.org', port=443): Max retries exceeded with url: /id/dataset/3221 (Caused by NewConnectionError(&quot;HTTPSConnection(host='marineinfo.org', port=443): Failed to establish a new connection: [Errno 111] Connection refused&quot;))</error>
 			<system-out>OPTIONS https://marineinfo.org/id/dataset/3221 with Origin: https://vliz.be
-access-control-allow-origin: ''
 </system-out>
+			<system-err>Request failed: Connection error: HTTPSConnectionPool(host='marineinfo.org', port=443): Max retries exceeded with url: /id/dataset/3221 (Caused by NewConnectionError(&quot;HTTPSConnection(host='marineinfo.org', port=443): Failed to establish a new connection: [Errno 111] Connection refused&quot;))
+</system-err>
 		</testcase>
-		<testcase name="access_control_allow_methods [https://marineinfo.org/id/dataset/3221]" classname="marineinfo-cors-compliance-basic-dataset" time="0.5042281150817871">
-			<failure message="Header 'access-control-allow-methods' is missing">Expected methods ['HEAD'] but header was absent</failure>
+		<testcase name="access_control_allow_methods [https://marineinfo.org/id/dataset/3221]" classname="marineinfo-cors-compliance-basic-dataset" time="15.44293212890625">
+			<error message="Unexpected error">Request failed: Connection error: HTTPSConnectionPool(host='marineinfo.org', port=443): Max retries exceeded with url: /id/dataset/3221 (Caused by NewConnectionError(&quot;HTTPSConnection(host='marineinfo.org', port=443): Failed to establish a new connection: [Errno 111] Connection refused&quot;))</error>
 			<system-out>OPTIONS https://marineinfo.org/id/dataset/3221 (checking allow-methods)
-access-control-allow-methods: ''
 </system-out>
+			<system-err>Request failed: Connection error: HTTPSConnectionPool(host='marineinfo.org', port=443): Max retries exceeded with url: /id/dataset/3221 (Caused by NewConnectionError(&quot;HTTPSConnection(host='marineinfo.org', port=443): Failed to establish a new connection: [Errno 111] Connection refused&quot;))
+</system-err>
 		</testcase>
 		<properties>
 			<property name="urls" value="https://marineinfo.org/doc/dataset/3221, https://marineinfo.org/id/dataset/3221"/>
